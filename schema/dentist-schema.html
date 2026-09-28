@@ -1,0 +1,72 @@
+<!-- 경주 프라임치과 구조화 데이터 (JSON-LD)
+     홈페이지 모든 페이지의 <head> 안, </head> 바로 위에 붙여 넣습니다. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "@id": "https://kjdent2875.com/#dentist",
+  "name": "경주 프라임치과의원",
+  "alternateName": ["프라임치과의원", "경주 프라임치과"],
+  "description": "경주 프라임치과는 통합치의학과 전문의 류성현 원장이 진료하는 치과입니다. 임플란트, 신경치료, 보철, 잇몸치료, 사랑니 발치, 소아치과 진료를 하며 주말(토·일)에도 진료합니다.",
+  "url": "https://kjdent2875.com",
+  "telephone": "+82-54-705-1234",
+  "priceRange": "₩₩",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "원화로 298-1, 5층 501호",
+    "addressLocality": "경주시",
+    "addressRegion": "경상북도",
+    "addressCountry": "KR"
+  },
+  "hasMap": "http://place.map.kakao.com/801916740",
+  "areaServed": { "@type": "City", "name": "경주시" },
+  "medicalSpecialty": "Dentistry",
+  "availableService": [
+    { "@type": "MedicalProcedure", "name": "임플란트" },
+    { "@type": "MedicalProcedure", "name": "신경치료" },
+    { "@type": "MedicalProcedure", "name": "크라운·브릿지 보철" },
+    { "@type": "MedicalProcedure", "name": "잇몸치료·스케일링" },
+    { "@type": "MedicalProcedure", "name": "사랑니 발치" },
+    { "@type": "MedicalProcedure", "name": "소아치과 진료" }
+  ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "10:00",
+      "closes": "12:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "14:00",
+      "closes": "19:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Saturday", "Sunday"],
+      "opens": "09:00",
+      "closes": "13:00"
+    }
+  ],
+  "amenityFeature": {
+    "@type": "LocationFeatureSpecification",
+    "name": "건물 후면 전용 주차장",
+    "value": true
+  },
+  "employee": {
+    "@type": "Person",
+    "name": "류성현",
+    "jobTitle": "대표원장",
+    "description": "보건복지부 인증 통합치의학과 전문의",
+    "hasCredential": {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "전문의 자격",
+      "name": "통합치의학과 전문의"
+    }
+  },
+  "sameAs": [
+    "http://place.map.kakao.com/801916740"
+  ]
+}
+</script>
