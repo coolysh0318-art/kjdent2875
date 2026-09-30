@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Tóm tắt giấy đồng ý nhổ răng</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@700;800;900&amp;family=Noto+Sans:wght@400;500;700;800;900&amp;family=Noto+Sans+KR:wght@400;500;700;900&amp;family=Noto+Sans+Thai:wght@400;500;700;800;900&amp;family=Noto+Sans+SC:wght@400;500;700;800;900&amp;display=swap">
+<style>
+/* A4 한 장(794×1123 CSS px) 이미지용 — 임플란트 동의서 요약과 같은 레이아웃 */
+:root {
+  --paper: #ffffff; --ink: #1d2327; --muted: #5a656b; --line: #e2e6e9; --tint: #f5f7f8;
+  --brand: #e8891c; --brand-ink: #b3620a; --brand-soft: #fdf1e3;
+  --teal: #1f7a78; --teal-soft: #e5f2f1; --alert: #c8322b; --alert-soft: #fcebea;
+  --font: "Noto Sans", "Noto Sans KR", sans-serif;
+  --display: "Noto Sans", "Noto Sans KR", sans-serif;
+  --fs: 11.8px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--paper); }
+body { width: 794px; height: 1123px; overflow: hidden; color: var(--ink); font-family: var(--font);
+  font-size: var(--fs); line-height: 1.5; display: flex; flex-direction: column; overflow-wrap: break-word; word-break: normal; }
+h1, h2, h3 { font-family: var(--display); }
+b { font-weight: 700; }
+.head { padding: 24px 34px 14px; border-bottom: 5px solid var(--brand); display: grid; gap: 7px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.clinic { display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--brand-ink); font-size: 12px; }
+.mark { background: var(--brand); color: #fff; font-family: "Noto Sans KR", sans-serif; font-weight: 900; font-size: 11px; border-radius: 5px; padding: 3px 6px; }
+.ver { color: var(--muted); font-size: 11px; }
+h1 { font-size: 27px; font-weight: 900; letter-spacing: -.01em; line-height: 1.25; }
+h1 span { color: var(--brand-ink); }
+.pre { background: var(--teal-soft); border-radius: 5px; padding: 8px 12px; font-size: 0.97em; }
+.pre b { color: var(--teal); }
+.body { flex: 1; display: grid; grid-template-columns: 1fr 1fr; min-height: 0; }
+.col { padding: 16px 20px 14px; display: flex; flex-direction: column; gap: var(--gap, 14px); min-width: 0; }
+.col + .col { border-left: 1px solid var(--line); }
+.sec { display: grid; gap: 6px; flex: none; }
+.sec-h { display: flex; align-items: center; gap: 8px; }
+.no { width: 21px; height: 21px; border-radius: 50%; background: var(--ink); color: #fff; font-family: "Noto Sans", sans-serif; font-weight: 900; font-size: 11.5px; display: grid; place-items: center; flex: none; }
+h2 { font-size: 1.24em; font-weight: 800; line-height: 1.3; }
+.muted { color: var(--muted); }
+.box { border: 1.5px solid var(--brand); border-radius: 6px; padding: 8px 12px; display: grid; gap: 4px; }
+.box ul, .grave ul { list-style: none; display: grid; gap: 3px; }
+.box li, .grave li { padding-left: 11px; position: relative; }
+.box li::before, .grave li::before { content: ""; position: absolute; left: 1px; top: .62em; width: 5px; height: 5px; border-radius: 50%; background: var(--brand); }
+.alts { display: grid; gap: 5px; }
+.alt { display: grid; grid-template-columns: 112px minmax(0,1fr); gap: 8px; background: var(--tint); border-radius: 5px; padding: 5px 10px; }
+.alt h3 { font-size: 1em; font-weight: 800; }
+.types .alt { background: var(--brand-soft); }
+.types .alt h3 { color: var(--brand-ink); }
+.chips { display: flex; flex-wrap: wrap; gap: 4px; }
+.chips span { border: 1px solid var(--line); border-radius: 99px; padding: 0 9px; font-size: 0.93em; }
+.cx { display: grid; gap: 5px; }
+.cx-g { display: grid; gap: 1px; }
+.cx-g h3 { font-size: 1em; font-weight: 800; color: var(--brand-ink); }
+.grave { background: var(--alert-soft); border-radius: 6px; padding: 7px 11px; }
+.grave h3 { color: var(--alert); }
+.grave li::before { background: var(--alert); }
+.rules { list-style: none; display: grid; gap: 3px; }
+.rules li { display: grid; grid-template-columns: 16px 1fr; gap: 6px; }
+.rules li::before { content: "✓"; color: var(--teal); font-weight: 900; }
+.foot { border-top: 1px solid var(--line); background: var(--tint); padding: 9px 34px 11px; display: grid; gap: 2px; font-size: 0.88em; color: var(--muted); }
+.foot b { color: var(--ink); }
+.sign { padding: 10px 34px 16px; border-top: 1.5px solid var(--ink); display: grid; grid-template-columns: auto 1fr 1.4fr; gap: 20px; align-items: end; }
+.sign .lbl { font-family: var(--display); font-weight: 800; font-size: 12.5px; line-height: 1.35; }
+.sign .f { display: grid; gap: 3px; }
+.sign .f > span { font-size: 10.5px; color: var(--muted); }
+.sign .f div { border-bottom: 1px solid var(--ink); height: 26px; display: flex; justify-content: flex-end; align-items: flex-end; padding: 0 2px 3px; font-size: 11px; color: var(--muted); }
+</style>
+</head>
+<body>
+<header class="head">
+  <div class="top">
+    <div class="clinic"><span class="mark">프라임</span>Nha khoa Prime, Gyeongju</div>
+    <div class="ver">Giấy đồng ý phiên bản 5 · 05/08/2026</div>
+  </div>
+  <h1>Giấy đồng ý nhổ răng <span>– Tóm tắt</span></h1>
+  <p class="pre"><b>Đây là bản tóm tắt để quý vị đọc trước khi đồng ý.</b> Việc đồng ý chính thức được thực hiện tại phòng khám: sau khi nghe bác sĩ giải thích và hỏi những điều còn thắc mắc, quý vị ký vào bản gốc của giấy đồng ý.</p>
+</header>
+<main class="body">
+  <div class="col">
+    <section class="sec">
+      <div class="sec-h"><span class="no">1</span><h2>Vì sao cần nhổ răng</h2></div>
+      <p>Nhổ răng là lấy bỏ <b>răng không thể giữ lại</b> do sâu răng, bệnh nướu, gãy răng hoặc chân răng, viêm tủy hoặc viêm quanh chóp, cũng như răng khôn mọc ngầm.</p>
+      <p class="muted">Nếu để lại, đau và nhiễm trùng sẽ tái diễn, viêm có thể lan sang răng bên cạnh và xương xung quanh.</p>
+      <div class="alts types">
+        <div class="alt"><h3>Nhổ răng thường</h3><p>Lấy nguyên chiếc răng ra.</p></div>
+        <div class="alt"><h3>Nhổ răng tiểu phẫu</h3><p>Rạch nướu, chia nhỏ răng hoặc mài xương rồi khâu lại (răng mọc ngầm, chân răng cong hoặc dính xương).</p></div>
+      </div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">2</span><h2>Điều cần biết khi nhổ răng</h2></div>
+      <div class="box"><p>Tình trạng răng và xương chỉ được xác định chính xác trong lúc nhổ.</p><ul><li>Tùy tình trạng thực tế, <b>phương pháp có thể thay đổi hoặc cần thêm thủ thuật</b>.</li><li>Trong tình huống khẩn cấp, các biện pháp bảo đảm an toàn cho quý vị được ưu tiên.</li><li>Khi cần, quý vị có thể được <b>chuyển đến bệnh viện tuyến trên</b>.</li></ul></div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">3</span><h2>Các phương pháp điều trị khác</h2></div>
+      <div class="alts">
+        <div class="alt"><h3>Chữa tủy và bọc răng</h3><p>Tùy tình trạng, có thể chữa tủy rồi bọc răng để giữ răng.</p></div>
+        <div class="alt"><h3>Điều trị nướu</h3><p>Có thể thử điều trị nha chu để giữ răng.</p></div>
+        <div class="alt"><h3>Không nhổ</h3><p>Đau và nhiễm trùng tái diễn, viêm có thể lan sang răng bên cạnh, xương hàm hoặc hình thành nang.</p></div>
+      </div>
+      <p class="muted">Nếu răng vỡ nhiều hoặc tiêu xương nhiều thì khó bảo đảm thành công, đau hoặc nhiễm trùng có thể quay lại.</p>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">4</span><h2>Vui lòng cho bác sĩ biết</h2></div>
+      <p class="muted">Để nhổ răng an toàn, hãy báo trước nếu quý vị có:</p>
+      <div class="chips"><span>Tiểu đường</span><span>Cao huyết áp / bệnh tim</span><span>Thuốc loãng xương</span><span>Dị ứng thuốc / thuốc tê</span><span>Thuốc chống đông / bệnh dễ chảy máu</span><span>Hút thuốc</span><span>Xạ trị vùng đầu cổ</span><span>Hóa trị / thuốc ức chế miễn dịch</span><span>Mang thai (hoặc có thể)</span><span>Bệnh khác / thuốc đang dùng</span></div>
+    </section>
+  </div>
+  <div class="col">
+    <section class="sec">
+      <div class="sec-h"><span class="no">5</span><h2>Biến chứng có thể xảy ra</h2></div>
+      <div class="cx">
+        <div class="cx-g"><h3>Trong và sau khi nhổ</h3><p>Đau, sưng, chảy máu, bầm tím, nhiễm trùng, hở vết khâu, đau chỗ tiêm tê, chóng mặt hoặc hồi hộp thoáng qua, trầy xước hoặc phồng rộp môi, khóe miệng (thường lành sau vài ngày), hạn chế há miệng hoặc đau khớp thái dương hàm, mảnh xương sắc trồi ra khỏi nướu, tác dụng phụ của thuốc kê đơn (kháng sinh, giảm đau).</p></div>
+        <div class="cx-g"><h3>Viêm ổ răng khô</h3><p>Nếu cục máu đông bong ra và lộ xương, <b>có thể đau dữ dội vào ngày 3–5 sau nhổ</b> và cần đến phòng khám nhiều lần để làm sạch.</p></div>
+        <div class="cx-g"><h3>Tổn thương thần kinh</h3><p>Nhất là khi nhổ răng hàm dưới và răng khôn: tê hoặc rối loạn cảm giác môi dưới, cằm, lưỡi, nướu, thay đổi vị giác. Phần lớn hồi phục trong vài tuần, nhưng có thể kéo dài trên 6 tháng hoặc hiếm khi không hồi phục.</p></div>
+        <div class="cx-g"><h3>Răng, cấu trúc lân cận, hàm trên</h3><p>Gãy chân răng (có thể để lại một phần nếu lấy ra gần dây thần kinh nguy hiểm hơn), tổn thương răng hoặc mão răng bên cạnh, gãy xương ổ răng, thủng xoang hoặc viêm xoang sau nhổ răng hàm trên (hiếm khi chân răng lọt vào xoang, cần phẫu thuật hoặc khám tai mũi họng), nuốt hoặc hít phải dụng cụ, mảnh răng.</p></div>
+        <div class="cx-g grave"><h3>Hiếm gặp nhưng nghiêm trọng</h3><ul><li>Khó cầm máu hoặc chảy máu lại sau vài ngày (thường gặp hơn khi dùng thuốc chống đông).</li><li><b>Tự ý ngừng thuốc chống đông</b> làm tăng nguy cơ đột quỵ, nhồi máu cơ tim. Việc ngừng thuốc phải được quyết định cùng bác sĩ đã kê đơn.</li><li>Người từng dùng thuốc loãng xương có thể chậm lành và hiếm khi bị hoại tử xương hàm (MRONJ).</li><li>Tràn khí dưới da (khí lọt vào mô gây sưng), nhiễm trùng xương hàm (viêm tủy xương).</li><li>Gãy xương hàm dưới, chảy máu sàn miệng, nhiễm trùng lan rộng (nhiễm khuẩn huyết), sốc phản vệ — cần cấp cứu và chuyển viện.</li></ul></div>
+      </div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">6</span><h2>Những điều bệnh nhân cần tuân thủ</h2></div>
+      <ul class="rules"><li><span><b>Cắn chặt gạc</b> theo hướng dẫn để cầm máu; không chạm vào chỗ nhổ bằng lưỡi, tay hay ống hút.</span></li><li><span><b>Không hút thuốc</b> vì làm chậm lành và tăng nguy cơ nhiễm trùng. Tuân thủ đơn thuốc và hướng dẫn của bác sĩ.</span></li><li><span>Báo ngay nếu máu không cầm, đau hoặc sưng tăng, hoặc khi <b>sức khỏe, thuốc đang dùng thay đổi</b>.</span></li></ul>
+    </section>
+  </div>
+</main>
+<footer class="foot"><p><b>Khi ký giấy đồng ý,</b> quý vị xác nhận đã được giải thích và hiểu các nội dung trên, đã nhận “Hướng dẫn sau nhổ răng” và tự nguyện đồng ý nhổ răng.</p><p>Bác sĩ điều trị là người giải thích và thực hiện chính ca phẫu thuật; khi cần, nha sĩ khác của phòng khám có thể tham gia một số bước. Nếu bệnh nhân là trẻ vị thành niên hoặc không thể hiểu nội dung, người đại diện sẽ ký.</p><p>Đây là bản dịch để tham khảo. Nếu có khác biệt, bản gốc tiếng Hàn được ưu tiên áp dụng.</p></footer>
+<section class="sign">
+  <p class="lbl">Tôi đã đọc<br>bản tóm tắt này</p>
+  <div class="f"><span>Ngày</span><div>ngày ______ tháng ______ năm ________</div></div>
+  <div class="f"><span>Họ tên bệnh nhân (hoặc người đại diện)</span><div>(chữ ký)</div></div>
+</section>
+<script>
+// 넘치면 글자 크기를 조금씩 줄여 A4 한 장에 맞춤
+document.fonts.ready.then(function fit(){
+  const cols=[...document.querySelectorAll('.col')];
+  const m=document.querySelector("main");
+  const over=()=>document.body.scrollHeight>1124||m.scrollHeight>m.clientHeight+1||cols.some(c=>c.scrollHeight>c.clientHeight+1);
+  let fs=11.8, gap=14;
+  while(over() && fs>9.9){ fs-=0.1; if(gap>9) gap-=0.5;
+    document.documentElement.style.setProperty('--fs',fs+'px');
+    document.documentElement.style.setProperty('--gap',gap+'px'); }
+  document.body.dataset.fs=fs.toFixed(1);
+});
+</script>
+</body>
+</html>

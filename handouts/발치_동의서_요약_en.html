@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Tooth Extraction Consent Summary</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@700;800;900&amp;family=Noto+Sans:wght@400;500;700;800;900&amp;family=Noto+Sans+KR:wght@400;500;700;900&amp;family=Noto+Sans+Thai:wght@400;500;700;800;900&amp;family=Noto+Sans+SC:wght@400;500;700;800;900&amp;display=swap">
+<style>
+/* A4 한 장(794×1123 CSS px) 이미지용 — 임플란트 동의서 요약과 같은 레이아웃 */
+:root {
+  --paper: #ffffff; --ink: #1d2327; --muted: #5a656b; --line: #e2e6e9; --tint: #f5f7f8;
+  --brand: #e8891c; --brand-ink: #b3620a; --brand-soft: #fdf1e3;
+  --teal: #1f7a78; --teal-soft: #e5f2f1; --alert: #c8322b; --alert-soft: #fcebea;
+  --font: "Noto Sans", "Noto Sans KR", sans-serif;
+  --display: "Noto Sans", "Noto Sans KR", sans-serif;
+  --fs: 11.8px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--paper); }
+body { width: 794px; height: 1123px; overflow: hidden; color: var(--ink); font-family: var(--font);
+  font-size: var(--fs); line-height: 1.5; display: flex; flex-direction: column; overflow-wrap: break-word; word-break: normal; }
+h1, h2, h3 { font-family: var(--display); }
+b { font-weight: 700; }
+.head { padding: 24px 34px 14px; border-bottom: 5px solid var(--brand); display: grid; gap: 7px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.clinic { display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--brand-ink); font-size: 12px; }
+.mark { background: var(--brand); color: #fff; font-family: "Noto Sans KR", sans-serif; font-weight: 900; font-size: 11px; border-radius: 5px; padding: 3px 6px; }
+.ver { color: var(--muted); font-size: 11px; }
+h1 { font-size: 28px; font-weight: 900; letter-spacing: -.01em; line-height: 1.25; }
+h1 span { color: var(--brand-ink); }
+.pre { background: var(--teal-soft); border-radius: 5px; padding: 8px 12px; font-size: 0.97em; }
+.pre b { color: var(--teal); }
+.body { flex: 1; display: grid; grid-template-columns: 1fr 1fr; min-height: 0; }
+.col { padding: 16px 20px 14px; display: flex; flex-direction: column; gap: var(--gap, 14px); min-width: 0; }
+.col + .col { border-left: 1px solid var(--line); }
+.sec { display: grid; gap: 6px; flex: none; }
+.sec-h { display: flex; align-items: center; gap: 8px; }
+.no { width: 21px; height: 21px; border-radius: 50%; background: var(--ink); color: #fff; font-family: "Noto Sans", sans-serif; font-weight: 900; font-size: 11.5px; display: grid; place-items: center; flex: none; }
+h2 { font-size: 1.24em; font-weight: 800; line-height: 1.3; }
+.muted { color: var(--muted); }
+.box { border: 1.5px solid var(--brand); border-radius: 6px; padding: 8px 12px; display: grid; gap: 4px; }
+.box ul, .grave ul { list-style: none; display: grid; gap: 3px; }
+.box li, .grave li { padding-left: 11px; position: relative; }
+.box li::before, .grave li::before { content: ""; position: absolute; left: 1px; top: .62em; width: 5px; height: 5px; border-radius: 50%; background: var(--brand); }
+.alts { display: grid; gap: 5px; }
+.alt { display: grid; grid-template-columns: 118px minmax(0,1fr); gap: 8px; background: var(--tint); border-radius: 5px; padding: 5px 10px; }
+.alt h3 { font-size: 1em; font-weight: 800; }
+.types .alt { background: var(--brand-soft); }
+.types .alt h3 { color: var(--brand-ink); }
+.chips { display: flex; flex-wrap: wrap; gap: 4px; }
+.chips span { border: 1px solid var(--line); border-radius: 99px; padding: 0 9px; font-size: 0.93em; }
+.cx { display: grid; gap: 5px; }
+.cx-g { display: grid; gap: 1px; }
+.cx-g h3 { font-size: 1em; font-weight: 800; color: var(--brand-ink); }
+.grave { background: var(--alert-soft); border-radius: 6px; padding: 7px 11px; }
+.grave h3 { color: var(--alert); }
+.grave li::before { background: var(--alert); }
+.rules { list-style: none; display: grid; gap: 3px; }
+.rules li { display: grid; grid-template-columns: 16px 1fr; gap: 6px; }
+.rules li::before { content: "✓"; color: var(--teal); font-weight: 900; }
+.foot { border-top: 1px solid var(--line); background: var(--tint); padding: 9px 34px 11px; display: grid; gap: 2px; font-size: 0.88em; color: var(--muted); }
+.foot b { color: var(--ink); }
+.sign { padding: 10px 34px 16px; border-top: 1.5px solid var(--ink); display: grid; grid-template-columns: auto 1fr 1.4fr; gap: 20px; align-items: end; }
+.sign .lbl { font-family: var(--display); font-weight: 800; font-size: 12.5px; line-height: 1.35; }
+.sign .f { display: grid; gap: 3px; }
+.sign .f > span { font-size: 10.5px; color: var(--muted); }
+.sign .f div { border-bottom: 1px solid var(--ink); height: 26px; display: flex; justify-content: flex-end; align-items: flex-end; padding: 0 2px 3px; font-size: 11px; color: var(--muted); }
+</style>
+</head>
+<body>
+<header class="head">
+  <div class="top">
+    <div class="clinic"><span class="mark">프라임</span>Prime Dental Clinic, Gyeongju</div>
+    <div class="ver">Consent form v5 · Aug 5, 2026</div>
+  </div>
+  <h1>Tooth Extraction Consent <span>— Summary</span></h1>
+  <p class="pre"><b>This summary is for reading before you give consent.</b> Actual consent takes place at the clinic: after your dentist explains the treatment and answers your questions, you sign the original consent form.</p>
+</header>
+<main class="body">
+  <div class="col">
+    <section class="sec">
+      <div class="sec-h"><span class="no">1</span><h2>Why the tooth needs to come out</h2></div>
+      <p>Extraction removes a tooth that <b>cannot be saved</b> because of decay, gum disease, a fractured tooth or root, or inflammation of the nerve or root tip, as well as impacted wisdom teeth.</p>
+      <p class="muted">Left in place, such a tooth can cause repeated pain and infection, and inflammation can spread to neighboring teeth and bone.</p>
+      <div class="alts types">
+        <div class="alt"><h3>Simple extraction</h3><p>The tooth is removed as it is.</p></div>
+        <div class="alt"><h3>Surgical extraction</h3><p>The gum is opened, the tooth is sectioned or bone is trimmed, and the site is stitched (impacted teeth, curved or fused roots).</p></div>
+      </div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">2</span><h2>Good to know about the procedure</h2></div>
+      <div class="box"><p>The condition of the tooth and bone can only be fully seen during extraction.</p><ul><li>Depending on what is found, <b>the method may change or additional treatment</b> may be needed.</li><li>In an emergency, measures needed for your safety come first.</li><li>If needed, we may <b>refer you to a hospital</b> with more advanced care.</li></ul></div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">3</span><h2>Other treatment options</h2></div>
+      <div class="alts">
+        <div class="alt"><h3>Root canal + crown</h3><p>Depending on the tooth, it may be saved with root canal treatment and a crown.</p></div>
+        <div class="alt"><h3>Gum treatment</h3><p>Periodontal treatment may be tried to keep the tooth.</p></div>
+        <div class="alt"><h3>No extraction</h3><p>Pain and infection may recur, inflammation may spread to neighboring teeth and the jaw, or a cyst may form.</p></div>
+      </div>
+      <p class="muted">If the tooth is badly broken or much of the bone is lost, success cannot be guaranteed, and pain or infection may return.</p>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">4</span><h2>Please tell us</h2></div>
+      <p class="muted">For a safe extraction, let us know in advance if you have any of the following:</p>
+      <div class="chips"><span>Diabetes</span><span>High blood pressure / heart disease</span><span>Osteoporosis medication</span><span>Drug / anesthetic allergy</span><span>Blood thinners / bleeding disorder</span><span>Smoking</span><span>Head &amp; neck radiation therapy</span><span>Chemotherapy / immunosuppressants</span><span>Pregnancy (or possible)</span><span>Other conditions / medications</span></div>
+    </section>
+  </div>
+  <div class="col">
+    <section class="sec">
+      <div class="sec-h"><span class="no">5</span><h2>Possible complications</h2></div>
+      <div class="cx">
+        <div class="cx-g"><h3>During and after extraction</h3><p>Pain, swelling, bleeding, bruising, infection, opening of stitches, pain at the injection site, brief dizziness or palpitations, scrapes or blisters on the lips or mouth corners (usually heal within days), limited mouth opening or jaw joint pain, sharp bone fragments coming through the gum, side effects of prescribed medicines (antibiotics, painkillers).</p></div>
+        <div class="cx-g"><h3>Dry socket</h3><p>If the blood clot is lost and bone is exposed, <b>severe pain may start 3–5 days after extraction</b>, and several visits for cleaning may be needed.</p></div>
+        <div class="cx-g"><h3>Nerve injury</h3><p>Especially with lower molars and wisdom teeth: numbness or altered sensation of the lower lip, chin, tongue or gums, or a change in taste. Most recover within weeks, but it may last over 6 months or, rarely, not recover.</p></div>
+        <div class="cx-g"><h3>Teeth, nearby structures, upper jaw</h3><p>Root fracture (part of a root may be left if removing it near a nerve is riskier), damage to neighboring teeth or crowns, fracture of the socket bone, sinus perforation or sinusitis after upper molar extraction (rarely a root enters the sinus, requiring surgery or an ENT specialist), swallowing or inhaling instruments or tooth fragments.</p></div>
+        <div class="cx-g grave"><h3>Rare but serious</h3><ul><li>Bleeding that is hard to stop or starts again days later (more likely with blood thinners).</li><li><b>Stopping blood thinners on your own</b> raises the risk of stroke and heart attack. Whether to stop is decided with the doctor who prescribed them.</li><li>With a history of osteoporosis medication, the site may heal poorly and, rarely, jawbone necrosis (MRONJ) may occur.</li><li>Subcutaneous emphysema (air trapped in tissue causing swelling), jawbone infection (osteomyelitis).</li><li>Lower jaw fracture, bleeding in the floor of the mouth, spreading infection (sepsis), anaphylaxis (shock) — emergency care and hospital transfer needed.</li></ul></div>
+      </div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">6</span><h2>What we ask of you</h2></div>
+      <ul class="rules"><li><span><b>Bite firmly on the gauze</b> as instructed, and do not touch the site with your tongue, fingers or a straw.</span></li><li><span><b>Do not smoke</b> — it slows healing and raises the risk of infection. Follow prescriptions and your dentist's instructions.</span></li><li><span>Tell us right away if bleeding does not stop or pain or swelling gets worse, and if <b>your health or medications change</b>.</span></li></ul>
+    </section>
+  </div>
+</main>
+<footer class="foot"><p><b>By signing the consent form,</b> you confirm that you received and understood the explanation, received the “Tooth Extraction Guide”, and agree to the extraction of your own free will.</p><p>The attending dentist gives the explanation and performs the main part of the surgery; if needed, other dentists at the clinic may take part in some steps. If the patient is a minor or cannot understand the document, a representative signs.</p><p>This is a translation for reference. If there is any difference, the Korean original prevails.</p></footer>
+<section class="sign">
+  <p class="lbl">I have read<br>this summary</p>
+  <div class="f"><span>Date</span><div>______ / ______ / __________</div></div>
+  <div class="f"><span>Patient (or representative) name</span><div>(signature)</div></div>
+</section>
+<script>
+// 넘치면 글자 크기를 조금씩 줄여 A4 한 장에 맞춤
+document.fonts.ready.then(function fit(){
+  const cols=[...document.querySelectorAll('.col')];
+  const m=document.querySelector("main");
+  const over=()=>document.body.scrollHeight>1124||m.scrollHeight>m.clientHeight+1||cols.some(c=>c.scrollHeight>c.clientHeight+1);
+  let fs=11.8, gap=14;
+  while(over() && fs>9.9){ fs-=0.1; if(gap>9) gap-=0.5;
+    document.documentElement.style.setProperty('--fs',fs+'px');
+    document.documentElement.style.setProperty('--gap',gap+'px'); }
+  document.body.dataset.fs=fs.toFixed(1);
+});
+</script>
+</body>
+</html>
