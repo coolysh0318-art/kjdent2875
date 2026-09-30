@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Tóm tắt giấy đồng ý làm hàm giả</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@700;800;900&amp;family=Noto+Sans:wght@400;500;700;800;900&amp;family=Noto+Sans+KR:wght@400;500;700;900&amp;family=Noto+Sans+Thai:wght@400;500;700;800;900&amp;family=Noto+Sans+SC:wght@400;500;700;800;900&amp;display=swap">
+<style>
+/* A4 한 장(794×1123 CSS px) 이미지용 — 임플란트 동의서 요약과 같은 레이아웃 */
+:root {
+  --paper: #ffffff; --ink: #1d2327; --muted: #5a656b; --line: #e2e6e9; --tint: #f5f7f8;
+  --brand: #e8891c; --brand-ink: #b3620a; --brand-soft: #fdf1e3;
+  --teal: #1f7a78; --teal-soft: #e5f2f1; --alert: #c8322b; --alert-soft: #fcebea;
+  --font: "Noto Sans", "Noto Sans KR", sans-serif;
+  --display: "Noto Sans", "Noto Sans KR", sans-serif;
+  --fs: 11.2px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--paper); }
+body { width: 794px; height: 1123px; overflow: hidden; color: var(--ink); font-family: var(--font);
+  font-size: var(--fs); line-height: 1.5; display: flex; flex-direction: column; overflow-wrap: break-word; word-break: normal; }
+h1, h2, h3 { font-family: var(--display); }
+b { font-weight: 700; }
+.head { padding: 24px 34px 14px; border-bottom: 5px solid var(--brand); display: grid; gap: 7px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.clinic { display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--brand-ink); font-size: 12px; }
+.mark { background: var(--brand); color: #fff; font-family: "Noto Sans KR", sans-serif; font-weight: 900; font-size: 11px; border-radius: 5px; padding: 3px 6px; }
+.ver { color: var(--muted); font-size: 11px; }
+h1 { font-size: 27px; font-weight: 900; letter-spacing: -.01em; line-height: 1.25; }
+h1 span { color: var(--brand-ink); }
+.pre { background: var(--teal-soft); border-radius: 5px; padding: 8px 12px; font-size: 0.97em; }
+.pre b { color: var(--teal); }
+.body { flex: 1; display: grid; grid-template-columns: 1fr 1fr; min-height: 0; }
+.col { padding: 16px 20px 14px; display: flex; flex-direction: column; gap: var(--gap, 14px); min-width: 0; }
+.col + .col { border-left: 1px solid var(--line); }
+.sec { display: grid; gap: 6px; flex: none; }
+.sec-h { display: flex; align-items: center; gap: 8px; }
+.no { width: 21px; height: 21px; border-radius: 50%; background: var(--ink); color: #fff; font-family: "Noto Sans", sans-serif; font-weight: 900; font-size: 11.5px; display: grid; place-items: center; flex: none; }
+h2 { font-size: 1.24em; font-weight: 800; line-height: 1.3; }
+.muted { color: var(--muted); }
+.box { border: 1.5px solid var(--brand); border-radius: 6px; padding: 8px 12px; display: grid; gap: 4px; }
+.box ul, .grave ul { list-style: none; display: grid; gap: 3px; }
+.box li, .grave li { padding-left: 11px; position: relative; }
+.box li::before, .grave li::before { content: ""; position: absolute; left: 1px; top: .62em; width: 5px; height: 5px; border-radius: 50%; background: var(--brand); }
+.alts { display: grid; gap: 5px; }
+.alt { display: grid; align-items: start; grid-template-columns: 112px minmax(0,1fr); gap: 8px; background: var(--tint); border-radius: 5px; padding: 5px 10px; }
+.alt h3 { font-size: 1em; font-weight: 800; }
+.types .alt { background: var(--brand-soft); }
+.types .alt h3 { color: var(--brand-ink); }
+.flow { display: flex; align-items: center; gap: 4px 5px; flex-wrap: wrap; }
+.flow span { background: var(--brand-soft); color: var(--brand-ink); font-weight: 700; border-radius: 99px; padding: 1px 9px; font-size: 0.92em; }
+.flow i { color: var(--brand); font-style: normal; font-weight: 900; }
+.alist { list-style: none; display: grid; gap: 4px; }
+.alist li { background: var(--tint); border-radius: 5px; padding: 4px 10px; }
+.chips { display: flex; flex-wrap: wrap; gap: 4px; }
+.chips span { border: 1px solid var(--line); border-radius: 99px; padding: 0 9px; font-size: 0.93em; }
+.cx { display: grid; gap: 5px; }
+.cx-g { display: grid; gap: 1px; }
+.cx-g h3 { font-size: 1em; font-weight: 800; color: var(--brand-ink); }
+.grave { background: var(--alert-soft); border-radius: 6px; padding: 7px 11px; }
+.grave h3 { color: var(--alert); }
+.grave li::before { background: var(--alert); }
+.rules { list-style: none; display: grid; gap: 3px; }
+.rules li { display: grid; grid-template-columns: 16px 1fr; gap: 6px; }
+.rules li::before { content: "✓"; color: var(--teal); font-weight: 900; }
+.foot { border-top: 1px solid var(--line); background: var(--tint); padding: 9px 34px 11px; display: grid; gap: 2px; font-size: 0.88em; color: var(--muted); }
+.foot b { color: var(--ink); }
+.sign { padding: 10px 34px 16px; border-top: 1.5px solid var(--ink); display: grid; grid-template-columns: auto 1fr 1.4fr; gap: 20px; align-items: end; }
+.sign .lbl { font-family: var(--display); font-weight: 800; font-size: 12.5px; line-height: 1.35; }
+.sign .f { display: grid; gap: 3px; }
+.sign .f > span { font-size: 10.5px; color: var(--muted); }
+.sign .f div { border-bottom: 1px solid var(--ink); height: 26px; display: flex; justify-content: flex-end; align-items: flex-end; padding: 0 2px 3px; font-size: 11px; color: var(--muted); }
+</style>
+</head>
+<body>
+<header class="head">
+  <div class="top">
+    <div class="clinic"><span class="mark">프라임</span>Nha khoa Prime, Gyeongju</div>
+    <div class="ver">Giấy đồng ý phiên bản 8 · 04/08/2026</div>
+  </div>
+  <h1>Giấy đồng ý làm hàm giả tháo lắp <span>– Tóm tắt</span></h1>
+  <p class="pre"><b>Đây là bản tóm tắt để quý vị đọc trước khi đồng ý.</b> Việc đồng ý chính thức được thực hiện tại phòng khám: sau khi nghe bác sĩ giải thích và hỏi những điều còn thắc mắc, quý vị ký vào bản gốc của giấy đồng ý.</p>
+</header>
+<main class="body">
+  <div class="col">
+    <section class="sec">
+      <div class="sec-h"><span class="no">1</span><h2>Mục đích và các loại hàm giả</h2></div>
+      <p>Hàm giả thay thế răng và mô đã mất bằng răng nhân tạo và nền hàm để phục hồi <b>ăn nhai, phát âm và diện mạo</b>. Khác với răng thật, hàm giả không bám vào xương mà <b>tựa trên nướu</b>, nên có những giới hạn cơ bản.</p>
+      <div class="alts types"><div class="alt"><h3>Hàm toàn phần</h3><p>Toàn bộ nướu và vòm miệng chịu lực nhai.</p></div><div class="alt"><h3>Hàm bán phần</h3><p>Móc vào răng còn lại; răng và nướu cùng chịu lực.</p></div><div class="alt"><h3>Hàm trên implant</h3><p>Gắn vào implant trong xương để bám chắc hơn (phẫu thuật cấy implant được giải thích và đồng ý riêng).</p></div></div>
+      <div class="flow"><span>Lấy dấu</span><i>→</i><span>Thử hàm sáp (kiểm tra hình dáng)</span><i>→</i><span>Lắp hàm</span><i>→</i><span>Chỉnh sửa nhiều lần</span></div>
+      <p class="muted">Hàm giả không hoàn tất vào ngày lắp mà được hoàn thiện qua nhiều lần chỉnh sửa.</p>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">2</span><h2>Điều quan trọng cần biết</h2></div>
+      <div class="box"><p>Kể cả hàm giả làm tốt cũng có những giới hạn sau:</p><ul><li><b>Lực nhai kém hơn răng thật</b>. Khó cắn bằng răng cửa, khó nhai đồ cứng, dai hoặc dính.</li><li>Cần thời gian và <b>nhiều lần chỉnh sửa</b> để quen. Đau nướu là một phần bình thường của quá trình.</li><li>Xương hàm tiếp tục tiêu nên <b>hàm giả lỏng dần theo thời gian</b>, cần đệm hàm hoặc làm lại.</li><li>Muốn thay đổi sau bước thử hàm sáp thì <b>phải làm hàm mới</b>.</li></ul></div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">3</span><h2>Các phương pháp điều trị khác</h2></div>
+      <ul class="alist"><li><b>Implant</b> — Xương chịu lực nên nhai gần như răng thật, ít vướng, nhưng cần phẫu thuật, thời gian và chi phí hơn; tình trạng xương hoặc sức khỏe có thể không cho phép hoặc cần ghép xương.</li><li><b>Cầu răng cố định</b> — Ít vướng, cảm giác tự nhiên, nhưng phải mài răng hai bên và không làm được khi mất nhiều răng hoặc mất răng cuối.</li><li><b>Không điều trị</b> — Răng còn lại xô lệch, răng đối diện trồi, xương tiêu dần khiến làm hàm hay implant sau này khó hơn; ăn nhai, phát âm, dinh dưỡng kém đi và khuôn mặt có thể thay đổi.</li></ul>
+    </section>
+  </div>
+  <div class="col">
+    <section class="sec">
+      <div class="sec-h"><span class="no">4</span><h2>Biến chứng có thể xảy ra</h2></div>
+      <div class="cx">
+        <div class="cx-g"><h3>Chức năng và thích nghi</h3><p>Cảm giác vướng, nhiều nước bọt, thay đổi phát âm, buồn nôn (nặng có thể không đeo được), giảm vị giác và cảm nhận nhiệt (hàm trên che vòm miệng nên dễ bỏng khi ăn nóng), màu, hình dạng hoặc cách xếp răng khác mong đợi, khuôn mặt có thể thay đổi. Mức độ thích nghi rất khác nhau; có người dù chỉnh nhiều lần vẫn không thấy thoải mái.</p></div>
+        <div class="cx-g"><h3>Nướu, niêm mạc và độ bám</h3><p>Đau hoặc loét nướu (có thể tái lại), hàm lỏng (nhất là <b>hàm toàn phần dưới</b>; nặng hơn khi xương thấp hoặc khô miệng), viêm miệng do nấm dưới hàm (tăng nguy cơ nếu đeo khi ngủ hoặc vệ sinh kém), dị ứng vật liệu, tăng sinh nướu do hàm không khít — vết loét không lành hoặc mảng trắng, đỏ kéo dài cần kiểm tra. Tổn thương nhẹ hoặc buồn nôn khi lấy dấu, chỉnh sửa; đau, bầm, chóng mặt do thuốc tê.</p></div>
+        <div class="cx-g"><h3>Thay đổi theo thời gian</h3><p>Tiêu xương <b>là không thể tránh</b>, nên hàm vừa khít cũng dần lỏng và gây đau, cần sửa hoặc làm lại. Răng mang móc có thể ê, lung lay, dễ sâu và mòn; nếu mất răng đó phải sửa hoặc làm lại hàm.</p></div>
+        <div class="cx-g"><h3>Hàm trên implant</h3><p>Bám chắc hơn nhưng nướu vẫn chịu một phần lực nên các giới hạn trên vẫn còn, cần chỉnh sửa và đệm hàm. Nắp và vòng cao su là <b>linh kiện hao mòn</b>, phải thay và có chi phí; viêm quanh implant hoặc không tích hợp có thể làm mất implant, khi đó phải sửa hoặc làm lại hàm.</p></div>
+        <div class="cx-g grave"><h3>Hiếm gặp nhưng nghiêm trọng</h3><ul><li>Dị ứng thuốc hoặc vật liệu, sốc phản vệ — cần cấp cứu và chuyển viện.</li></ul></div>
+      </div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">5</span><h2>Vui lòng cho bác sĩ biết</h2></div>
+      <p class="muted">Để điều trị an toàn, hãy báo trước nếu quý vị có:</p>
+      <div class="chips"><span>Tiểu đường</span><span>Cao huyết áp / bệnh tim</span><span>Dị ứng thuốc / thuốc tê</span><span>Dị ứng vật liệu hàm (acrylic, kim loại)</span><span>Khô miệng hoặc thuốc gây khô miệng</span><span>Thuốc loãng xương (kể cả tiêm)</span><span>Hóa trị / ức chế miễn dịch / xạ trị đầu cổ</span><span>Thuốc chống đông / bệnh dễ chảy máu</span><span>Phản xạ nôn mạnh</span><span>Nghiến / cắn chặt răng</span><span>Hút thuốc</span><span>Vấn đề với hàm giả cũ</span><span>Bệnh khác / thuốc đang dùng</span></div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">6</span><h2>Những điều bệnh nhân cần tuân thủ</h2></div>
+      <ul class="rules"><li><span>Đến đầy đủ các buổi <b>chỉnh sửa, kiểm tra và khám định kỳ</b>.</span></li><li><span>Ở bước <b>thử hàm sáp</b> (đeo thử hàm tạm bằng sáp), hãy kiểm tra kỹ màu, kích thước, hình dạng, cách xếp răng và khuôn mặt.</span></li><li><span>Vệ sinh hàm giả và miệng hằng ngày, tháo hàm khi ngủ để nướu được nghỉ.</span></li><li><span>Báo khi đau, hàm lỏng hoặc bất thường, hay khi <b>sức khỏe, thuốc đang dùng thay đổi</b>.</span></li></ul>
+    </section>
+  </div>
+</main>
+<footer class="foot"><p><b>Khi ký giấy đồng ý,</b> quý vị xác nhận đã được giải thích và hiểu các nội dung trên — nhất là giới hạn lực nhai, cần thời gian thích nghi và chỉnh sửa, cần đệm hoặc làm lại hàm do tiêu xương, và phải làm lại nếu thay đổi sau bước thử hàm sáp — và tự nguyện đồng ý điều trị.</p><p>Bác sĩ điều trị là người giải thích và thực hiện chính ca phẫu thuật; khi cần, nha sĩ khác của phòng khám có thể tham gia một số bước. Nếu bệnh nhân là trẻ vị thành niên hoặc không thể hiểu nội dung, người đại diện sẽ ký.</p><p>Đây là bản dịch để tham khảo. Nếu có khác biệt, bản gốc tiếng Hàn được ưu tiên áp dụng.</p></footer>
+<section class="sign">
+  <p class="lbl">Tôi đã đọc<br>bản tóm tắt này</p>
+  <div class="f"><span>Ngày</span><div>ngày ______ tháng ______ năm ________</div></div>
+  <div class="f"><span>Họ tên bệnh nhân (hoặc người đại diện)</span><div>(chữ ký)</div></div>
+</section>
+<script>
+// 넘치면 글자 크기를 조금씩 줄여 A4 한 장에 맞춤
+document.fonts.ready.then(function fit(){
+  const cols=[...document.querySelectorAll('.col')];
+  const m=document.querySelector("main");
+  const over=()=>document.body.scrollHeight>1124||m.scrollHeight>m.clientHeight+1||cols.some(c=>c.scrollHeight>c.clientHeight+1);
+  let fs=11.2, gap=14;
+  while(over() && fs>9.6){ fs-=0.1; if(gap>9) gap-=0.5;
+    document.documentElement.style.setProperty('--fs',fs+'px');
+    document.documentElement.style.setProperty('--gap',gap+'px'); }
+  document.body.dataset.fs=fs.toFixed(1);
+});
+</script>
+</body>
+</html>

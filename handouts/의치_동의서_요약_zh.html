@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<title>活动义齿治疗同意书摘要</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@700;800;900&amp;family=Noto+Sans:wght@400;500;700;800;900&amp;family=Noto+Sans+KR:wght@400;500;700;900&amp;family=Noto+Sans+Thai:wght@400;500;700;800;900&amp;family=Noto+Sans+SC:wght@400;500;700;800;900&amp;display=swap">
+<style>
+/* A4 한 장(794×1123 CSS px) 이미지용 — 임플란트 동의서 요약과 같은 레이아웃 */
+:root {
+  --paper: #ffffff; --ink: #1d2327; --muted: #5a656b; --line: #e2e6e9; --tint: #f5f7f8;
+  --brand: #e8891c; --brand-ink: #b3620a; --brand-soft: #fdf1e3;
+  --teal: #1f7a78; --teal-soft: #e5f2f1; --alert: #c8322b; --alert-soft: #fcebea;
+  --font: "Noto Sans SC", "Noto Sans", "Noto Sans KR", sans-serif;
+  --display: "Noto Sans SC", "Noto Sans", "Noto Sans KR", sans-serif;
+  --fs: 11.8px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--paper); }
+body { width: 794px; height: 1123px; overflow: hidden; color: var(--ink); font-family: var(--font);
+  font-size: var(--fs); line-height: 1.6; display: flex; flex-direction: column; overflow-wrap: break-word; word-break: normal; }
+h1, h2, h3 { font-family: var(--display); }
+b { font-weight: 700; }
+.head { padding: 24px 34px 14px; border-bottom: 5px solid var(--brand); display: grid; gap: 7px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.clinic { display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--brand-ink); font-size: 12px; }
+.mark { background: var(--brand); color: #fff; font-family: "Noto Sans KR", sans-serif; font-weight: 900; font-size: 11px; border-radius: 5px; padding: 3px 6px; }
+.ver { color: var(--muted); font-size: 11px; }
+h1 { font-size: 29px; font-weight: 900; letter-spacing: -.01em; line-height: 1.25; }
+h1 span { color: var(--brand-ink); }
+.pre { background: var(--teal-soft); border-radius: 5px; padding: 8px 12px; font-size: 0.97em; }
+.pre b { color: var(--teal); }
+.body { flex: 1; display: grid; grid-template-columns: 1fr 1fr; min-height: 0; }
+.col { padding: 16px 20px 14px; display: flex; flex-direction: column; gap: var(--gap, 14px); min-width: 0; }
+.col + .col { border-left: 1px solid var(--line); }
+.sec { display: grid; gap: 6px; flex: none; }
+.sec-h { display: flex; align-items: center; gap: 8px; }
+.no { width: 21px; height: 21px; border-radius: 50%; background: var(--ink); color: #fff; font-family: "Noto Sans", sans-serif; font-weight: 900; font-size: 11.5px; display: grid; place-items: center; flex: none; }
+h2 { font-size: 1.24em; font-weight: 800; line-height: 1.3; }
+.muted { color: var(--muted); }
+.box { border: 1.5px solid var(--brand); border-radius: 6px; padding: 8px 12px; display: grid; gap: 4px; }
+.box ul, .grave ul { list-style: none; display: grid; gap: 3px; }
+.box li, .grave li { padding-left: 11px; position: relative; }
+.box li::before, .grave li::before { content: ""; position: absolute; left: 1px; top: .62em; width: 5px; height: 5px; border-radius: 50%; background: var(--brand); }
+.alts { display: grid; gap: 5px; }
+.alt { display: grid; align-items: start; grid-template-columns: 100px minmax(0,1fr); gap: 8px; background: var(--tint); border-radius: 5px; padding: 5px 10px; }
+.alt h3 { font-size: 1em; font-weight: 800; }
+.types .alt { background: var(--brand-soft); }
+.types .alt h3 { color: var(--brand-ink); }
+.flow { display: flex; align-items: center; gap: 4px 5px; flex-wrap: wrap; }
+.flow span { background: var(--brand-soft); color: var(--brand-ink); font-weight: 700; border-radius: 99px; padding: 1px 9px; font-size: 0.92em; }
+.flow i { color: var(--brand); font-style: normal; font-weight: 900; }
+.alist { list-style: none; display: grid; gap: 4px; }
+.alist li { background: var(--tint); border-radius: 5px; padding: 4px 10px; }
+.chips { display: flex; flex-wrap: wrap; gap: 4px; }
+.chips span { border: 1px solid var(--line); border-radius: 99px; padding: 0 9px; font-size: 0.93em; }
+.cx { display: grid; gap: 5px; }
+.cx-g { display: grid; gap: 1px; }
+.cx-g h3 { font-size: 1em; font-weight: 800; color: var(--brand-ink); }
+.grave { background: var(--alert-soft); border-radius: 6px; padding: 7px 11px; }
+.grave h3 { color: var(--alert); }
+.grave li::before { background: var(--alert); }
+.rules { list-style: none; display: grid; gap: 3px; }
+.rules li { display: grid; grid-template-columns: 16px 1fr; gap: 6px; }
+.rules li::before { content: "✓"; color: var(--teal); font-weight: 900; }
+.foot { border-top: 1px solid var(--line); background: var(--tint); padding: 9px 34px 11px; display: grid; gap: 2px; font-size: 0.88em; color: var(--muted); }
+.foot b { color: var(--ink); }
+.sign { padding: 10px 34px 16px; border-top: 1.5px solid var(--ink); display: grid; grid-template-columns: auto 1fr 1.4fr; gap: 20px; align-items: end; }
+.sign .lbl { font-family: var(--display); font-weight: 800; font-size: 12.5px; line-height: 1.35; }
+.sign .f { display: grid; gap: 3px; }
+.sign .f > span { font-size: 10.5px; color: var(--muted); }
+.sign .f div { border-bottom: 1px solid var(--ink); height: 26px; display: flex; justify-content: flex-end; align-items: flex-end; padding: 0 2px 3px; font-size: 11px; color: var(--muted); }
+</style>
+</head>
+<body>
+<header class="head">
+  <div class="top">
+    <div class="clinic"><span class="mark">프라임</span>Prime 牙科诊所（庆州）</div>
+    <div class="ver">同意书第8版 · 2026.08.04</div>
+  </div>
+  <h1>活动义齿治疗同意书 <span>摘要</span></h1>
+  <p class="pre"><b>本摘要供您在签署同意书前阅读。</b>正式同意须在诊所进行：听取牙医说明并提出疑问后，再签署同意书原件。</p>
+</header>
+<main class="body">
+  <div class="col">
+    <section class="sec">
+      <div class="sec-h"><span class="no">1</span><h2>治疗目的与种类</h2></div>
+      <p>义齿以人工牙和基托替代缺失的牙齿及周围组织，恢复<b>咀嚼、发音和面容</b>。它不像天然牙固定在骨上，而是<b>靠牙龈支撑</b>，因此存在根本性的局限。</p>
+      <div class="alts types"><div class="alt"><h3>全口义齿</h3><p>牙龈和上腭承担全部咬合力。</p></div><div class="alt"><h3>局部义齿</h3><p>卡环钩在余留牙上，由牙齿和牙龈分担咬合力。</p></div><div class="alt"><h3>种植覆盖义齿</h3><p>固定于颌骨内的种植体上，提高固位力（种植手术另行说明并签署同意）。</p></div></div>
+      <div class="flow"><span>取模</span><i>→</i><span>蜡型试戴（确认外观）</span><i>→</i><span>戴牙</span><i>→</i><span>多次调整</span></div>
+      <p class="muted">义齿并非戴上当天就完成，而是经过多次调整才趋于完善。</p>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">2</span><h2>务必了解的事项</h2></div>
+      <div class="box"><p>即使制作精良的义齿也有以下局限：</p><ul><li><b>咀嚼力不及天然牙</b>。难以用前牙咬断食物，较硬、较韧或黏性食物难以咀嚼。</li><li>适应需要时间和<b>多次调整</b>。牙龈疼痛是正常过程的一部分。</li><li>牙槽骨会持续吸收，<b>义齿会随时间变松</b>，需要重衬或重做。</li><li>蜡型试戴之后如需更改，<b>必须重新制作</b>。</li></ul></div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">3</span><h2>其他治疗方法</h2></div>
+      <ul class="alist"><li><b>种植牙</b> — 由骨骼承力，咀嚼接近天然牙且异物感小，但需手术，时间和费用更多；骨质或全身状况可能不允许或需植骨。</li><li><b>固定桥</b> — 异物感小、感觉自然，但需磨削两侧牙齿，缺牙范围大或缺少最后方牙齿时无法进行。</li><li><b>不治疗</b> — 余留牙移位、对颌牙伸长、牙槽骨持续吸收，日后做义齿或种植更困难；咀嚼、发音和营养变差，面容可能改变。</li></ul>
+    </section>
+  </div>
+  <div class="col">
+    <section class="sec">
+      <div class="sec-h"><span class="no">4</span><h2>可能出现的并发症</h2></div>
+      <div class="cx">
+        <div class="cx-g"><h3>功能与适应</h3><p>异物感或臃肿感、唾液增多、发音改变、恶心（严重时难以佩戴）、味觉和温度感减弱（上颌义齿覆盖上腭，可能被热食烫伤）、人工牙颜色、形态或排列与期望不同、面容可能改变。适应程度因人而异，部分人经多次调整仍无法舒适使用。</p></div>
+        <div class="cx-g"><h3>牙龈、黏膜与固位</h3><p>牙龈压痛或溃疡（调整后仍可能反复）、义齿松动（尤其<b>下颌全口义齿</b>，骨量低或口干时更明显）、真菌引起的义齿性口炎（夜间佩戴或清洁不足时风险增加）、义齿材料过敏、不合适的义齿长期使用导致牙龈增生——不愈合的溃疡或白色、红色斑块需进一步检查。取模和调整时口腔组织轻微损伤或恶心；局部麻醉时注射部位疼痛、淤青或头晕。</p></div>
+        <div class="cx-g"><h3>随时间发生的变化</h3><p>牙槽骨吸收<b>无法避免</b>，即使合适的义齿也会逐渐松动、引起疼痛，需要修理或重做。卡环基牙可能敏感、松动、易龋或磨损；如失去该牙，义齿需修改或重做。</p></div>
+        <div class="cx-g"><h3>种植覆盖义齿</h3><p>固位力提高，但牙龈仍承担部分咬合力，上述局限依然存在，需要调整和重衬。帽和橡胶圈是会磨损的<b>消耗件</b>，需付费更换；种植体周围炎或骨结合失败可能导致种植体脱落，届时义齿需修改或重做。</p></div>
+        <div class="cx-g grave"><h3>少见但严重的并发症</h3><ul><li>药物或材料过敏、过敏性休克——需紧急处理并转诊至上级医院。</li></ul></div>
+      </div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">5</span><h2>请务必告知</h2></div>
+      <p class="muted">为确保治疗安全，如有以下情况请提前告知：</p>
+      <div class="chips"><span>糖尿病</span><span>高血压 / 心脏病</span><span>药物 / 麻药过敏</span><span>义齿材料过敏（丙烯酸树脂、金属）</span><span>口干或服用致口干药物</span><span>骨质疏松药物（含注射）</span><span>化疗 / 免疫抑制剂 / 头颈部放疗</span><span>抗凝血药 / 出血性疾病</span><span>严重恶心反射</span><span>磨牙 / 紧咬牙</span><span>吸烟</span><span>以往义齿的不适</span><span>其他疾病 / 正在服用的药物</span></div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">6</span><h2>患者须遵守事项</h2></div>
+      <ul class="rules"><li><span>请按时参加<b>调整、检查和定期复查</b>。</span></li><li><span>在<b>蜡型试戴</b>（试戴蜡制临时义齿）时，请仔细确认人工牙的颜色、大小、形态、排列及面容。</span></li><li><span>每天清洁义齿和口腔，睡前取下义齿让牙龈休息。</span></li><li><span>如有疼痛、松动等异常，或<b>健康状况、服用药物发生变化</b>，请告知。</span></li></ul>
+    </section>
+  </div>
+</main>
+<footer class="foot"><p><b>签署同意书即表示</b>您已听取并理解上述说明——尤其是咀嚼力的局限、需要适应和多次调整、因骨吸收需要重衬或重做、蜡型试戴后更改需重做——并自愿同意接受义齿治疗。</p><p>主治医生是负责说明并主导手术的医生；必要时本院其他牙医可参与部分过程。患者为未成年人或难以理解本文件内容时，由代理人签字。</p><p>本文件为参考译文，如有出入，以韩文原件为准。</p></footer>
+<section class="sign">
+  <p class="lbl">本人已阅读<br>本摘要</p>
+  <div class="f"><span>日期</span><div>________ 年 ______ 月 ______ 日</div></div>
+  <div class="f"><span>患者（或代理人）姓名</span><div>（签字）</div></div>
+</section>
+<script>
+// 넘치면 글자 크기를 조금씩 줄여 A4 한 장에 맞춤
+document.fonts.ready.then(function fit(){
+  const cols=[...document.querySelectorAll('.col')];
+  const m=document.querySelector("main");
+  const over=()=>document.body.scrollHeight>1124||m.scrollHeight>m.clientHeight+1||cols.some(c=>c.scrollHeight>c.clientHeight+1);
+  let fs=11.8, gap=14;
+  while(over() && fs>9.6){ fs-=0.1; if(gap>9) gap-=0.5;
+    document.documentElement.style.setProperty('--fs',fs+'px');
+    document.documentElement.style.setProperty('--gap',gap+'px'); }
+  document.body.dataset.fs=fs.toFixed(1);
+});
+</script>
+</body>
+</html>

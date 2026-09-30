@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>의치 치료 동의서 요약</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@700;800;900&amp;family=Noto+Sans:wght@400;500;700;800;900&amp;family=Noto+Sans+KR:wght@400;500;700;900&amp;family=Noto+Sans+Thai:wght@400;500;700;800;900&amp;family=Noto+Sans+SC:wght@400;500;700;800;900&amp;display=swap">
+<style>
+/* A4 한 장(794×1123 CSS px) 이미지용 — 임플란트 동의서 요약과 같은 레이아웃 */
+:root {
+  --paper: #ffffff; --ink: #1d2327; --muted: #5a656b; --line: #e2e6e9; --tint: #f5f7f8;
+  --brand: #e8891c; --brand-ink: #b3620a; --brand-soft: #fdf1e3;
+  --teal: #1f7a78; --teal-soft: #e5f2f1; --alert: #c8322b; --alert-soft: #fcebea;
+  --font: "Noto Sans KR", sans-serif;
+  --display: "Gothic A1", "Noto Sans KR", sans-serif;
+  --fs: 11.8px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--paper); }
+body { width: 794px; height: 1123px; overflow: hidden; color: var(--ink); font-family: var(--font);
+  font-size: var(--fs); line-height: 1.55; display: flex; flex-direction: column; overflow-wrap: break-word; word-break: keep-all; }
+h1, h2, h3 { font-family: var(--display); }
+b { font-weight: 700; }
+.head { padding: 24px 34px 14px; border-bottom: 5px solid var(--brand); display: grid; gap: 7px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.clinic { display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--brand-ink); font-size: 12px; }
+.mark { background: var(--brand); color: #fff; font-family: "Noto Sans KR", sans-serif; font-weight: 900; font-size: 11px; border-radius: 5px; padding: 3px 6px; }
+.ver { color: var(--muted); font-size: 11px; }
+h1 { font-size: 30px; font-weight: 900; letter-spacing: -.01em; line-height: 1.25; }
+h1 span { color: var(--brand-ink); }
+.pre { background: var(--teal-soft); border-radius: 5px; padding: 8px 12px; font-size: 0.97em; }
+.pre b { color: var(--teal); }
+.body { flex: 1; display: grid; grid-template-columns: 1fr 1fr; min-height: 0; }
+.col { padding: 16px 20px 14px; display: flex; flex-direction: column; gap: var(--gap, 14px); min-width: 0; }
+.col + .col { border-left: 1px solid var(--line); }
+.sec { display: grid; gap: 6px; flex: none; }
+.sec-h { display: flex; align-items: center; gap: 8px; }
+.no { width: 21px; height: 21px; border-radius: 50%; background: var(--ink); color: #fff; font-family: "Noto Sans", sans-serif; font-weight: 900; font-size: 11.5px; display: grid; place-items: center; flex: none; }
+h2 { font-size: 1.24em; font-weight: 800; line-height: 1.3; }
+.muted { color: var(--muted); }
+.box { border: 1.5px solid var(--brand); border-radius: 6px; padding: 8px 12px; display: grid; gap: 4px; }
+.box ul, .grave ul { list-style: none; display: grid; gap: 3px; }
+.box li, .grave li { padding-left: 11px; position: relative; }
+.box li::before, .grave li::before { content: ""; position: absolute; left: 1px; top: .62em; width: 5px; height: 5px; border-radius: 50%; background: var(--brand); }
+.alts { display: grid; gap: 5px; }
+.alt { display: grid; align-items: start; grid-template-columns: 96px minmax(0,1fr); gap: 8px; background: var(--tint); border-radius: 5px; padding: 5px 10px; }
+.alt h3 { font-size: 1em; font-weight: 800; }
+.types .alt { background: var(--brand-soft); }
+.types .alt h3 { color: var(--brand-ink); }
+.flow { display: flex; align-items: center; gap: 4px 5px; flex-wrap: wrap; }
+.flow span { background: var(--brand-soft); color: var(--brand-ink); font-weight: 700; border-radius: 99px; padding: 1px 9px; font-size: 0.92em; }
+.flow i { color: var(--brand); font-style: normal; font-weight: 900; }
+.alist { list-style: none; display: grid; gap: 4px; }
+.alist li { background: var(--tint); border-radius: 5px; padding: 4px 10px; }
+.chips { display: flex; flex-wrap: wrap; gap: 4px; }
+.chips span { border: 1px solid var(--line); border-radius: 99px; padding: 0 9px; font-size: 0.93em; }
+.cx { display: grid; gap: 5px; }
+.cx-g { display: grid; gap: 1px; }
+.cx-g h3 { font-size: 1em; font-weight: 800; color: var(--brand-ink); }
+.grave { background: var(--alert-soft); border-radius: 6px; padding: 7px 11px; }
+.grave h3 { color: var(--alert); }
+.grave li::before { background: var(--alert); }
+.rules { list-style: none; display: grid; gap: 3px; }
+.rules li { display: grid; grid-template-columns: 16px 1fr; gap: 6px; }
+.rules li::before { content: "✓"; color: var(--teal); font-weight: 900; }
+.foot { border-top: 1px solid var(--line); background: var(--tint); padding: 9px 34px 11px; display: grid; gap: 2px; font-size: 0.88em; color: var(--muted); }
+.foot b { color: var(--ink); }
+.sign { padding: 10px 34px 16px; border-top: 1.5px solid var(--ink); display: grid; grid-template-columns: auto 1fr 1.4fr; gap: 20px; align-items: end; }
+.sign .lbl { font-family: var(--display); font-weight: 800; font-size: 12.5px; line-height: 1.35; }
+.sign .f { display: grid; gap: 3px; }
+.sign .f > span { font-size: 10.5px; color: var(--muted); }
+.sign .f div { border-bottom: 1px solid var(--ink); height: 26px; display: flex; justify-content: flex-end; align-items: flex-end; padding: 0 2px 3px; font-size: 11px; color: var(--muted); }
+</style>
+</head>
+<body>
+<header class="head">
+  <div class="top">
+    <div class="clinic"><span class="mark">프라임</span>경주 프라임치과</div>
+    <div class="ver">동의서 버전 8 · 2026. 08. 04</div>
+  </div>
+  <h1>의치(틀니) 치료 동의서 <span>한눈에 보기</span></h1>
+  <p class="pre"><b>동의 전에 미리 읽어 보시는 요약본입니다.</b> 실제 동의는 담당 의료진의 설명을 듣고 궁금한 점을 질문하신 뒤, 병원에서 동의서 원본에 서명하여 진행합니다.</p>
+</header>
+<main class="body">
+  <div class="col">
+    <section class="sec">
+      <div class="sec-h"><span class="no">1</span><h2>치료 목적과 종류</h2></div>
+      <p>빠진 치아와 주변 조직을 인공 치아와 틀니 바탕(의치상)으로 대신해 <b>씹기·발음·외모를 회복</b>하는 치료입니다. 자연치아처럼 뼈에 고정되지 않고 <b>잇몸 위에 얹혀 지지</b>되기 때문에 근본적인 한계가 있습니다.</p>
+      <div class="alts types"><div class="alt"><h3>총의치 (완전틀니)</h3><p>잇몸과 입천장 전체가 씹는 힘을 받습니다.</p></div><div class="alt"><h3>부분의치</h3><p>남은 치아에 고리를 걸어 치아와 잇몸이 힘을 나눠 받습니다.</p></div><div class="alt"><h3>임플란트 틀니</h3><p>잇몸뼈에 심은 임플란트에 걸어 유지력을 높입니다. (임플란트 수술은 따로 설명·동의)</p></div></div>
+      <div class="flow"><span>본뜨기</span><i>→</i><span>납의치 시적 (모양 확인)</span><i>→</i><span>장착</span><i>→</i><span>여러 번 조정</span></div>
+      <p class="muted">틀니는 끼우는 날 끝나는 것이 아니라 여러 차례 조정을 거쳐 완성됩니다.</p>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">2</span><h2>꼭 알아 두실 점</h2></div>
+      <div class="box"><p>잘 만든 틀니라도 다음과 같은 한계가 있습니다.</p><ul><li><b>씹는 힘은 자연치아에 미치지 못합니다</b>. 앞니로 베어 물기 어렵고, 딱딱하거나 질기고 끈적한 음식은 씹기 힘듭니다.</li><li>적응에는 시간과 <b>여러 번의 조정</b>이 필요합니다. 잇몸이 아프고 헐리는 것은 흔한 과정입니다.</li><li>잇몸뼈는 계속 줄어들어 <b>시간이 지나면 헐거워지고</b>, 틀니 안쪽을 보강(첨상)하거나 다시 만들어야 합니다.</li><li>납의치 시적 뒤에 모양을 바꾸려면 <b>새로 만들어야</b> 합니다.</li></ul></div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">3</span><h2>다른 치료 방법</h2></div>
+      <ul class="alist"><li><b>임플란트</b> — 뼈가 힘을 받아 자연치아에 가깝게 씹고 이물감이 적지만, 수술이 필요하고 기간·비용이 더 들며 뼈·전신 상태에 따라 어렵거나 골이식이 필요할 수 있습니다.</li><li><b>고정성 브릿지</b> — 이물감이 적고 자연치아에 가깝지만, 양옆 치아를 깎아야 하고 빠진 범위가 넓거나 맨 뒤 치아가 없으면 할 수 없습니다.</li><li><b>치료하지 않음</b> — 남은 치아가 움직이고 맞은편 치아가 솟으며 잇몸뼈가 계속 줄어 나중엔 틀니도 임플란트도 더 어려워집니다. 씹기·발음·영양이 나빠지고 얼굴 모습이 변할 수 있습니다.</li></ul>
+    </section>
+  </div>
+  <div class="col">
+    <section class="sec">
+      <div class="sec-h"><span class="no">4</span><h2>생길 수 있는 합병증</h2></div>
+      <div class="cx">
+        <div class="cx-g"><h3>기능·적응</h3><p>이물감·부피감, 침이 많아짐, 발음 변화, 구역질(심하면 착용이 어려움), 맛·온도를 덜 느낌(위 틀니는 입천장을 덮어 뜨거운 음식에 델 수 있음), 인공치 색·모양·배열이 기대와 다름, 턱 높이 변화로 얼굴 모습 변화. 적응 정도는 사람마다 크게 달라 여러 번 조정해도 끝내 편하지 않을 수 있습니다.</p></div>
+        <div class="cx-g"><h3>잇몸·점막·유지력</h3><p>잇몸 통증·상처(조정해도 반복될 수 있음), 헐거움(특히 <b>아래 완전틀니</b>, 잇몸뼈가 낮거나 입이 마르면 더 심함), 곰팡이균에 의한 의치성 구내염(밤에도 끼거나 위생이 부족하면 위험 증가), 틀니 재료 알레르기, 안 맞는 틀니를 오래 쓰면 잇몸 군살 — 낫지 않는 상처나 흰·붉은 반점이 계속되면 검사가 필요합니다. 본뜨기·조정 중 입안 상처나 구역감, 마취 시 주사 부위 통증·멍·어지럼.</p></div>
+        <div class="cx-g"><h3>시간이 지나며 생기는 변화</h3><p>잇몸뼈 흡수는 <b>피할 수 없어</b> 잘 맞던 틀니도 점차 헐거워지고 아파져 수리·재제작이 필요합니다. 고리를 거는 치아는 시리거나 흔들리고 충치·마모가 생기기 쉬우며, 이 치아를 잃으면 틀니를 고치거나 다시 만들어야 합니다.</p></div>
+        <div class="cx-g"><h3>임플란트 틀니</h3><p>유지력은 좋아지지만 잇몸도 힘을 받아 위의 한계가 그대로 적용되고 조정·첨상이 필요합니다. 캡·고무링은 닳는 <b>소모품</b>이라 교체 비용이 들고, 임플란트 주위염이나 결합 실패로 임플란트를 잃으면 틀니를 고치거나 다시 만들어야 합니다.</p></div>
+        <div class="cx-g grave"><h3>드물지만 중대한 합병증</h3><ul><li>약물·재료 알레르기, 아나필락시스(쇼크) — 응급 처치·상급병원 이송 필요</li></ul></div>
+      </div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">5</span><h2>꼭 알려 주세요</h2></div>
+      <p class="muted">안전한 치료를 위해 아래에 해당하면 미리 말씀해 주세요.</p>
+      <div class="chips"><span>당뇨</span><span>고혈압·심장질환</span><span>약물·마취제 알레르기</span><span>틀니 재료(아크릴·금속) 알레르기</span><span>입 마름·입 마르게 하는 약</span><span>골다공증 약 (주사 포함)</span><span>항암·면역억제제·두경부 방사선</span><span>항혈전제·출혈성 질환</span><span>심한 구역질</span><span>이갈이·이 악물기</span><span>흡연</span><span>예전 틀니에서 불편했던 점</span><span>그 밖의 질환·복용 약</span></div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">6</span><h2>환자분이 지켜 주실 일</h2></div>
+      <ul class="rules"><li><span>정해진 <b>조정·점검·정기검진</b>에 꼭 오세요.</span></li><li><span><b>납의치 시적</b>(밀랍으로 만든 임시 틀니를 끼워 보는 단계)에서 인공치 색·크기·모양·배열과 얼굴 모습을 충분히 확인해 주세요.</span></li><li><span>틀니와 입안을 매일 깨끗이 관리하고, 잘 때는 빼 두어 잇몸을 쉬게 해 주세요.</span></li><li><span>아프거나 헐거워지는 등 이상이 있거나 <b>건강 상태·복용 약이 바뀌면</b> 알려 주세요.</span></li></ul>
+    </section>
+  </div>
+</main>
+<footer class="foot"><p><b>동의서에 서명하시면</b> 위 내용, 특히 씹는 힘의 한계, 적응과 여러 번의 조정, 잇몸뼈 흡수에 따른 첨상·재제작, 납의치 시적 후 변경 시 재제작에 대해 설명 듣고 이해했으며, 자유로운 의사로 의치 치료에 동의함을 확인하게 됩니다.</p><p>주치의는 설명을 맡고 시술을 주도하는 의사이며, 필요하면 본원의 다른 치과의사가 일부 과정에 참여할 수 있습니다. 미성년자이거나 내용을 이해하기 어려운 경우에는 대리인이 서명합니다.</p></footer>
+<section class="sign">
+  <p class="lbl">요약본을 읽고<br>확인했습니다</p>
+  <div class="f"><span>확인일</span><div>년&emsp;&emsp;&emsp;월&emsp;&emsp;&emsp;일</div></div>
+  <div class="f"><span>환자(또는 대리인) 성명</span><div>(서명)</div></div>
+</section>
+<script>
+// 넘치면 글자 크기를 조금씩 줄여 A4 한 장에 맞춤
+document.fonts.ready.then(function fit(){
+  const cols=[...document.querySelectorAll('.col')];
+  const m=document.querySelector("main");
+  const over=()=>document.body.scrollHeight>1124||m.scrollHeight>m.clientHeight+1||cols.some(c=>c.scrollHeight>c.clientHeight+1);
+  let fs=11.8, gap=14;
+  while(over() && fs>9.6){ fs-=0.1; if(gap>9) gap-=0.5;
+    document.documentElement.style.setProperty('--fs',fs+'px');
+    document.documentElement.style.setProperty('--gap',gap+'px'); }
+  document.body.dataset.fs=fs.toFixed(1);
+});
+</script>
+</body>
+</html>
