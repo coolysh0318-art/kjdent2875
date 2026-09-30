@@ -1,0 +1,378 @@
+<title>임플란트 수술 안내문</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@700;800;900&family=Noto+Sans+KR:wght@400;500;700&display=swap">
+<style>
+/* Layout: 한 장짜리 환자 안내문. 좁은 단일 컬럼, 섹션마다 시기 태그, 마지막은 경고 박스 */
+:root {
+  --bg: #f6f7f8;
+  --paper: #ffffff;
+  --ink: #1d2327;
+  --muted: #5f6a70;
+  --line: #e2e6e9;
+  --brand: #e8891c;        /* 로고 오렌지 */
+  --brand-ink: #b3620a;
+  --brand-soft: #fdf1e3;
+  --teal: #1f7a78;
+  --teal-soft: #e5f2f1;
+  --alert: #c8322b;
+  --alert-soft: #fcebea;
+  --font-display: "Gothic A1", "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
+  --font-body: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #14181b; --paper: #1c2226; --ink: #e9edef; --muted: #a2adb3; --line: #2e373c;
+    --brand: #f5a142; --brand-ink: #f7b366; --brand-soft: #33271a;
+    --teal: #5cc0bd; --teal-soft: #17302f;
+    --alert: #ff7a72; --alert-soft: #3a1f1d;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #14181b; --paper: #1c2226; --ink: #e9edef; --muted: #a2adb3; --line: #2e373c;
+  --brand: #f5a142; --brand-ink: #f7b366; --brand-soft: #33271a;
+  --teal: #5cc0bd; --teal-soft: #17302f;
+  --alert: #ff7a72; --alert-soft: #3a1f1d;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.75;
+  word-break: keep-all;
+  padding: 32px 16px 64px;
+}
+.sheet {
+  max-width: 760px;
+  margin: 0 auto;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+}
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+b, strong { font-weight: 700; }
+.num { color: var(--brand-ink); font-weight: 700; white-space: nowrap; }
+
+/* 머리 */
+.head {
+  padding: 36px 40px 28px;
+  border-bottom: 6px solid var(--brand);
+  display: grid;
+  gap: 18px;
+}
+.clinic { display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--brand-ink); letter-spacing: .04em; font-size: 14px; }
+.clinic .mark {
+  width: 30px; height: 30px; border-radius: 6px; background: var(--brand); color: #fff;
+  display: grid; place-items: center; font-family: var(--font-display); font-weight: 900; font-size: 13px;
+}
+.head h1 { font-size: clamp(30px, 6vw, 42px); font-weight: 900; letter-spacing: -.02em; line-height: 1.2; }
+.meta { display: flex; flex-wrap: wrap; gap: 6px 16px; color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+.intro { color: var(--ink); max-width: 62ch; }
+.intro p + p { margin-top: 8px; }
+
+.notice {
+  display: grid; gap: 4px;
+  background: var(--teal-soft);
+  border-radius: 6px;
+  padding: 14px 18px;
+}
+.notice strong { color: var(--teal); font-size: 15px; }
+.notice p { font-size: 14.5px; }
+
+/* 시간표 요약 */
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  border-bottom: 1px solid var(--line);
+  background: var(--bg);
+}
+.timeline div { padding: 14px 12px; border-right: 1px solid var(--line); display: grid; gap: 2px; }
+.timeline div:last-child { border-right: 0; }
+.timeline .t { font-family: var(--font-display); font-weight: 800; font-size: 15px; color: var(--brand-ink); }
+.timeline .d { font-size: 12.5px; color: var(--muted); line-height: 1.5; }
+
+/* 본문 섹션 */
+section { padding: 34px 40px; border-bottom: 1px solid var(--line); display: grid; gap: 18px; }
+section:last-of-type { border-bottom: 0; }
+.sec-head { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.sec-no {
+  font-family: var(--font-display); font-weight: 900; font-size: 15px;
+  color: var(--paper); background: var(--ink);
+  width: 28px; height: 28px; border-radius: 50%;
+  display: inline-grid; place-items: center; flex: none; transform: translateY(-2px);
+}
+.sec-head h2 { font-size: 23px; font-weight: 800; letter-spacing: -.01em; }
+.when { font-size: 12.5px; font-weight: 700; color: var(--brand-ink); background: var(--brand-soft); padding: 2px 10px; border-radius: 99px; letter-spacing: .02em; }
+
+/* 1. 진행 단계 */
+.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; counter-reset: step; }
+.steps li { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 14px; position: relative; padding-bottom: 22px; }
+.steps li:last-child { padding-bottom: 0; }
+.steps li::before {
+  counter-increment: step; content: counter(step);
+  width: 36px; height: 36px; border-radius: 50%;
+  border: 2px solid var(--brand); color: var(--brand-ink); background: var(--paper);
+  display: grid; place-items: center; font-family: var(--font-display); font-weight: 900; z-index: 1;
+}
+.steps li:not(:last-child)::after {
+  content: ""; position: absolute; left: 17px; top: 38px; bottom: 0; width: 2px; background: var(--line);
+}
+.steps h3 { font-size: 18px; font-weight: 800; display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
+.steps h3 small { font-family: var(--font-body); font-size: 13px; font-weight: 500; color: var(--muted); }
+.steps .body { display: grid; gap: 4px; padding-top: 4px; min-width: 0; }
+.steps .body p { color: var(--ink); }
+.steps .body p.sub { color: var(--muted); font-size: 14.5px; }
+
+/* 체크 리스트 */
+.items { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.items li { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 12px; }
+.items li::before {
+  content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--brand);
+  margin: 10px 0 0 7px;
+}
+.items .body { display: grid; gap: 3px; min-width: 0; }
+.items .lead { font-weight: 700; }
+.items .body p:not(.lead) { color: var(--muted); font-size: 15px; }
+
+.subhead { font-size: 15px; font-weight: 800; color: var(--teal); padding-top: 6px; border-top: 1px dashed var(--line); margin-top: 4px; padding-top: 16px; }
+
+.tip {
+  background: var(--brand-soft); border-radius: 6px; padding: 14px 18px;
+  display: grid; gap: 4px; font-size: 15px;
+}
+.tip strong { color: var(--brand-ink); }
+
+/* 5. 응급 */
+.alert-sec { background: var(--alert-soft); }
+.alert-sec .sec-no { background: var(--alert); color: #fff; }
+.alert-sec .sec-head h2 { color: var(--alert); }
+.calls { display: grid; gap: 10px; }
+.call {
+  background: var(--paper); border: 1px solid var(--line); border-radius: 6px;
+  padding: 14px 18px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 16px; align-items: start;
+}
+.call .sym { font-weight: 700; }
+.call .sym small { display: block; font-weight: 400; color: var(--muted); font-size: 14px; }
+.call .act { font-size: 13.5px; font-weight: 700; color: var(--alert); border: 1.5px solid var(--alert); border-radius: 99px; padding: 2px 12px; white-space: nowrap; }
+.call.critical { border: 2px solid var(--alert); }
+.call.critical .act { background: var(--alert); color: #fff; }
+
+.foot { padding: 22px 40px 30px; color: var(--muted); font-size: 13px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+
+@media (max-width: 640px) {
+  body { padding-block: 0 40px; padding-inline: 0; }
+  .sheet { border-radius: 0; border-inline: 0; }
+  .head, section, .foot { padding-inline: 20px; }
+  .timeline { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .timeline div { border-bottom: 1px solid var(--line); }
+  .timeline div:nth-child(2n) { border-right: 0; }
+  .timeline div:last-child { grid-column: 1 / -1; border-bottom: 0; }
+  .call { grid-template-columns: minmax(0, 1fr); }
+  .call .act { justify-self: start; white-space: normal; }
+}
+@media print {
+  body { background: #fff; padding: 0; }
+  .sheet { border: 0; }
+  section { break-inside: avoid-page; }
+}
+</style>
+
+<article class="sheet">
+  <header class="head">
+    <div class="clinic"><span class="mark">프라임</span>경주 프라임치과</div>
+    <h1>임플란트 수술 안내문</h1>
+    <div class="meta"><span>문서 버전 2</span><span>작성일 2026. 08. 06</span></div>
+    <div class="intro">
+      <p>이 안내문은 임플란트 수술의 진행 과정과 수술 후 관리 요령을 담고 있습니다.</p>
+      <p>보철물(인공 치아)을 장착하신 뒤의 관리는 「임플란트 보철 안내문」으로 따로 안내해 드립니다. 치료 기간 동안 보관하시고, 필요할 때마다 꺼내 보세요.</p>
+    </div>
+    <div class="notice">
+      <strong>개별 안내를 우선해 주세요</strong>
+      <p>이 문서는 일반적인 치료 안내입니다. 환자분의 상태에 따라 담당 의료진의 지시가 다를 수 있습니다.</p>
+    </div>
+  </header>
+
+  <div class="timeline" aria-label="수술 후 기간별 요약">
+    <div><span class="t">당일</span><span class="d">거즈 2~3시간<br>마취 풀린 후 식사</span></div>
+    <div><span class="t">48시간</span><span class="d">냉찜질<br>이후 온찜질</span></div>
+    <div><span class="t">1~2주</span><span class="d">약 끝까지 복용<br>실밥 제거</span></div>
+    <div><span class="t">약 1개월</span><span class="d">이식 부위 보호<br>비행기·수영 자제</span></div>
+    <div><span class="t">2~4개월</span><span class="d">뼈와 붙는 기간<br>수술 부위로 씹지 않기</span></div>
+  </div>
+
+  <!-- 1 -->
+  <section>
+    <div class="sec-head"><span class="sec-no">1</span><h2>임플란트 치료는 이렇게 진행됩니다</h2></div>
+    <ol class="steps">
+      <li><div class="body">
+        <h3>1차 수술</h3>
+        <p>잇몸을 절개하고 턱뼈에 임플란트 고정체를 심습니다.</p>
+        <p class="sub">뼈나 잇몸이 부족하면 골이식, 상악동 거상술, 연조직 이식술을 1차 수술 전후 또는 함께 시행할 수 있습니다.</p>
+      </div></li>
+      <li><div class="body">
+        <h3>골유착 기간 <small>보통 2~4개월</small></h3>
+        <p>임플란트가 뼈와 단단히 붙는 기간입니다.</p>
+        <p class="sub">골이식 여부나 구강 상태에 따라 더 길어질 수 있습니다.</p>
+      </div></li>
+      <li><div class="body">
+        <h3>2차 수술 <small>필요한 경우</small></h3>
+        <p>잇몸을 열어 치유 지대주를 연결합니다.</p>
+        <p class="sub">구강 상태에 따라 1차 수술과 함께 하거나 생략할 수 있습니다.</p>
+      </div></li>
+      <li><div class="body">
+        <h3>보철 치료</h3>
+        <p>본을 뜬 뒤 최종 인공 치아를 만들어 장착합니다.</p>
+        <p class="sub">필요하면 그 전에 임시치아나 임시틀니를 먼저 쓰기도 합니다. 장착 후 관리는 「임플란트 보철 안내문」을 참고해 주세요.</p>
+      </div></li>
+    </ol>
+  </section>
+
+  <!-- 2 -->
+  <section>
+    <div class="sec-head"><span class="sec-no">2</span><h2>수술 당일 주의사항</h2><span class="when">수술 당일 ~ 3일</span></div>
+    <ul class="items">
+      <li><div class="body">
+        <p class="lead">거즈는 <span class="num">2~3시간</span> 지그시 물어 주세요.</p>
+        <p>침이나 피는 뱉지 말고 삼키세요. 계속 뱉으면 지혈이 늦어집니다.</p>
+      </div></li>
+      <li><div class="body">
+        <p class="lead">식사는 마취가 완전히 풀린 뒤에 하세요.</p>
+        <p>감각이 없는 동안에는 입술·볼·혀를 깨물거나 뜨거운 음식에 데일 수 있습니다.</p>
+        <p>처방받은 진통제는 마취가 풀리기 전에 미리 드시면 통증 조절에 도움이 됩니다.</p>
+      </div></li>
+      <li><div class="body">
+        <p class="lead">수술 후 <span class="num">48시간</span>은 냉찜질, 그 뒤로는 온찜질을 해 주세요.</p>
+        <p>수술한 쪽 볼에 <span class="num">15분</span> 찜질하고 <span class="num">15분</span> 쉬기를 반복합니다. 48시간 이후에는 온찜질이나 가벼운 마사지가 부기를 빼는 데 도움이 됩니다.</p>
+      </div></li>
+      <li><div class="body">
+        <p class="lead">빨대, 코 풀기, 침 뱉기, 세게 가글하기는 피해 주세요.</p>
+        <p>입안의 압력이 바뀌면 지혈을 방해할 수 있습니다.</p>
+      </div></li>
+      <li><div class="body">
+        <p class="lead">당일에는 미지근하고 부드러운 음식을 드세요.</p>
+        <p>죽이나 수프 같은 음식을 수술 반대쪽으로 드시고, 뜨겁거나 자극적인 음식은 피해 주세요.</p>
+      </div></li>
+      <li><div class="body">
+        <p class="lead">사우나, 격한 운동, 오랜 목욕은 <span class="num">2~3일</span>간 쉬어 주세요.</p>
+        <p>출혈을 일으킬 수 있습니다.</p>
+      </div></li>
+    </ul>
+  </section>
+
+  <!-- 3 -->
+  <section>
+    <div class="sec-head"><span class="sec-no">3</span><h2>수술 후 1~2주 관리</h2><span class="when">실밥 풀 때까지</span></div>
+    <ul class="items">
+      <li><div class="body">
+        <p class="lead">처방약은 임의로 끊지 말고 끝까지 드세요.</p>
+        <p>두드러기나 심한 위장 장애가 생기면 복용을 멈추고 병원에 연락해 주세요.</p>
+      </div></li>
+      <li><div class="body">
+        <p class="lead">수술 부위는 따로 안내드릴 때까지 칫솔질하지 마세요.</p>
+        <p>나머지 치아는 평소처럼 닦으세요. 소금물 대신 깨끗한 물과 일반 치약을 쓰시면 됩니다. 가글액을 처방받으셨다면 안내대로 사용해 주세요.</p>
+      </div></li>
+      <li><div class="body">
+        <p class="lead">실밥(봉합사)은 보통 <span class="num">1~2주</span> 뒤에 뽑습니다.</p>
+        <p>그 전에 빠지면 연락해 주세요.</p>
+      </div></li>
+      <li><div class="body">
+        <p class="lead">최소 <span class="num">2주</span>, 가능하면 치료 기간 내내 금연·금주해 주세요.</p>
+        <p>흡연과 음주는 상처 회복을 늦추고 임플란트 실패율을 높이는 가장 큰 원인입니다.</p>
+      </div></li>
+      <li><div class="body">
+        <p class="lead">부기는 <span class="num">2~3일째</span>에 가장 심하고, 그 뒤로 가라앉습니다.</p>
+        <p>길게는 2주까지 갈 수 있습니다. 멍이 턱이나 목까지 번지거나, 입이 잘 안 벌어지고 턱이 뻣뻣할 수도 있습니다. 오래가면 내원해 주세요.</p>
+      </div></li>
+    </ul>
+    <div class="tip">
+      <strong>이럴 땐 연락 주세요</strong>
+      <p>2~3일이 지났는데 부기나 통증이 점점 심해질 때, 열이 날 때, 출혈이 멈추지 않을 때</p>
+    </div>
+  </section>
+
+  <!-- 4 -->
+  <section>
+    <div class="sec-head"><span class="sec-no">4</span><h2>치유 기간과 임시치아</h2><span class="when">뼈와 붙는 2~4개월</span></div>
+    <ul class="items">
+      <li><div class="body">
+        <p class="lead">잇몸 밖으로 나온 부분(치유 지대주)을 건드리지 마세요.</p>
+        <p>손, 혀, 칫솔로 작은 힘이라도 반복해서 가해지면 뼈와 붙는 데 방해가 되어 재수술이 필요할 수 있습니다.</p>
+      </div></li>
+      <li><div class="body">
+        <p class="lead">수술 부위로 딱딱하거나 질긴 음식을 씹지 마세요.</p>
+        <p>뼈와 붙기 전에 힘이 가해지면 실패의 원인이 됩니다.</p>
+      </div></li>
+      <li><div class="body">
+        <p class="lead">임시치아·임시틀니는 조심해서 써 주세요.</p>
+        <p>빠지거나 깨질 수 있습니다. 문제가 생기면 먼저 연락하고 내원해 주세요. 잇몸이 아물면서 임시틀니가 금방 헐거워져 여러 번 조정이 필요할 수 있습니다.</p>
+      </div></li>
+      <li><div class="body">
+        <p class="lead">건강 상태나 드시는 약이 바뀌면 꼭 알려 주세요.</p>
+        <p>특히 <b>골다공증 치료제(먹는 약·주사)</b>를 새로 시작하시면 반드시 말씀해 주세요. 드물게 턱뼈 괴사가 생길 수 있어 치료 일정 조율이 필요합니다.</p>
+      </div></li>
+    </ul>
+
+    <h3 class="subhead">골이식·상악동 거상술을 함께 받으신 분</h3>
+    <ul class="items">
+      <li><div class="body">
+        <p class="lead">약 <span class="num">한 달</span>간 이식 부위 잇몸을 건드리지 마세요.</p>
+        <p>손이나 혀로 만지지 마시고, 그 부위 칫솔질도 피해 주세요.</p>
+      </div></li>
+      <li><div class="body">
+        <p class="lead">코를 풀거나 빨대를 쓰지 마시고, 기침은 자제해 주세요.</p>
+        <p>재채기는 참지 말고 <b>입을 벌린 채</b> 하세요. 참으면 상악동(코 옆 빈 공간) 압력이 높아져 이식 부위가 손상될 수 있습니다.</p>
+      </div></li>
+      <li><div class="body">
+        <p class="lead">고개를 숙이지 마시고, 주무실 때는 베개를 높여 주세요.</p>
+        <p>상체나 고개를 숙이는 자세는 피해 주세요.</p>
+      </div></li>
+      <li><div class="body">
+        <p class="lead">약 <span class="num">한 달</span>간 비행기·등산·수영을 자제해 주세요.</p>
+        <p>상악동 거상술을 받으셨다면 수영 중 코로 물이 들어가 감염이 생길 수 있습니다. 관악기 연주는 <span class="num">2주</span> 정도 쉬어 주세요.</p>
+      </div></li>
+      <li><div class="body">
+        <p class="lead">코피 섞인 물이나 뼈 알갱이가 조금 나올 수 있습니다.</p>
+        <p>수술 후 2~3일간 코에서 피 섞인 물이 나오거나, 며칠간 이식한 뼈 알갱이가 입안으로 조금씩 나오는 것은 대개 정상입니다. 양이 많거나 걱정되시면 연락해 주세요.</p>
+      </div></li>
+    </ul>
+  </section>
+
+  <!-- 5 -->
+  <section class="alert-sec">
+    <div class="sec-head"><span class="sec-no">5</span><h2>이럴 때는 바로 연락해 주세요</h2></div>
+    <div class="calls">
+      <div class="call">
+        <p class="sym">거즈를 2~3시간 물어도 피가 멈추지 않고 계속 고일 때</p>
+        <span class="act">새 거즈 물고 연락</span>
+      </div>
+      <div class="call">
+        <p class="sym">2~3일 후 부기·통증이 오히려 심해질 때, 38℃ 이상 열, 고름이나 냄새가 날 때<small>감염 신호일 수 있습니다.</small></p>
+        <span class="act">즉시 내원</span>
+      </div>
+      <div class="call">
+        <p class="sym">아랫입술·턱·혀가 먹먹하거나 저린 느낌, 맛이 달라진 느낌이 며칠 넘게 갈 때<small>신경과 관련된 증상일 수 있습니다.</small></p>
+        <span class="act">바로 알려 주세요</span>
+      </div>
+      <div class="call">
+        <p class="sym">임시치아나 치유 지대주가 빠졌을 때<small>직접 다시 끼우지 마세요.</small></p>
+        <span class="act">내원</span>
+      </div>
+      <div class="call critical">
+        <p class="sym">숨쉬기 힘들 때, 입 바닥이 붓고 침 삼키기 어려울 때, 두드러기·얼굴 부종 같은 알레르기 반응이 있을 때<small>응급 처치 후 본원에도 알려 주세요.</small></p>
+        <span class="act">즉시 119 · 응급실</span>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <span>경주 프라임치과 · 임플란트 수술 안내문</span>
+    <span>문서 버전 2 · 2026. 08. 06</span>
+  </footer>
+</article>

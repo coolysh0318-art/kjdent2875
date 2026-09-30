@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Teeth Whitening Consent Summary</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@700;800;900&amp;family=Noto+Sans:wght@400;500;700;800;900&amp;family=Noto+Sans+KR:wght@400;500;700;900&amp;family=Noto+Sans+Thai:wght@400;500;700;800;900&amp;family=Noto+Sans+SC:wght@400;500;700;800;900&amp;display=swap">
+<style>
+/* A4 한 장(794×1123 CSS px) 이미지용 — 임플란트 동의서 요약과 같은 레이아웃 */
+:root {
+  --paper: #ffffff; --ink: #1d2327; --muted: #5a656b; --line: #e2e6e9; --tint: #f5f7f8;
+  --brand: #e8891c; --brand-ink: #b3620a; --brand-soft: #fdf1e3;
+  --teal: #1f7a78; --teal-soft: #e5f2f1; --alert: #c8322b; --alert-soft: #fcebea;
+  --font: "Noto Sans", "Noto Sans KR", sans-serif;
+  --display: "Noto Sans", "Noto Sans KR", sans-serif;
+  --fs: 11.2px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--paper); }
+body { width: 794px; height: 1123px; overflow: hidden; color: var(--ink); font-family: var(--font);
+  font-size: var(--fs); line-height: 1.5; display: flex; flex-direction: column; overflow-wrap: break-word; word-break: normal; }
+h1, h2, h3 { font-family: var(--display); }
+b { font-weight: 700; }
+.head { padding: 24px 34px 14px; border-bottom: 5px solid var(--brand); display: grid; gap: 7px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.clinic { display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--brand-ink); font-size: 12px; }
+.mark { background: var(--brand); color: #fff; font-family: "Noto Sans KR", sans-serif; font-weight: 900; font-size: 11px; border-radius: 5px; padding: 3px 6px; }
+.ver { color: var(--muted); font-size: 11px; }
+h1 { font-size: 28px; font-weight: 900; letter-spacing: -.01em; line-height: 1.25; }
+h1 span { color: var(--brand-ink); }
+.pre { background: var(--teal-soft); border-radius: 5px; padding: 8px 12px; font-size: 0.97em; }
+.pre b { color: var(--teal); }
+.body { flex: 1; display: grid; grid-template-columns: 1fr 1fr; min-height: 0; }
+.col { padding: 16px 20px 14px; display: flex; flex-direction: column; gap: var(--gap, 14px); min-width: 0; }
+.col + .col { border-left: 1px solid var(--line); }
+.sec { display: grid; gap: 6px; flex: none; }
+.sec-h { display: flex; align-items: center; gap: 8px; }
+.no { width: 21px; height: 21px; border-radius: 50%; background: var(--ink); color: #fff; font-family: "Noto Sans", sans-serif; font-weight: 900; font-size: 11.5px; display: grid; place-items: center; flex: none; }
+h2 { font-size: 1.24em; font-weight: 800; line-height: 1.3; }
+.muted { color: var(--muted); }
+.box { border: 1.5px solid var(--brand); border-radius: 6px; padding: 8px 12px; display: grid; gap: 4px; }
+.box ul, .grave ul { list-style: none; display: grid; gap: 3px; }
+.box li, .grave li { padding-left: 11px; position: relative; }
+.box li::before, .grave li::before { content: ""; position: absolute; left: 1px; top: .62em; width: 5px; height: 5px; border-radius: 50%; background: var(--brand); }
+.alts { display: grid; gap: 5px; }
+.alt { display: grid; align-items: start; grid-template-columns: 120px minmax(0,1fr); gap: 8px; background: var(--tint); border-radius: 5px; padding: 5px 10px; }
+.alt h3 { font-size: 1em; font-weight: 800; }
+.types .alt { background: var(--brand-soft); }
+.types .alt h3 { color: var(--brand-ink); }
+.flow { display: flex; align-items: center; gap: 4px 5px; flex-wrap: wrap; }
+.flow span { background: var(--brand-soft); color: var(--brand-ink); font-weight: 700; border-radius: 99px; padding: 1px 9px; font-size: 0.92em; }
+.flow i { color: var(--brand); font-style: normal; font-weight: 900; }
+.alist { list-style: none; display: grid; gap: 4px; }
+.alist li { background: var(--tint); border-radius: 5px; padding: 4px 10px; }
+.chips { display: flex; flex-wrap: wrap; gap: 4px; }
+.chips span { border: 1px solid var(--line); border-radius: 99px; padding: 0 9px; font-size: 0.93em; }
+.cx { display: grid; gap: 5px; }
+.cx-g { display: grid; gap: 1px; }
+.cx-g h3 { font-size: 1em; font-weight: 800; color: var(--brand-ink); }
+.grave { background: var(--alert-soft); border-radius: 6px; padding: 7px 11px; }
+.grave h3 { color: var(--alert); }
+.grave li::before { background: var(--alert); }
+.rules { list-style: none; display: grid; gap: 3px; }
+.rules li { display: grid; grid-template-columns: 16px 1fr; gap: 6px; }
+.rules li::before { content: "✓"; color: var(--teal); font-weight: 900; }
+.foot { border-top: 1px solid var(--line); background: var(--tint); padding: 9px 34px 11px; display: grid; gap: 2px; font-size: 0.88em; color: var(--muted); }
+.foot b { color: var(--ink); }
+.sign { padding: 10px 34px 16px; border-top: 1.5px solid var(--ink); display: grid; grid-template-columns: auto 1fr 1.4fr; gap: 20px; align-items: end; }
+.sign .lbl { font-family: var(--display); font-weight: 800; font-size: 12.5px; line-height: 1.35; }
+.sign .f { display: grid; gap: 3px; }
+.sign .f > span { font-size: 10.5px; color: var(--muted); }
+.sign .f div { border-bottom: 1px solid var(--ink); height: 26px; display: flex; justify-content: flex-end; align-items: flex-end; padding: 0 2px 3px; font-size: 11px; color: var(--muted); }
+</style>
+</head>
+<body>
+<header class="head">
+  <div class="top">
+    <div class="clinic"><span class="mark">프라임</span>Prime Dental Clinic, Gyeongju</div>
+    <div class="ver">Consent form v6 · Aug 7, 2026</div>
+  </div>
+  <h1>Teeth Whitening Consent <span>— Summary</span></h1>
+  <p class="pre"><b>This summary is for reading before you give consent.</b> Actual consent takes place at the clinic: after your dentist explains the treatment and answers your questions, you sign the original consent form.</p>
+</header>
+<main class="body">
+  <div class="col">
+    <section class="sec">
+      <div class="sec-h"><span class="no">1</span><h2>Purpose and methods</h2></div>
+      <p>A whitening agent (hydrogen or carbamide peroxide) breaks down pigments inside the tooth to <b>lighten discolored teeth</b>.</p>
+      <div class="alts types"><div class="alt"><h3>In-office whitening</h3><p>Applied at the clinic with gums protected, sometimes with a light.</p></div><div class="alt"><h3>Home whitening</h3><p>Custom trays with gel worn at home (can be combined).</p></div><div class="alt"><h3>Internal whitening</h3><p>Gel placed inside a root-canal-treated tooth and replaced several times.</p></div></div>
+      <div class="flow"><span>Check-up</span><i>→</i><span>Needed treatment</span><i>→</i><span>Whitening</span><i>→</i><span>Maintenance</span></div>
+      <p class="muted">Whitening is an <b>optional cosmetic treatment</b>; skipping it does not harm your oral health.</p>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">2</span><h2>Limits of the effect — please check</h2></div>
+      <div class="box"><p>Results vary by person and by tooth, and you may not reach the shade you want.</p><ul><li><b>The cause of discoloration matters.</b> Yellowish teeth respond well, but gray, bluish or dark stains, drug stains (tetracycline) and fluorosis spots respond poorly. White spots do not disappear and may even stand out more.</li><li><b>Fillings, crowns, veneers and other restorations do not whiten.</b> If they no longer match, they may need to be redone at extra cost.</li><li>The neck of the tooth near the gum is naturally darker, and teeth may lighten unevenly.</li><li>The number of sessions and duration are decided as treatment goes on; extra sessions may cost more.</li><li><b>The effect is not permanent.</b> Teeth darken again over time (this is not failure); coffee, tea, wine, curry and smoking speed this up, and maintenance is needed.</li></ul></div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">3</span><h2>Other treatment options</h2></div>
+      <ul class="alist"><li><b>No treatment</b> — No side effects or cost, but no color change.</li><li><b>Scaling and polishing</b> — Removes surface stains only; teeth will not become lighter than their natural shade.</li><li><b>In-office vs home</b> — In-office is faster but causes more sensitivity; home is gentler but slower.</li><li><b>Microabrasion / resin infiltration</b> — For fluorosis or white spots; slightly removes the surface.</li><li><b>Resin bonding</b> — Color and shape in one visit, but stains over time.</li><li><b>Veneers / crowns</b> — Fix difficult cases but require trimming and cost more.</li></ul>
+    </section>
+  </div>
+  <div class="col">
+    <section class="sec">
+      <div class="sec-h"><span class="no">4</span><h2>Possible complications</h2></div>
+      <div class="cx">
+        <div class="cx-g"><h3>Sensitivity (most common)</h3><p>Sensitivity to cold or sharp twinges are common. They usually appear within the first days and settle within days, but may last longer or be severe enough to stop treatment, and desensitizers do not remove them completely. Rarely the nerve is damaged and a root canal is needed. Untreated decay, leaking fillings, exposed roots, worn tooth necks or cracks make it worse and need treatment first.</p></div>
+        <div class="cx-g"><h3>Gums and mouth</h3><p>Gums, lips or cheeks touched by the agent may turn white and sting or hurt (chemical irritation). This usually heals within days but can last longer; gum inflammation or sores should be treated first.</p></div>
+        <div class="cx-g"><h3>Whitening a root-canal-treated tooth</h3><p>Rarely, <b>external root resorption</b> can occur and cost the tooth, sometimes found years later (a barrier reduces but cannot remove this risk). The root canal may need redoing; fillings may discolor or come off; the target shade may not be reached or color may return.</p></div>
+        <div class="cx-g"><h3>Other</h3><p>Wider gaps at filling margins causing decay or staining; swallowing or inhaling the agent or instruments (swallowing can upset the stomach). <b>Not recommended during pregnancy</b>; consult us if breastfeeding. For teenagers, whitening is done after all permanent teeth have erupted.</p></div>
+        <div class="cx-g grave"><h3>Rare but serious</h3><ul><li>Allergy or anaphylaxis (shock) — emergency care and hospital transfer needed.</li></ul></div>
+      </div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">5</span><h2>Please tell us</h2></div>
+      <p class="muted">For safe whitening, let us know in advance if you have any of the following:</p>
+      <div class="chips"><span>Pregnancy (or possible)</span><span>Breastfeeding</span><span>Allergy to whitening agents (peroxide)</span><span>Other drug / dental material allergy</span><span>Usual tooth sensitivity</span><span>Stomach / esophageal disease</span><span>Head &amp; neck radiation therapy</span><span>Chemotherapy / immunosuppressants</span><span>Smoking</span><span>Other conditions / medications</span></div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">6</span><h2>What we ask of you</h2></div>
+      <ul class="rules"><li><span>Keep to the set time, frequency and duration; <b>do not use it longer</b> to get faster results (it can damage teeth), and use only the amount of agent instructed.</span></li><li><span>If you have sensitivity, pain, or gums turning white or sore, <b>stop right away</b> and tell us.</span></li><li><span>Cut down on staining foods and smoking, and keep your trays clean.</span></li><li><span>Come at the scheduled times, and tell us if your health, medications or <b>pregnancy status</b> change.</span></li></ul>
+    </section>
+  </div>
+</main>
+<footer class="foot"><p><b>By signing the consent form,</b> you confirm that you understand whitening is an optional cosmetic treatment and that you received and understood the explanation — especially that teeth may not become as light as you want, that restorations do not whiten, and that the color returns over time — and agree to whitening of your own free will.</p><p>The attending dentist gives the explanation and performs the main part of the surgery; if needed, other dentists at the clinic may take part in some steps. If the patient is a minor or cannot understand the document, a representative signs.</p><p>This is a translation for reference. If there is any difference, the Korean original prevails.</p></footer>
+<section class="sign">
+  <p class="lbl">I have read<br>this summary</p>
+  <div class="f"><span>Date</span><div>______ / ______ / __________</div></div>
+  <div class="f"><span>Patient (or representative) name</span><div>(signature)</div></div>
+</section>
+<script>
+// 넘치면 글자 크기를 조금씩 줄여 A4 한 장에 맞춤
+document.fonts.ready.then(function fit(){
+  const cols=[...document.querySelectorAll('.col')];
+  const m=document.querySelector("main");
+  const over=()=>document.body.scrollHeight>1124||m.scrollHeight>m.clientHeight+1||cols.some(c=>c.scrollHeight>c.clientHeight+1);
+  let fs=11.2, gap=14;
+  while(over() && fs>9.6){ fs-=0.1; if(gap>9) gap-=0.5;
+    document.documentElement.style.setProperty('--fs',fs+'px');
+    document.documentElement.style.setProperty('--gap',gap+'px'); }
+  document.body.dataset.fs=fs.toFixed(1);
+});
+</script>
+</body>
+</html>

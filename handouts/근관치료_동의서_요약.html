@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>근관치료 동의서 요약</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@700;800;900&amp;family=Noto+Sans:wght@400;500;700;800;900&amp;family=Noto+Sans+KR:wght@400;500;700;900&amp;family=Noto+Sans+Thai:wght@400;500;700;800;900&amp;family=Noto+Sans+SC:wght@400;500;700;800;900&amp;display=swap">
+<style>
+/* A4 한 장(794×1123 CSS px) 이미지용 — 임플란트 동의서 요약과 같은 레이아웃 */
+:root {
+  --paper: #ffffff; --ink: #1d2327; --muted: #5a656b; --line: #e2e6e9; --tint: #f5f7f8;
+  --brand: #e8891c; --brand-ink: #b3620a; --brand-soft: #fdf1e3;
+  --teal: #1f7a78; --teal-soft: #e5f2f1; --alert: #c8322b; --alert-soft: #fcebea;
+  --font: "Noto Sans KR", sans-serif;
+  --display: "Gothic A1", "Noto Sans KR", sans-serif;
+  --fs: 12.0px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--paper); }
+body { width: 794px; height: 1123px; overflow: hidden; color: var(--ink); font-family: var(--font);
+  font-size: var(--fs); line-height: 1.58; display: flex; flex-direction: column; overflow-wrap: break-word; word-break: keep-all; }
+h1, h2, h3 { font-family: var(--display); }
+b { font-weight: 700; }
+.head { padding: 24px 34px 14px; border-bottom: 5px solid var(--brand); display: grid; gap: 7px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.clinic { display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--brand-ink); font-size: 12px; }
+.mark { background: var(--brand); color: #fff; font-family: "Noto Sans KR", sans-serif; font-weight: 900; font-size: 11px; border-radius: 5px; padding: 3px 6px; }
+.ver { color: var(--muted); font-size: 11px; }
+h1 { font-size: 30px; font-weight: 900; letter-spacing: -.01em; line-height: 1.25; }
+h1 span { color: var(--brand-ink); }
+.pre { background: var(--teal-soft); border-radius: 5px; padding: 8px 12px; font-size: 0.97em; }
+.pre b { color: var(--teal); }
+.body { flex: 1; display: grid; grid-template-columns: 1fr 1fr; min-height: 0; }
+.col { padding: 16px 20px 14px; display: flex; flex-direction: column; gap: var(--gap, 14px); min-width: 0; }
+.col + .col { border-left: 1px solid var(--line); }
+.sec { display: grid; gap: 6px; flex: none; }
+.sec-h { display: flex; align-items: center; gap: 8px; }
+.no { width: 21px; height: 21px; border-radius: 50%; background: var(--ink); color: #fff; font-family: "Noto Sans", sans-serif; font-weight: 900; font-size: 11.5px; display: grid; place-items: center; flex: none; }
+h2 { font-size: 1.24em; font-weight: 800; line-height: 1.3; }
+.muted { color: var(--muted); }
+.box { border: 1.5px solid var(--brand); border-radius: 6px; padding: 8px 12px; display: grid; gap: 4px; }
+.box ul, .grave ul { list-style: none; display: grid; gap: 3px; }
+.box li, .grave li { padding-left: 11px; position: relative; }
+.box li::before, .grave li::before { content: ""; position: absolute; left: 1px; top: .62em; width: 5px; height: 5px; border-radius: 50%; background: var(--brand); }
+.alts { display: grid; gap: 5px; }
+.alt { display: grid; grid-template-columns: 92px minmax(0,1fr); gap: 8px; background: var(--tint); border-radius: 5px; padding: 5px 10px; }
+.alt h3 { font-size: 1em; font-weight: 800; }
+.types .alt { background: var(--brand-soft); }
+.types .alt h3 { color: var(--brand-ink); }
+.flow { display: flex; align-items: center; gap: 4px 5px; flex-wrap: wrap; }
+.flow span { background: var(--brand-soft); color: var(--brand-ink); font-weight: 700; border-radius: 99px; padding: 1px 9px; font-size: 0.92em; }
+.flow i { color: var(--brand); font-style: normal; font-weight: 900; }
+.chips { display: flex; flex-wrap: wrap; gap: 4px; }
+.chips span { border: 1px solid var(--line); border-radius: 99px; padding: 0 9px; font-size: 0.93em; }
+.cx { display: grid; gap: 5px; }
+.cx-g { display: grid; gap: 1px; }
+.cx-g h3 { font-size: 1em; font-weight: 800; color: var(--brand-ink); }
+.grave { background: var(--alert-soft); border-radius: 6px; padding: 7px 11px; }
+.grave h3 { color: var(--alert); }
+.grave li::before { background: var(--alert); }
+.rules { list-style: none; display: grid; gap: 3px; }
+.rules li { display: grid; grid-template-columns: 16px 1fr; gap: 6px; }
+.rules li::before { content: "✓"; color: var(--teal); font-weight: 900; }
+.foot { border-top: 1px solid var(--line); background: var(--tint); padding: 9px 34px 11px; display: grid; gap: 2px; font-size: 0.88em; color: var(--muted); }
+.foot b { color: var(--ink); }
+.sign { padding: 10px 34px 16px; border-top: 1.5px solid var(--ink); display: grid; grid-template-columns: auto 1fr 1.4fr; gap: 20px; align-items: end; }
+.sign .lbl { font-family: var(--display); font-weight: 800; font-size: 12.5px; line-height: 1.35; }
+.sign .f { display: grid; gap: 3px; }
+.sign .f > span { font-size: 10.5px; color: var(--muted); }
+.sign .f div { border-bottom: 1px solid var(--ink); height: 26px; display: flex; justify-content: flex-end; align-items: flex-end; padding: 0 2px 3px; font-size: 11px; color: var(--muted); }
+</style>
+</head>
+<body>
+<header class="head">
+  <div class="top">
+    <div class="clinic"><span class="mark">프라임</span>경주 프라임치과</div>
+    <div class="ver">동의서 버전 9 · 2026. 08. 06</div>
+  </div>
+  <h1>근관치료 동의서 <span>한눈에 보기</span></h1>
+  <p class="pre"><b>동의 전에 미리 읽어 보시는 요약본입니다.</b> 실제 동의는 담당 의료진의 설명을 듣고 궁금한 점을 질문하신 뒤, 병원에서 동의서 원본에 서명하여 진행합니다.</p>
+</header>
+<main class="body">
+  <div class="col">
+    <section class="sec">
+      <div class="sec-h"><span class="no">1</span><h2>치료 목적과 과정</h2></div>
+      <p>충치·파절·외상 등으로 치아 속 신경(치수)에 염증이 생기거나 괴사했을 때, 감염된 신경과 세균을 없애고 뿌리 속 신경관을 소독한 뒤 막아서 <b>자연치아를 살려 쓰는 치료</b>입니다.</p>
+      <div class="flow"><span>마취 후 치아 열기</span><i>→</i><span>신경관 청소·소독 (여러 번 내원)</span><i>→</i><span>신경관 충전</span><i>→</i><span>코어·크라운</span></div>
+      <p class="muted">그대로 두면 통증·감염이 반복되고 뿌리 끝과 주변 뼈까지 염증이 번질 수 있습니다. 치료 후에는 보통 크라운으로 씌우며, 경우에 따라 씌우지 않기로 할 수도 있습니다.</p>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">2</span><h2>치료 중 알아 두실 점</h2></div>
+      <div class="box"><p>신경관은 매우 가늘고 복잡하며, 굽어 있거나 막혀(석회화) 있을 수 있습니다.</p><ul><li>그래서 <b>여러 번 나누어 내원</b>해야 합니다.</li><li>상태에 따라 <b>치료 방법이 바뀌거나 추가 처치</b>가 필요할 수 있습니다.</li><li>응급 상황에서는 안전을 위한 처치가 먼저 이루어지며, 필요하면 상급 의료기관으로 전원을 요청할 수 있습니다.</li></ul></div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">3</span><h2>다른 치료 방법</h2></div>
+      <div class="alts">
+        <div class="alt"><h3>발치 후 수복</h3><p>치아를 뽑고 임플란트·브릿지·틀니로 대신합니다. 자연치아를 잃고, 별도의 수술·비용·기간이 들며 옆 치아를 깎아야 할 수 있습니다.</p></div>
+        <div class="alt"><h3>치료하지 않음</h3><p>통증·감염이 반복되고 고름주머니·물혹이 생기거나 옆 치아·턱뼈로 염증이 번져 결국 치아를 잃을 수 있습니다.</p></div>
+      </div>
+      <p class="muted">근관치료는 자연치아를 지키는 장점이 있지만 성공을 보장할 수는 없으며, 실패하면 재근관치료·치근단 수술·발치가 필요할 수 있습니다.</p>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">4</span><h2>환자분이 지켜 주실 일</h2></div>
+      <ul class="rules"><li><span>치료가 끝날 때까지 그 치아로 <b>세게 씹지 마세요</b>. 임시 상태의 치아는 부러지기 쉽습니다.</span></li><li><span><b>임시로 막은 재료가 빠지거나 깨지면</b> 신경관이 오염될 수 있으니 바로 연락하고 내원해 주세요.</span></li><li><span>예약일에 꼭 오셔서 치료를 끝까지 마치고, 크라운이 예정되어 있으면 미루지 마세요.</span></li><li><span>처방과 지시를 따르고, 통증·부기 등 이상이 있거나 <b>건강 상태·복용 약이 바뀌면</b> 바로 알려 주세요.</span></li></ul>
+    </section>
+  </div>
+  <div class="col">
+    <section class="sec">
+      <div class="sec-h"><span class="no">5</span><h2>생길 수 있는 합병증</h2></div>
+      <div class="cx">
+        <div class="cx-g"><h3>치료 중·치료 후</h3><p>며칠간 통증이나 씹을 때 아픔, 치아 감각이 다르게 느껴짐, 치료 중 갑자기 심한 통증·부기(flare-up), 마취 부위 통증·멍·감각 이상, 주사침 파절, 일시적 어지럼·두근거림, 염증이 심하면 마취가 잘 안 되어 추가 마취, 입 벌리기 어려움·턱관절 통증, 러버댐·소독액·처방약 알레르기나 부작용</p></div>
+        <div class="cx-g"><h3>치아·신경관 관련</h3><p>가는 기구가 부러져 신경관 안에 남음, 치아에 의도치 않은 구멍(천공), 막히거나 굽은 신경관을 끝까지 치료하지 못함, 재근관치료 시 기존 충전재·기둥·보철물 제거가 어렵거나 치아 손상, 재료가 뿌리 끝 밖으로 나감, 기존 보철물 손상, 치료 전 발견되지 않은 금(균열)·치근 파절 — 재근관치료·치근단 수술·발치가 필요할 수 있습니다.</p></div>
+        <div class="cx-g"><h3>소독액·주변 구조물</h3><p>소독액이 입안·피부·눈에 닿으면 자극, 옷에 묻으면 영구 탈색. 뿌리 끝 밖으로 새면 갑작스러운 통증·부기·멍. 위 어금니는 상악동 천공·염증(이비인후과 진료), 아래 어금니는 신경 영향으로 아랫입술·턱·잇몸 저림이나 미각 변화(일시적 또는 영구적). 기구나 치아 조각을 삼키거나 들이마심.</p></div>
+        <div class="cx-g"><h3>치료 결과</h3><p>성공률은 높지만 보장할 수 없으며, 염증이 남거나 재발하면 재치료·수술·발치가 필요할 수 있습니다. 신경치료한 치아는 <b>부러지기 쉬워</b> 알맞은 최종 수복이 필요하고, 그 후에도 파절·재감염·변색이 생길 수 있어 정기검진이 필요합니다.</p></div>
+        <div class="cx-g grave"><h3>드물지만 중대한 합병증</h3><ul><li>소독액 누출로 인한 넓은 조직 손상 — 상급기관 처치 필요</li><li>신경관을 말리는 공기가 조직에 들어가 얼굴·목이 붓는 피하기종 (심하면 기도에 영향)</li><li>감염의 전신 확산(패혈증), 아나필락시스(쇼크) — 응급 처치·상급병원 이송 필요</li></ul></div>
+      </div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">6</span><h2>꼭 알려 주세요</h2></div>
+      <p class="muted">안전한 치료를 위해 아래에 해당하면 미리 말씀해 주세요.</p>
+      <div class="chips"><span>당뇨</span><span>고혈압·심장질환 (심내막염 예방이 필요한 경우 포함)</span><span>약물·마취제 알레르기</span><span>라텍스(고무) 알레르기</span><span>두경부 방사선치료</span><span>항암치료·면역억제제</span><span>임신 (가능성 포함)</span><span>흡연</span><span>그 밖의 질환·복용 약</span></div>
+    </section>
+  </div>
+</main>
+<footer class="foot"><p><b>진료비</b> — 재근관치료·치근단 수술·발치 후 수복, 그리고 근관치료 후 최종 수복(코어·기둥·크라운)은 별도 진료로 비용이 따로 듭니다. 금액·납부·취소 시 정산 기준은 따로 안내해 드립니다.</p><p><b>동의서에 서명하시면</b> 위 내용을 설명 듣고 이해했으며, 자유로운 의사로 근관치료에 동의함을 확인하게 됩니다.</p><p>주치의는 설명을 맡고 시술을 주도하는 의사이며, 필요하면 본원의 다른 치과의사가 일부 과정에 참여할 수 있습니다. 미성년자이거나 내용을 이해하기 어려운 경우에는 대리인이 서명합니다.</p></footer>
+<section class="sign">
+  <p class="lbl">요약본을 읽고<br>확인했습니다</p>
+  <div class="f"><span>확인일</span><div>년&emsp;&emsp;&emsp;월&emsp;&emsp;&emsp;일</div></div>
+  <div class="f"><span>환자(또는 대리인) 성명</span><div>(서명)</div></div>
+</section>
+<script>
+// 넘치면 글자 크기를 조금씩 줄여 A4 한 장에 맞춤
+document.fonts.ready.then(function fit(){
+  const cols=[...document.querySelectorAll('.col')];
+  const m=document.querySelector("main");
+  const over=()=>document.body.scrollHeight>1124||m.scrollHeight>m.clientHeight+1||cols.some(c=>c.scrollHeight>c.clientHeight+1);
+  let fs=12.0, gap=14;
+  while(over() && fs>9.6){ fs-=0.1; if(gap>9) gap-=0.5;
+    document.documentElement.style.setProperty('--fs',fs+'px');
+    document.documentElement.style.setProperty('--gap',gap+'px'); }
+  document.body.dataset.fs=fs.toFixed(1);
+});
+</script>
+</body>
+</html>

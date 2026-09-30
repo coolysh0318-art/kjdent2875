@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Tóm tắt giấy đồng ý phục hình răng</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@700;800;900&amp;family=Noto+Sans:wght@400;500;700;800;900&amp;family=Noto+Sans+KR:wght@400;500;700;900&amp;family=Noto+Sans+Thai:wght@400;500;700;800;900&amp;family=Noto+Sans+SC:wght@400;500;700;800;900&amp;display=swap">
+<style>
+/* A4 한 장(794×1123 CSS px) 이미지용 — 임플란트 동의서 요약과 같은 레이아웃 */
+:root {
+  --paper: #ffffff; --ink: #1d2327; --muted: #5a656b; --line: #e2e6e9; --tint: #f5f7f8;
+  --brand: #e8891c; --brand-ink: #b3620a; --brand-soft: #fdf1e3;
+  --teal: #1f7a78; --teal-soft: #e5f2f1; --alert: #c8322b; --alert-soft: #fcebea;
+  --font: "Noto Sans", "Noto Sans KR", sans-serif;
+  --display: "Noto Sans", "Noto Sans KR", sans-serif;
+  --fs: 11.2px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--paper); }
+body { width: 794px; height: 1123px; overflow: hidden; color: var(--ink); font-family: var(--font);
+  font-size: var(--fs); line-height: 1.5; display: flex; flex-direction: column; overflow-wrap: break-word; word-break: normal; }
+h1, h2, h3 { font-family: var(--display); }
+b { font-weight: 700; }
+.head { padding: 24px 34px 14px; border-bottom: 5px solid var(--brand); display: grid; gap: 7px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.clinic { display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--brand-ink); font-size: 12px; }
+.mark { background: var(--brand); color: #fff; font-family: "Noto Sans KR", sans-serif; font-weight: 900; font-size: 11px; border-radius: 5px; padding: 3px 6px; }
+.ver { color: var(--muted); font-size: 11px; }
+h1 { font-size: 27px; font-weight: 900; letter-spacing: -.01em; line-height: 1.25; }
+h1 span { color: var(--brand-ink); }
+.pre { background: var(--teal-soft); border-radius: 5px; padding: 8px 12px; font-size: 0.97em; }
+.pre b { color: var(--teal); }
+.body { flex: 1; display: grid; grid-template-columns: 1fr 1fr; min-height: 0; }
+.col { padding: 16px 20px 14px; display: flex; flex-direction: column; gap: var(--gap, 14px); min-width: 0; }
+.col + .col { border-left: 1px solid var(--line); }
+.sec { display: grid; gap: 6px; flex: none; }
+.sec-h { display: flex; align-items: center; gap: 8px; }
+.no { width: 21px; height: 21px; border-radius: 50%; background: var(--ink); color: #fff; font-family: "Noto Sans", sans-serif; font-weight: 900; font-size: 11.5px; display: grid; place-items: center; flex: none; }
+h2 { font-size: 1.24em; font-weight: 800; line-height: 1.3; }
+.muted { color: var(--muted); }
+.box { border: 1.5px solid var(--brand); border-radius: 6px; padding: 8px 12px; display: grid; gap: 4px; }
+.box ul, .grave ul { list-style: none; display: grid; gap: 3px; }
+.box li, .grave li { padding-left: 11px; position: relative; }
+.box li::before, .grave li::before { content: ""; position: absolute; left: 1px; top: .62em; width: 5px; height: 5px; border-radius: 50%; background: var(--brand); }
+.alts { display: grid; gap: 5px; }
+.alt { display: grid; align-items: start; grid-template-columns: 118px minmax(0,1fr); gap: 8px; background: var(--tint); border-radius: 5px; padding: 5px 10px; }
+.alt h3 { font-size: 1em; font-weight: 800; }
+.types { grid-template-columns: 1fr 1fr; }
+.types .alt { background: var(--brand-soft); grid-template-columns: 1fr; gap: 0; align-content: start; }
+.types .alt h3 { color: var(--brand-ink); }
+.flow { display: flex; align-items: center; gap: 4px 5px; flex-wrap: wrap; }
+.flow span { background: var(--brand-soft); color: var(--brand-ink); font-weight: 700; border-radius: 99px; padding: 1px 9px; font-size: 0.92em; }
+.flow i { color: var(--brand); font-style: normal; font-weight: 900; }
+.alist { list-style: none; display: grid; gap: 4px; }
+.alist li { background: var(--tint); border-radius: 5px; padding: 4px 10px; }
+.chips { display: flex; flex-wrap: wrap; gap: 4px; }
+.chips span { border: 1px solid var(--line); border-radius: 99px; padding: 0 9px; font-size: 0.93em; }
+.cx { display: grid; gap: 5px; }
+.cx-g { display: grid; gap: 1px; }
+.cx-g h3 { font-size: 1em; font-weight: 800; color: var(--brand-ink); }
+.grave { background: var(--alert-soft); border-radius: 6px; padding: 7px 11px; }
+.grave h3 { color: var(--alert); }
+.grave li::before { background: var(--alert); }
+.rules { list-style: none; display: grid; gap: 3px; }
+.rules li { display: grid; grid-template-columns: 16px 1fr; gap: 6px; }
+.rules li::before { content: "✓"; color: var(--teal); font-weight: 900; }
+.foot { border-top: 1px solid var(--line); background: var(--tint); padding: 9px 34px 11px; display: grid; gap: 2px; font-size: 0.88em; color: var(--muted); }
+.foot b { color: var(--ink); }
+.sign { padding: 10px 34px 16px; border-top: 1.5px solid var(--ink); display: grid; grid-template-columns: auto 1fr 1.4fr; gap: 20px; align-items: end; }
+.sign .lbl { font-family: var(--display); font-weight: 800; font-size: 12.5px; line-height: 1.35; }
+.sign .f { display: grid; gap: 3px; }
+.sign .f > span { font-size: 10.5px; color: var(--muted); }
+.sign .f div { border-bottom: 1px solid var(--ink); height: 26px; display: flex; justify-content: flex-end; align-items: flex-end; padding: 0 2px 3px; font-size: 11px; color: var(--muted); }
+</style>
+</head>
+<body>
+<header class="head">
+  <div class="top">
+    <div class="clinic"><span class="mark">프라임</span>Nha khoa Prime, Gyeongju</div>
+    <div class="ver">Giấy đồng ý phiên bản 7 · 04/08/2026</div>
+  </div>
+  <h1>Giấy đồng ý phục hình răng <span>– Tóm tắt</span></h1>
+  <p class="pre"><b>Đây là bản tóm tắt để quý vị đọc trước khi đồng ý.</b> Việc đồng ý chính thức được thực hiện tại phòng khám: sau khi nghe bác sĩ giải thích và hỏi những điều còn thắc mắc, quý vị ký vào bản gốc của giấy đồng ý.</p>
+</header>
+<main class="body">
+  <div class="col">
+    <section class="sec">
+      <div class="sec-h"><span class="no">1</span><h2>Mục đích và các loại phục hình</h2></div>
+      <p>Phục hồi <b>hình dạng, chức năng ăn nhai và phát âm</b> của răng bị tổn thương hoặc mất, và cải thiện thẩm mỹ khi cần.</p>
+      <div class="alts types"><div class="alt"><h3>Mão răng</h3><p>Bọc toàn bộ để bảo vệ răng yếu</p></div><div class="alt"><h3>Cầu răng</h3><p>Dùng răng hai bên làm trụ để thay răng mất</p></div><div class="alt"><h3>Inlay</h3><p>Miếng phục hình làm riêng lấp phần đã mài</p></div><div class="alt"><h3>Mặt dán sứ</h3><p>Mài mỏng mặt ngoài răng cửa rồi dán</p></div></div>
+      <div class="flow"><span>Mài răng</span><i>→</i><span>Lấy dấu (đeo răng tạm)</span><i>→</i><span>Chế tác và gắn</span><i>→</i><span>Chỉnh khớp cắn</span></div>
+      <p class="muted">Tùy tình trạng răng, có thể cần điều trị tủy, điều trị nướu hoặc làm chốt – cùi trước, hoặc kế hoạch có thể thay đổi.</p>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">2</span><h2>Điều cần biết trước</h2></div>
+      <div class="box"><p>Phần mô răng đã mài không thể phục hồi lại.</p><ul><li><b>Lượng mài</b> tùy loại phục hình và tình trạng răng.</li><li>Nếu <b>chủ yếu vì thẩm mỹ</b> như mặt dán sứ, quý vị có thể chọn giữ nguyên răng hiện tại.</li><li>Kết quả tùy tình trạng răng và nướu nên <b>phục hình cuối cùng có thể không giống hoàn toàn bản xem trước</b>; làm lại vì lý do thẩm mỹ có thể phải mài thêm.</li></ul></div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">3</span><h2>Các phương pháp điều trị khác</h2></div>
+      <ul class="alist"><li><b>Trám trực tiếp (composite)</b> — Ít mài, xong trong một lần, nhưng nếu tổn thương lớn thì hạn chế về độ bền, tuổi thọ và màu sắc.</li><li><b>Inlay hay mão răng</b> — Inlay mài ít hơn nhưng bảo vệ răng yếu hạn chế; mão răng bảo vệ tốt hơn nhưng mài nhiều hơn.</li><li><b>Thay cho mặt dán</b> — Trám composite, tẩy trắng hoặc chỉnh nha ít mài hoặc không mài, nhưng mức cải thiện và độ bền khác nhau.</li><li><b>Thay cho cầu răng</b> — Implant không mài răng bên cạnh nhưng cần phẫu thuật, thời gian và chi phí hơn; hàm tháo lắp nhai kém và vướng.</li><li><b>Không điều trị</b> — Sâu răng, gãy, đau, nhiễm trùng, răng di chuyển và tiêu xương có thể tiến triển, khiến điều trị sau khó hơn (nếu vì thẩm mỹ thì răng giữ nguyên).</li></ul>
+    </section>
+  </div>
+  <div class="col">
+    <section class="sec">
+      <div class="sec-h"><span class="no">4</span><h2>Biến chứng có thể xảy ra</h2></div>
+      <div class="cx">
+        <div class="cx-g"><h3>Mài răng và tủy</h3><p>Có thể ê buốt hoặc đau khi ăn nóng lạnh; thường giảm dần, nhưng nếu kéo dài hoặc nặng hơn có thể cần điều trị tủy. Sau khi gắn, tủy có thể chết hoặc răng đổi màu và cần điều trị tủy (khó dự đoán trước).</p></div>
+        <div class="cx-g"><h3>Gãy và bong</h3><p>Răng, răng trụ cầu hoặc chân răng có thể gãy, cần phục hình lại, điều trị tủy hoặc nhổ (răng đã chữa tủy yếu hơn); phục hình có thể mẻ, mòn hoặc bong, cần sửa, gắn lại hoặc làm lại.</p></div>
+        <div class="cx-g"><h3>Nướu và sâu răng thứ phát</h3><p>Viêm hoặc tụt nướu ở viền phục hình (lộ viền, ê buốt), sâu răng dưới phục hình (răng đã chữa tủy có thể không đau nên phát hiện muộn), viền đổi màu hoặc hở, giắt thức ăn. Nếu vệ sinh kém, cầu răng có thể mất răng trụ và phải làm lại toàn bộ.</p></div>
+        <div class="cx-g"><h3>Khớp cắn, thích nghi, thẩm mỹ, khác</h3><p>Chỉnh khớp cắn, khó chịu khi nhai hoặc đau khớp thái dương hàm, cảm giác vướng hoặc thay đổi phát âm, màu sắc hoặc hình dạng khác răng thật (mặt dán có thể lệch màu hoặc lộ viền), răng tạm bong, vỡ hoặc ê, tổn thương bề mặt răng bên cạnh, trầy xước hoặc bỏng môi, má, lưỡi, đau, bầm hoặc chóng mặt do thuốc tê (hiếm khi tê kéo dài). Phục hình có <b>tuổi thọ nhất định</b>, tùy vệ sinh, thói quen và chăm sóc.</p></div>
+        <div class="cx-g grave"><h3>Hiếm gặp nhưng nghiêm trọng</h3><ul><li>Dị ứng vật liệu nha khoa hoặc thuốc; hiếm khi sốc phản vệ — cần cấp cứu và chuyển viện.</li><li>Nuốt hoặc hít phải dụng cụ, vật liệu — có thể cần khám y khoa.</li></ul></div>
+      </div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">5</span><h2>Vui lòng cho bác sĩ biết</h2></div>
+      <p class="muted">Để điều trị an toàn, hãy báo trước nếu quý vị có:</p>
+      <div class="chips"><span>Tiểu đường</span><span>Cao huyết áp / bệnh tim</span><span>Dị ứng thuốc / thuốc tê</span><span>Dị ứng vật liệu nha khoa</span><span>Thuốc chống đông / bệnh dễ chảy máu</span><span>Nghiến / cắn chặt răng</span><span>Hút thuốc</span><span>Mang thai (hoặc có thể)</span><span>Xạ trị vùng đầu cổ</span><span>Hóa trị / thuốc ức chế miễn dịch</span><span>Bệnh khác / thuốc đang dùng</span></div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">6</span><h2>Những điều bệnh nhân cần tuân thủ</h2></div>
+      <ul class="rules"><li><span><b>Tái khám định kỳ</b>.</span></li><li><span>Báo ngay khi ê buốt, đau, phục hình bong hoặc vỡ, hay khi <b>sức khỏe, thuốc đang dùng thay đổi</b>.</span></li><li><span>Vệ sinh hằng ngày bằng bàn chải, chỉ nha khoa và bàn chải kẽ — thức ăn dễ giắt <b>dưới cầu răng</b>.</span></li><li><span>Tránh đồ ăn cứng, dẻo và <b>thói quen gây áp lực lên phục hình</b> như nghiến hoặc cắn chặt răng.</span></li></ul>
+    </section>
+  </div>
+</main>
+<footer class="foot"><p><b>Chi phí và bảo hành:</b> điều trị tủy, điều trị nướu hoặc chốt – cùi cần làm trước hay cùng lúc là các điều trị riêng với chi phí riêng; sửa, làm lại hoặc gắn lại phục hình cũng vậy, nhưng nếu trong thời hạn và điều kiện bảo hành có thể được miễn phí hoặc hỗ trợ một phần. Số tiền, hoàn tiền và điều kiện bảo hành sẽ được thông báo riêng.</p><p><b>Khi ký giấy đồng ý,</b> quý vị xác nhận đã được giải thích, hiểu các nội dung trên và tự nguyện đồng ý phục hình răng.</p><p>Bác sĩ điều trị là người giải thích và thực hiện chính ca phẫu thuật; khi cần, nha sĩ khác của phòng khám có thể tham gia một số bước. Nếu bệnh nhân là trẻ vị thành niên hoặc không thể hiểu nội dung, người đại diện sẽ ký.</p><p>Đây là bản dịch để tham khảo. Nếu có khác biệt, bản gốc tiếng Hàn được ưu tiên áp dụng.</p></footer>
+<section class="sign">
+  <p class="lbl">Tôi đã đọc<br>bản tóm tắt này</p>
+  <div class="f"><span>Ngày</span><div>ngày ______ tháng ______ năm ________</div></div>
+  <div class="f"><span>Họ tên bệnh nhân (hoặc người đại diện)</span><div>(chữ ký)</div></div>
+</section>
+<script>
+// 넘치면 글자 크기를 조금씩 줄여 A4 한 장에 맞춤
+document.fonts.ready.then(function fit(){
+  const cols=[...document.querySelectorAll('.col')];
+  const m=document.querySelector("main");
+  const over=()=>document.body.scrollHeight>1124||m.scrollHeight>m.clientHeight+1||cols.some(c=>c.scrollHeight>c.clientHeight+1);
+  let fs=11.2, gap=14;
+  while(over() && fs>9.6){ fs-=0.1; if(gap>9) gap-=0.5;
+    document.documentElement.style.setProperty('--fs',fs+'px');
+    document.documentElement.style.setProperty('--gap',gap+'px'); }
+  document.body.dataset.fs=fs.toFixed(1);
+});
+</script>
+</body>
+</html>

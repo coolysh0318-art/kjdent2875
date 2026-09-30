@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<title>牙齿美白同意书摘要</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@700;800;900&amp;family=Noto+Sans:wght@400;500;700;800;900&amp;family=Noto+Sans+KR:wght@400;500;700;900&amp;family=Noto+Sans+Thai:wght@400;500;700;800;900&amp;family=Noto+Sans+SC:wght@400;500;700;800;900&amp;display=swap">
+<style>
+/* A4 한 장(794×1123 CSS px) 이미지용 — 임플란트 동의서 요약과 같은 레이아웃 */
+:root {
+  --paper: #ffffff; --ink: #1d2327; --muted: #5a656b; --line: #e2e6e9; --tint: #f5f7f8;
+  --brand: #e8891c; --brand-ink: #b3620a; --brand-soft: #fdf1e3;
+  --teal: #1f7a78; --teal-soft: #e5f2f1; --alert: #c8322b; --alert-soft: #fcebea;
+  --font: "Noto Sans SC", "Noto Sans", "Noto Sans KR", sans-serif;
+  --display: "Noto Sans SC", "Noto Sans", "Noto Sans KR", sans-serif;
+  --fs: 11.6px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--paper); }
+body { width: 794px; height: 1123px; overflow: hidden; color: var(--ink); font-family: var(--font);
+  font-size: var(--fs); line-height: 1.6; display: flex; flex-direction: column; overflow-wrap: break-word; word-break: normal; }
+h1, h2, h3 { font-family: var(--display); }
+b { font-weight: 700; }
+.head { padding: 24px 34px 14px; border-bottom: 5px solid var(--brand); display: grid; gap: 7px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.clinic { display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--brand-ink); font-size: 12px; }
+.mark { background: var(--brand); color: #fff; font-family: "Noto Sans KR", sans-serif; font-weight: 900; font-size: 11px; border-radius: 5px; padding: 3px 6px; }
+.ver { color: var(--muted); font-size: 11px; }
+h1 { font-size: 29px; font-weight: 900; letter-spacing: -.01em; line-height: 1.25; }
+h1 span { color: var(--brand-ink); }
+.pre { background: var(--teal-soft); border-radius: 5px; padding: 8px 12px; font-size: 0.97em; }
+.pre b { color: var(--teal); }
+.body { flex: 1; display: grid; grid-template-columns: 1fr 1fr; min-height: 0; }
+.col { padding: 16px 20px 14px; display: flex; flex-direction: column; gap: var(--gap, 14px); min-width: 0; }
+.col + .col { border-left: 1px solid var(--line); }
+.sec { display: grid; gap: 6px; flex: none; }
+.sec-h { display: flex; align-items: center; gap: 8px; }
+.no { width: 21px; height: 21px; border-radius: 50%; background: var(--ink); color: #fff; font-family: "Noto Sans", sans-serif; font-weight: 900; font-size: 11.5px; display: grid; place-items: center; flex: none; }
+h2 { font-size: 1.24em; font-weight: 800; line-height: 1.3; }
+.muted { color: var(--muted); }
+.box { border: 1.5px solid var(--brand); border-radius: 6px; padding: 8px 12px; display: grid; gap: 4px; }
+.box ul, .grave ul { list-style: none; display: grid; gap: 3px; }
+.box li, .grave li { padding-left: 11px; position: relative; }
+.box li::before, .grave li::before { content: ""; position: absolute; left: 1px; top: .62em; width: 5px; height: 5px; border-radius: 50%; background: var(--brand); }
+.alts { display: grid; gap: 5px; }
+.alt { display: grid; align-items: start; grid-template-columns: 100px minmax(0,1fr); gap: 8px; background: var(--tint); border-radius: 5px; padding: 5px 10px; }
+.alt h3 { font-size: 1em; font-weight: 800; }
+.types .alt { background: var(--brand-soft); }
+.types .alt h3 { color: var(--brand-ink); }
+.flow { display: flex; align-items: center; gap: 4px 5px; flex-wrap: wrap; }
+.flow span { background: var(--brand-soft); color: var(--brand-ink); font-weight: 700; border-radius: 99px; padding: 1px 9px; font-size: 0.92em; }
+.flow i { color: var(--brand); font-style: normal; font-weight: 900; }
+.alist { list-style: none; display: grid; gap: 4px; }
+.alist li { background: var(--tint); border-radius: 5px; padding: 4px 10px; }
+.chips { display: flex; flex-wrap: wrap; gap: 4px; }
+.chips span { border: 1px solid var(--line); border-radius: 99px; padding: 0 9px; font-size: 0.93em; }
+.cx { display: grid; gap: 5px; }
+.cx-g { display: grid; gap: 1px; }
+.cx-g h3 { font-size: 1em; font-weight: 800; color: var(--brand-ink); }
+.grave { background: var(--alert-soft); border-radius: 6px; padding: 7px 11px; }
+.grave h3 { color: var(--alert); }
+.grave li::before { background: var(--alert); }
+.rules { list-style: none; display: grid; gap: 3px; }
+.rules li { display: grid; grid-template-columns: 16px 1fr; gap: 6px; }
+.rules li::before { content: "✓"; color: var(--teal); font-weight: 900; }
+.foot { border-top: 1px solid var(--line); background: var(--tint); padding: 9px 34px 11px; display: grid; gap: 2px; font-size: 0.88em; color: var(--muted); }
+.foot b { color: var(--ink); }
+.sign { padding: 10px 34px 16px; border-top: 1.5px solid var(--ink); display: grid; grid-template-columns: auto 1fr 1.4fr; gap: 20px; align-items: end; }
+.sign .lbl { font-family: var(--display); font-weight: 800; font-size: 12.5px; line-height: 1.35; }
+.sign .f { display: grid; gap: 3px; }
+.sign .f > span { font-size: 10.5px; color: var(--muted); }
+.sign .f div { border-bottom: 1px solid var(--ink); height: 26px; display: flex; justify-content: flex-end; align-items: flex-end; padding: 0 2px 3px; font-size: 11px; color: var(--muted); }
+</style>
+</head>
+<body>
+<header class="head">
+  <div class="top">
+    <div class="clinic"><span class="mark">프라임</span>Prime 牙科诊所（庆州）</div>
+    <div class="ver">同意书第6版 · 2026.08.07</div>
+  </div>
+  <h1>牙齿美白同意书 <span>摘要</span></h1>
+  <p class="pre"><b>本摘要供您在签署同意书前阅读。</b>正式同意须在诊所进行：听取牙医说明并提出疑问后，再签署同意书原件。</p>
+</header>
+<main class="body">
+  <div class="col">
+    <section class="sec">
+      <div class="sec-h"><span class="no">1</span><h2>治疗目的与方法</h2></div>
+      <p>美白剂（过氧化氢、过氧化脲等）分解牙齿内部的色素，<b>使变色的牙齿变白</b>。</p>
+      <div class="alts types"><div class="alt"><h3>诊室美白</h3><p>先保护牙龈和嘴唇，在诊所涂抹美白剂，必要时配合光照。</p></div><div class="alt"><h3>家庭美白</h3><p>在家佩戴装有美白剂的个性化牙托，按规定时间使用（两种方法可结合）。</p></div><div class="alt"><h3>死髓牙内漂白</h3><p>针对根管治疗后变色的牙齿，将美白剂置于牙齿内部并多次更换。</p></div></div>
+      <div class="flow"><span>检查龋齿、牙龈、裂纹、修复体</span><i>→</i><span>先完成必要治疗</span><i>→</i><span>美白</span><i>→</i><span>维护</span></div>
+      <p class="muted">美白是<b>可选择的美容治疗</b>，而非疾病治疗，不做也不影响口腔健康。治疗中方法或次数可能调整。</p>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">2</span><h2>效果的局限——请务必确认</h2></div>
+      <div class="box"><p>效果因人、因牙而异，可能达不到期望的白度。</p><ul><li><b>变色原因影响很大。</b>偏黄的牙齿效果较好；灰色、蓝色、黑色系变色、药物（四环素）着色和氟斑牙效果有限。白斑不会消失，反而可能更明显。</li><li><b>树脂、牙冠、贴面等修复体不会变白。</b>颜色不协调时可能需重做，费用另计。</li><li>靠近牙龈的牙颈部本来就较暗，各牙变白程度也可能不均匀。</li><li>所需次数和时间在治疗过程中确定，增加时可能产生额外费用。</li><li><b>效果并非永久。</b>牙齿会随时间再次变暗（并非失败）；咖啡、茶、红酒、咖喱和吸烟会加快这一过程，需要维护。</li></ul></div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">3</span><h2>其他治疗方法</h2></div>
+      <ul class="alist"><li><b>不治疗</b> — 无副作用和费用，但颜色不会改善。</li><li><b>洁牙与抛光</b> — 只能去除表面色素，不会比天生牙色更白。</li><li><b>诊室与家庭美白</b> — 诊室美白见效快但敏感和牙龈刺激较多；家庭美白刺激小但时间长，需坚持佩戴。</li><li><b>微磨除 / 树脂渗透</b> — 用于氟斑牙或白斑，需轻微磨除表面，适用范围有限。</li><li><b>树脂修复</b> — 一次改善颜色和形态，但会随时间变色、磨损。</li><li><b>贴面 / 牙冠</b> — 可改善难治变色和形态，但需磨牙、费用高，可能崩裂或脱落。</li></ul>
+    </section>
+  </div>
+  <div class="col">
+    <section class="sec">
+      <div class="sec-h"><span class="no">4</span><h2>可能出现的并发症</h2></div>
+      <div class="cx">
+        <div class="cx-g"><h3>牙齿敏感（最常见）</h3><p>遇冷敏感或刺痛很常见，通常在开始数日内出现、数日内缓解，但可能持续更久或严重到需要中止，脱敏剂也不能完全消除。极少数牙髓受损需根管治疗。未治疗的龋齿、有缝隙的修复体、牙根暴露、牙颈部缺损或裂纹会加重敏感，需先处理。</p></div>
+        <div class="cx-g"><h3>牙龈与口腔</h3><p>接触美白剂的牙龈、嘴唇、脸颊可能发白、刺痛（化学刺激），通常数日内恢复，但可能更久；牙龈有炎症或伤口时需先治疗。</p></div>
+        <div class="cx-g"><h3>死髓牙内漂白</h3><p>少数可发生<b>牙根外吸收</b>而导致失牙，有时数年后才发现（设置隔离层可降低但无法消除风险）。可能需重新根管治疗；修复体变色或脱落；达不到目标颜色或再次变色。</p></div>
+        <div class="cx-g"><h3>其他</h3><p>修复体边缘缝隙增大导致继发龋或着色；误吞或误吸美白剂、器械（吞下可刺激胃部）。<b>孕期不建议美白</b>，哺乳期请事先咨询。青少年应在恒牙全部萌出后进行。</p></div>
+        <div class="cx-g grave"><h3>少见但严重的并发症</h3><ul><li>过敏、过敏性休克——需紧急处理并转诊至上级医院。</li></ul></div>
+      </div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">5</span><h2>请务必告知</h2></div>
+      <p class="muted">为确保美白安全，如有以下情况请提前告知：</p>
+      <div class="chips"><span>怀孕（或可能怀孕）</span><span>哺乳期</span><span>美白剂（过氧化物）过敏</span><span>其他药物 / 牙科材料过敏</span><span>平时牙齿敏感</span><span>胃 / 食管疾病</span><span>头颈部放射治疗</span><span>化疗 / 免疫抑制剂</span><span>吸烟</span><span>其他疾病 / 正在服用的药物</span></div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">6</span><h2>患者须遵守事项</h2></div>
+      <ul class="rules"><li><span>遵守规定的使用时间、次数和疗程，<b>不要为求速效擅自延长</b>（可能损伤牙齿），美白剂按指示用量使用。</span></li><li><span>出现敏感、疼痛、牙龈发白或疼痛时，<b>立即停止</b>并告知诊所。</span></li><li><span>减少易着色食物和吸烟，保持牙托清洁。</span></li><li><span>按预约时间就诊，健康状况、服用药物或<b>怀孕情况</b>变化时请告知。</span></li></ul>
+    </section>
+  </div>
+</main>
+<footer class="foot"><p><b>签署同意书即表示</b>您理解美白是可选择的美容治疗，已听取并理解说明——尤其是牙齿可能达不到期望的白度、修复体不会变白、颜色会随时间恢复——并自愿同意接受牙齿美白。</p><p>主治医生是负责说明并主导手术的医生；必要时本院其他牙医可参与部分过程。患者为未成年人或难以理解本文件内容时，由代理人签字。</p><p>本文件为参考译文，如有出入，以韩文原件为准。</p></footer>
+<section class="sign">
+  <p class="lbl">本人已阅读<br>本摘要</p>
+  <div class="f"><span>日期</span><div>________ 年 ______ 月 ______ 日</div></div>
+  <div class="f"><span>患者（或代理人）姓名</span><div>（签字）</div></div>
+</section>
+<script>
+// 넘치면 글자 크기를 조금씩 줄여 A4 한 장에 맞춤
+document.fonts.ready.then(function fit(){
+  const cols=[...document.querySelectorAll('.col')];
+  const m=document.querySelector("main");
+  const over=()=>document.body.scrollHeight>1124||m.scrollHeight>m.clientHeight+1||cols.some(c=>c.scrollHeight>c.clientHeight+1);
+  let fs=11.6, gap=14;
+  while(over() && fs>9.6){ fs-=0.1; if(gap>9) gap-=0.5;
+    document.documentElement.style.setProperty('--fs',fs+'px');
+    document.documentElement.style.setProperty('--gap',gap+'px'); }
+  document.body.dataset.fs=fs.toFixed(1);
+});
+</script>
+</body>
+</html>

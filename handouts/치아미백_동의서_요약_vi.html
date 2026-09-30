@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Tóm tắt giấy đồng ý tẩy trắng răng</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@700;800;900&amp;family=Noto+Sans:wght@400;500;700;800;900&amp;family=Noto+Sans+KR:wght@400;500;700;900&amp;family=Noto+Sans+Thai:wght@400;500;700;800;900&amp;family=Noto+Sans+SC:wght@400;500;700;800;900&amp;display=swap">
+<style>
+/* A4 한 장(794×1123 CSS px) 이미지용 — 임플란트 동의서 요약과 같은 레이아웃 */
+:root {
+  --paper: #ffffff; --ink: #1d2327; --muted: #5a656b; --line: #e2e6e9; --tint: #f5f7f8;
+  --brand: #e8891c; --brand-ink: #b3620a; --brand-soft: #fdf1e3;
+  --teal: #1f7a78; --teal-soft: #e5f2f1; --alert: #c8322b; --alert-soft: #fcebea;
+  --font: "Noto Sans", "Noto Sans KR", sans-serif;
+  --display: "Noto Sans", "Noto Sans KR", sans-serif;
+  --fs: 11.0px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--paper); }
+body { width: 794px; height: 1123px; overflow: hidden; color: var(--ink); font-family: var(--font);
+  font-size: var(--fs); line-height: 1.5; display: flex; flex-direction: column; overflow-wrap: break-word; word-break: normal; }
+h1, h2, h3 { font-family: var(--display); }
+b { font-weight: 700; }
+.head { padding: 24px 34px 14px; border-bottom: 5px solid var(--brand); display: grid; gap: 7px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.clinic { display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--brand-ink); font-size: 12px; }
+.mark { background: var(--brand); color: #fff; font-family: "Noto Sans KR", sans-serif; font-weight: 900; font-size: 11px; border-radius: 5px; padding: 3px 6px; }
+.ver { color: var(--muted); font-size: 11px; }
+h1 { font-size: 27px; font-weight: 900; letter-spacing: -.01em; line-height: 1.25; }
+h1 span { color: var(--brand-ink); }
+.pre { background: var(--teal-soft); border-radius: 5px; padding: 8px 12px; font-size: 0.97em; }
+.pre b { color: var(--teal); }
+.body { flex: 1; display: grid; grid-template-columns: 1fr 1fr; min-height: 0; }
+.col { padding: 16px 20px 14px; display: flex; flex-direction: column; gap: var(--gap, 14px); min-width: 0; }
+.col + .col { border-left: 1px solid var(--line); }
+.sec { display: grid; gap: 6px; flex: none; }
+.sec-h { display: flex; align-items: center; gap: 8px; }
+.no { width: 21px; height: 21px; border-radius: 50%; background: var(--ink); color: #fff; font-family: "Noto Sans", sans-serif; font-weight: 900; font-size: 11.5px; display: grid; place-items: center; flex: none; }
+h2 { font-size: 1.24em; font-weight: 800; line-height: 1.3; }
+.muted { color: var(--muted); }
+.box { border: 1.5px solid var(--brand); border-radius: 6px; padding: 8px 12px; display: grid; gap: 4px; }
+.box ul, .grave ul { list-style: none; display: grid; gap: 3px; }
+.box li, .grave li { padding-left: 11px; position: relative; }
+.box li::before, .grave li::before { content: ""; position: absolute; left: 1px; top: .62em; width: 5px; height: 5px; border-radius: 50%; background: var(--brand); }
+.alts { display: grid; gap: 5px; }
+.alt { display: grid; align-items: start; grid-template-columns: 120px minmax(0,1fr); gap: 8px; background: var(--tint); border-radius: 5px; padding: 5px 10px; }
+.alt h3 { font-size: 1em; font-weight: 800; }
+.types .alt { background: var(--brand-soft); }
+.types .alt h3 { color: var(--brand-ink); }
+.flow { display: flex; align-items: center; gap: 4px 5px; flex-wrap: wrap; }
+.flow span { background: var(--brand-soft); color: var(--brand-ink); font-weight: 700; border-radius: 99px; padding: 1px 9px; font-size: 0.92em; }
+.flow i { color: var(--brand); font-style: normal; font-weight: 900; }
+.alist { list-style: none; display: grid; gap: 4px; }
+.alist li { background: var(--tint); border-radius: 5px; padding: 4px 10px; }
+.chips { display: flex; flex-wrap: wrap; gap: 4px; }
+.chips span { border: 1px solid var(--line); border-radius: 99px; padding: 0 9px; font-size: 0.93em; }
+.cx { display: grid; gap: 5px; }
+.cx-g { display: grid; gap: 1px; }
+.cx-g h3 { font-size: 1em; font-weight: 800; color: var(--brand-ink); }
+.grave { background: var(--alert-soft); border-radius: 6px; padding: 7px 11px; }
+.grave h3 { color: var(--alert); }
+.grave li::before { background: var(--alert); }
+.rules { list-style: none; display: grid; gap: 3px; }
+.rules li { display: grid; grid-template-columns: 16px 1fr; gap: 6px; }
+.rules li::before { content: "✓"; color: var(--teal); font-weight: 900; }
+.foot { border-top: 1px solid var(--line); background: var(--tint); padding: 9px 34px 11px; display: grid; gap: 2px; font-size: 0.88em; color: var(--muted); }
+.foot b { color: var(--ink); }
+.sign { padding: 10px 34px 16px; border-top: 1.5px solid var(--ink); display: grid; grid-template-columns: auto 1fr 1.4fr; gap: 20px; align-items: end; }
+.sign .lbl { font-family: var(--display); font-weight: 800; font-size: 12.5px; line-height: 1.35; }
+.sign .f { display: grid; gap: 3px; }
+.sign .f > span { font-size: 10.5px; color: var(--muted); }
+.sign .f div { border-bottom: 1px solid var(--ink); height: 26px; display: flex; justify-content: flex-end; align-items: flex-end; padding: 0 2px 3px; font-size: 11px; color: var(--muted); }
+</style>
+</head>
+<body>
+<header class="head">
+  <div class="top">
+    <div class="clinic"><span class="mark">프라임</span>Nha khoa Prime, Gyeongju</div>
+    <div class="ver">Giấy đồng ý phiên bản 6 · 07/08/2026</div>
+  </div>
+  <h1>Giấy đồng ý tẩy trắng răng <span>– Tóm tắt</span></h1>
+  <p class="pre"><b>Đây là bản tóm tắt để quý vị đọc trước khi đồng ý.</b> Việc đồng ý chính thức được thực hiện tại phòng khám: sau khi nghe bác sĩ giải thích và hỏi những điều còn thắc mắc, quý vị ký vào bản gốc của giấy đồng ý.</p>
+</header>
+<main class="body">
+  <div class="col">
+    <section class="sec">
+      <div class="sec-h"><span class="no">1</span><h2>Mục đích và phương pháp</h2></div>
+      <p>Thuốc tẩy trắng (hydrogen peroxide hoặc carbamide peroxide) phân hủy sắc tố bên trong răng để <b>làm sáng răng bị đổi màu</b>.</p>
+      <div class="alts types"><div class="alt"><h3>Tại phòng khám</h3><p>Bôi thuốc tại phòng khám sau khi bảo vệ nướu, có thể chiếu đèn.</p></div><div class="alt"><h3>Tại nhà</h3><p>Đeo máng có thuốc tại nhà (có thể kết hợp hai cách).</p></div><div class="alt"><h3>Tẩy trắng trong</h3><p>Đặt thuốc trong răng đã chữa tủy, thay nhiều lần.</p></div></div>
+      <div class="flow"><span>Khám</span><i>→</i><span>Điều trị cần thiết</span><i>→</i><span>Tẩy trắng</span><i>→</i><span>Duy trì</span></div>
+      <p class="muted">Tẩy trắng là <b>điều trị thẩm mỹ tự chọn</b>; không làm cũng không hại sức khỏe răng miệng.</p>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">2</span><h2>Giới hạn hiệu quả — vui lòng đọc kỹ</h2></div>
+      <div class="box"><p>Kết quả khác nhau ở mỗi người, mỗi răng, và có thể không đạt độ trắng mong muốn.</p><ul><li><b>Nguyên nhân đổi màu rất quan trọng.</b> Răng ố vàng đáp ứng tốt; màu xám, xanh, đen, nhiễm thuốc (tetracycline) và đốm nhiễm fluor đáp ứng kém. Đốm trắng không mất đi và có thể rõ hơn.</li><li><b>Miếng trám, mão, mặt dán không trắng lên.</b> Nếu lệch màu có thể phải làm lại với chi phí riêng.</li><li>Cổ răng sát nướu vốn sẫm hơn, và các răng có thể trắng lên không đều.</li><li>Số lần và thời gian được quyết định trong quá trình; thêm lần có thể phát sinh chi phí.</li><li><b>Hiệu quả không vĩnh viễn.</b> Răng sẽ sẫm lại theo thời gian (không phải thất bại); cà phê, trà, rượu vang, cà ri, thuốc lá làm nhanh hơn, cần duy trì.</li></ul></div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">3</span><h2>Các phương pháp điều trị khác</h2></div>
+      <ul class="alist"><li><b>Không điều trị</b> — Không tác dụng phụ, không tốn kém, nhưng màu không thay đổi.</li><li><b>Cạo vôi, đánh bóng</b> — Chỉ loại bỏ vết ố bề mặt, không trắng hơn màu tự nhiên.</li><li><b>Tại phòng khám hay tại nhà</b> — Tại phòng khám nhanh hơn nhưng ê hơn; tại nhà nhẹ hơn nhưng lâu hơn.</li><li><b>Mài vi mô / thẩm thấu nhựa</b> — Cho nhiễm fluor, đốm trắng; mài rất nhẹ bề mặt.</li><li><b>Trám composite</b> — Cải thiện màu, dáng trong một lần nhưng đổi màu theo thời gian.</li><li><b>Mặt dán / mão răng</b> — Khắc phục ca khó nhưng phải mài răng, chi phí cao.</li></ul>
+    </section>
+  </div>
+  <div class="col">
+    <section class="sec">
+      <div class="sec-h"><span class="no">4</span><h2>Biến chứng có thể xảy ra</h2></div>
+      <div class="cx">
+        <div class="cx-g"><h3>Ê buốt (thường gặp nhất)</h3><p>Ê buốt khi lạnh hoặc đau nhói thường gặp, thường xuất hiện vài ngày đầu và hết sau vài ngày, nhưng có thể kéo dài hoặc nặng đến mức phải ngừng; thuốc giảm ê không làm hết hoàn toàn. Hiếm khi tủy bị tổn thương cần chữa tủy. Sâu răng, miếng trám hở, lộ chân răng, mòn cổ răng hoặc nứt răng làm ê nặng hơn, cần xử lý trước.</p></div>
+        <div class="cx-g"><h3>Nướu và miệng</h3><p>Nướu, môi, má tiếp xúc thuốc có thể trắng bệch, rát hoặc đau (kích ứng hóa chất). Thường lành sau vài ngày nhưng có thể lâu hơn; viêm nướu hoặc vết loét cần điều trị trước.</p></div>
+        <div class="cx-g"><h3>Tẩy trắng răng đã chữa tủy</h3><p>Hiếm khi xảy ra <b>tiêu chân răng từ bên ngoài</b> có thể làm mất răng, đôi khi phát hiện sau nhiều năm (lớp chắn giảm nhưng không loại bỏ nguy cơ). Có thể phải chữa tủy lại; miếng trám đổi màu hoặc bong; không đạt màu mong muốn hoặc sẫm lại.</p></div>
+        <div class="cx-g"><h3>Khác</h3><p>Kẽ hở ở viền miếng trám rộng ra gây sâu hoặc đổi màu; nuốt hoặc hít phải thuốc, dụng cụ (nuốt thuốc có thể kích ứng dạ dày). <b>Không khuyến nghị khi mang thai</b>; đang cho con bú cần trao đổi trước. Thanh thiếu niên nên làm sau khi mọc đủ răng vĩnh viễn.</p></div>
+        <div class="cx-g grave"><h3>Hiếm gặp nhưng nghiêm trọng</h3><ul><li>Dị ứng, sốc phản vệ — cần cấp cứu và chuyển viện.</li></ul></div>
+      </div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">5</span><h2>Vui lòng cho bác sĩ biết</h2></div>
+      <p class="muted">Để tẩy trắng an toàn, hãy báo trước nếu quý vị có:</p>
+      <div class="chips"><span>Mang thai (hoặc có thể)</span><span>Đang cho con bú</span><span>Dị ứng thuốc tẩy trắng (peroxide)</span><span>Dị ứng thuốc / vật liệu nha khoa khác</span><span>Hay ê buốt răng</span><span>Bệnh dạ dày / thực quản</span><span>Xạ trị vùng đầu cổ</span><span>Hóa trị / thuốc ức chế miễn dịch</span><span>Hút thuốc</span><span>Bệnh khác / thuốc đang dùng</span></div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">6</span><h2>Những điều bệnh nhân cần tuân thủ</h2></div>
+      <ul class="rules"><li><span>Tuân thủ thời gian, số lần và thời hạn; <b>không tự ý dùng lâu hơn</b> để nhanh có kết quả (có thể hại răng) và chỉ dùng lượng thuốc được hướng dẫn.</span></li><li><span>Nếu ê buốt, đau, nướu trắng bệch hoặc đau, <b>ngừng ngay</b> và báo cho phòng khám.</span></li><li><span>Hạn chế đồ ăn gây ố màu và thuốc lá, giữ máng sạch sẽ.</span></li><li><span>Đến đúng lịch hẹn và báo khi sức khỏe, thuốc đang dùng hoặc <b>tình trạng mang thai</b> thay đổi.</span></li></ul>
+    </section>
+  </div>
+</main>
+<footer class="foot"><p><b>Khi ký giấy đồng ý,</b> quý vị xác nhận hiểu rằng tẩy trắng là điều trị thẩm mỹ tự chọn, đã được giải thích và hiểu — nhất là răng có thể không trắng như mong muốn, phục hình không trắng lên, và màu sẽ sẫm lại theo thời gian — và tự nguyện đồng ý tẩy trắng.</p><p>Bác sĩ điều trị là người giải thích và thực hiện chính ca phẫu thuật; khi cần, nha sĩ khác của phòng khám có thể tham gia một số bước. Nếu bệnh nhân là trẻ vị thành niên hoặc không thể hiểu nội dung, người đại diện sẽ ký.</p><p>Đây là bản dịch để tham khảo. Nếu có khác biệt, bản gốc tiếng Hàn được ưu tiên áp dụng.</p></footer>
+<section class="sign">
+  <p class="lbl">Tôi đã đọc<br>bản tóm tắt này</p>
+  <div class="f"><span>Ngày</span><div>ngày ______ tháng ______ năm ________</div></div>
+  <div class="f"><span>Họ tên bệnh nhân (hoặc người đại diện)</span><div>(chữ ký)</div></div>
+</section>
+<script>
+// 넘치면 글자 크기를 조금씩 줄여 A4 한 장에 맞춤
+document.fonts.ready.then(function fit(){
+  const cols=[...document.querySelectorAll('.col')];
+  const m=document.querySelector("main");
+  const over=()=>document.body.scrollHeight>1124||m.scrollHeight>m.clientHeight+1||cols.some(c=>c.scrollHeight>c.clientHeight+1);
+  let fs=11.0, gap=14;
+  while(over() && fs>9.6){ fs-=0.1; if(gap>9) gap-=0.5;
+    document.documentElement.style.setProperty('--fs',fs+'px');
+    document.documentElement.style.setProperty('--gap',gap+'px'); }
+  document.body.dataset.fs=fs.toFixed(1);
+});
+</script>
+</body>
+</html>

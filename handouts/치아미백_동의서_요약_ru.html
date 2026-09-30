@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Согласие на отбеливание — кратко</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@700;800;900&amp;family=Noto+Sans:wght@400;500;700;800;900&amp;family=Noto+Sans+KR:wght@400;500;700;900&amp;family=Noto+Sans+Thai:wght@400;500;700;800;900&amp;family=Noto+Sans+SC:wght@400;500;700;800;900&amp;display=swap">
+<style>
+/* A4 한 장(794×1123 CSS px) 이미지용 — 임플란트 동의서 요약과 같은 레이아웃 */
+:root {
+  --paper: #ffffff; --ink: #1d2327; --muted: #5a656b; --line: #e2e6e9; --tint: #f5f7f8;
+  --brand: #e8891c; --brand-ink: #b3620a; --brand-soft: #fdf1e3;
+  --teal: #1f7a78; --teal-soft: #e5f2f1; --alert: #c8322b; --alert-soft: #fcebea;
+  --font: "Noto Sans", "Noto Sans KR", sans-serif;
+  --display: "Noto Sans", "Noto Sans KR", sans-serif;
+  --fs: 11.0px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--paper); }
+body { width: 794px; height: 1123px; overflow: hidden; color: var(--ink); font-family: var(--font);
+  font-size: var(--fs); line-height: 1.5; display: flex; flex-direction: column; overflow-wrap: break-word; word-break: normal; }
+h1, h2, h3 { font-family: var(--display); }
+b { font-weight: 700; }
+.head { padding: 24px 34px 14px; border-bottom: 5px solid var(--brand); display: grid; gap: 7px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.clinic { display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--brand-ink); font-size: 12px; }
+.mark { background: var(--brand); color: #fff; font-family: "Noto Sans KR", sans-serif; font-weight: 900; font-size: 11px; border-radius: 5px; padding: 3px 6px; }
+.ver { color: var(--muted); font-size: 11px; }
+h1 { font-size: 26px; font-weight: 900; letter-spacing: -.01em; line-height: 1.25; }
+h1 span { color: var(--brand-ink); }
+.pre { background: var(--teal-soft); border-radius: 5px; padding: 8px 12px; font-size: 0.97em; }
+.pre b { color: var(--teal); }
+.body { flex: 1; display: grid; grid-template-columns: 1fr 1fr; min-height: 0; }
+.col { padding: 16px 20px 14px; display: flex; flex-direction: column; gap: var(--gap, 14px); min-width: 0; }
+.col + .col { border-left: 1px solid var(--line); }
+.sec { display: grid; gap: 6px; flex: none; }
+.sec-h { display: flex; align-items: center; gap: 8px; }
+.no { width: 21px; height: 21px; border-radius: 50%; background: var(--ink); color: #fff; font-family: "Noto Sans", sans-serif; font-weight: 900; font-size: 11.5px; display: grid; place-items: center; flex: none; }
+h2 { font-size: 1.24em; font-weight: 800; line-height: 1.3; }
+.muted { color: var(--muted); }
+.box { border: 1.5px solid var(--brand); border-radius: 6px; padding: 8px 12px; display: grid; gap: 4px; }
+.box ul, .grave ul { list-style: none; display: grid; gap: 3px; }
+.box li, .grave li { padding-left: 11px; position: relative; }
+.box li::before, .grave li::before { content: ""; position: absolute; left: 1px; top: .62em; width: 5px; height: 5px; border-radius: 50%; background: var(--brand); }
+.alts { display: grid; gap: 5px; }
+.alt { display: grid; align-items: start; grid-template-columns: 128px minmax(0,1fr); gap: 8px; background: var(--tint); border-radius: 5px; padding: 5px 10px; }
+.alt h3 { font-size: 1em; font-weight: 800; }
+.types .alt { background: var(--brand-soft); }
+.types .alt h3 { color: var(--brand-ink); }
+.flow { display: flex; align-items: center; gap: 4px 5px; flex-wrap: wrap; }
+.flow span { background: var(--brand-soft); color: var(--brand-ink); font-weight: 700; border-radius: 99px; padding: 1px 9px; font-size: 0.92em; }
+.flow i { color: var(--brand); font-style: normal; font-weight: 900; }
+.alist { list-style: none; display: grid; gap: 4px; }
+.alist li { background: var(--tint); border-radius: 5px; padding: 4px 10px; }
+.chips { display: flex; flex-wrap: wrap; gap: 4px; }
+.chips span { border: 1px solid var(--line); border-radius: 99px; padding: 0 9px; font-size: 0.93em; }
+.cx { display: grid; gap: 5px; }
+.cx-g { display: grid; gap: 1px; }
+.cx-g h3 { font-size: 1em; font-weight: 800; color: var(--brand-ink); }
+.grave { background: var(--alert-soft); border-radius: 6px; padding: 7px 11px; }
+.grave h3 { color: var(--alert); }
+.grave li::before { background: var(--alert); }
+.rules { list-style: none; display: grid; gap: 3px; }
+.rules li { display: grid; grid-template-columns: 16px 1fr; gap: 6px; }
+.rules li::before { content: "✓"; color: var(--teal); font-weight: 900; }
+.foot { border-top: 1px solid var(--line); background: var(--tint); padding: 9px 34px 11px; display: grid; gap: 2px; font-size: 0.88em; color: var(--muted); }
+.foot b { color: var(--ink); }
+.sign { padding: 10px 34px 16px; border-top: 1.5px solid var(--ink); display: grid; grid-template-columns: auto 1fr 1.4fr; gap: 20px; align-items: end; }
+.sign .lbl { font-family: var(--display); font-weight: 800; font-size: 12.5px; line-height: 1.35; }
+.sign .f { display: grid; gap: 3px; }
+.sign .f > span { font-size: 10.5px; color: var(--muted); }
+.sign .f div { border-bottom: 1px solid var(--ink); height: 26px; display: flex; justify-content: flex-end; align-items: flex-end; padding: 0 2px 3px; font-size: 11px; color: var(--muted); }
+</style>
+</head>
+<body>
+<header class="head">
+  <div class="top">
+    <div class="clinic"><span class="mark">프라임</span>Стоматология «Прайм», Кёнджу</div>
+    <div class="ver">Версия согласия 6 · 07.08.2026</div>
+  </div>
+  <h1>Согласие на отбеливание зубов <span>— кратко</span></h1>
+  <p class="pre"><b>Это краткое изложение для ознакомления до подписания согласия.</b> Само согласие оформляется в клинике: после разъяснений врача и ответов на ваши вопросы вы подписываете оригинал документа.</p>
+</header>
+<main class="body">
+  <div class="col">
+    <section class="sec">
+      <div class="sec-h"><span class="no">1</span><h2>Цель и методы</h2></div>
+      <p>Отбеливающий гель (перекись водорода или карбамида) разрушает пигменты внутри зуба и <b>осветляет потемневшие зубы</b>.</p>
+      <div class="alts types"><div class="alt"><h3>Кабинетное</h3><p>Гель наносят в клинике, защитив дёсны, иногда с лампой.</p></div><div class="alt"><h3>Домашнее</h3><p>Каппы с гелем носят дома (методы можно сочетать).</p></div><div class="alt"><h3>Внутрикоронковое</h3><p>Гель внутри зуба после лечения каналов, меняют несколько раз.</p></div></div>
+      <div class="flow"><span>Осмотр</span><i>→</i><span>Нужное лечение</span><i>→</i><span>Отбеливание</span><i>→</i><span>Поддержание</span></div>
+      <p class="muted">Это <b>необязательная эстетическая процедура</b>; отказ от неё не вредит здоровью рта.</p>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">2</span><h2>Пределы эффекта — обязательно прочитайте</h2></div>
+      <div class="box"><p>Результат зависит от человека и зуба; желаемого оттенка можно не достичь.</p><ul><li><b>Многое зависит от причины потемнения.</b> Жёлтые зубы осветляются хорошо; серые, голубоватые и тёмные, лекарственные (тетрациклин) и флюорозные пятна — плохо. Белые пятна не исчезают и могут стать заметнее.</li><li><b>Пломбы, коронки, виниры не отбеливаются.</b> Если цвет перестанет совпадать, их может понадобиться переделать за отдельную плату.</li><li>Пришеечная часть зуба у десны от природы темнее; зубы могут осветлиться неравномерно.</li><li>Число сеансов и сроки определяются по ходу лечения; дополнительные сеансы оплачиваются.</li><li><b>Эффект не постоянный.</b> Со временем зубы снова темнеют (это не неудача); кофе, чай, вино, карри и курение ускоряют это, нужно поддержание.</li></ul></div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">3</span><h2>Другие варианты лечения</h2></div>
+      <ul class="alist"><li><b>Без лечения</b> — Нет побочных эффектов и затрат, но цвет не меняется.</li><li><b>Чистка и полировка</b> — Убирают только поверхностный налёт; светлее природного цвета зубы не станут.</li><li><b>Кабинетное или домашнее</b> — Кабинетное быстрее, но чаще вызывает чувствительность; домашнее мягче, но дольше.</li><li><b>Микроабразия, инфильтрация</b> — При флюорозе и белых пятнах; слегка снимает эмаль.</li><li><b>Композит</b> — Цвет и форма за один визит, но со временем темнеет.</li><li><b>Виниры, коронки</b> — Исправляют сложные случаи, но нужна обточка и выше стоимость.</li></ul>
+    </section>
+  </div>
+  <div class="col">
+    <section class="sec">
+      <div class="sec-h"><span class="no">4</span><h2>Возможные осложнения</h2></div>
+      <div class="cx">
+        <div class="cx-g"><h3>Чувствительность (чаще всего)</h3><p>Часто бывает чувствительность к холодному или простреливающая боль. Обычно появляется в первые дни и проходит за несколько дней, но может длиться дольше или быть такой сильной, что лечение прекращают; средства от чувствительности не устраняют её полностью. Редко повреждается нерв и нужно лечение каналов. Кариес, негерметичные пломбы, оголённые корни, клиновидные дефекты и трещины её усиливают — их лечат заранее.</p></div>
+        <div class="cx-g"><h3>Дёсны и слизистая</h3><p>Дёсны, губы и щёки при контакте с гелем могут побелеть, жечь и болеть (химическое раздражение). Обычно проходит за несколько дней, но может длиться дольше; воспаление и ранки дёсен лечат заранее.</p></div>
+        <div class="cx-g"><h3>Отбеливание депульпированного зуба</h3><p>Редко возникает <b>наружная резорбция корня</b>, из-за которой зуб может быть потерян, иногда через годы (изолирующая прокладка снижает риск, но не устраняет). Может понадобиться повторное лечение каналов; пломбы могут потемнеть или выпасть; оттенок может не достигаться или вернуться.</p></div>
+        <div class="cx-g"><h3>Прочее</h3><p>Щели по краю пломб с кариесом или окрашиванием; проглатывание или вдыхание геля и инструментов (гель раздражает желудок). <b>Во время беременности не рекомендуется</b>, при кормлении грудью — консультация. Подросткам — только после прорезывания всех постоянных зубов.</p></div>
+        <div class="cx-g grave"><h3>Редкие, но серьёзные осложнения</h3><ul><li>Аллергия, анафилаксия (шок) — нужна экстренная помощь и перевод в больницу.</li></ul></div>
+      </div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">5</span><h2>Обязательно сообщите врачу</h2></div>
+      <p class="muted">Для безопасного отбеливания заранее сообщите, если у вас есть:</p>
+      <div class="chips"><span>Беременность (в т.ч. возможная)</span><span>Кормление грудью</span><span>Аллергия на отбеливающие вещества (перекиси)</span><span>Другая аллергия на лекарства / материалы</span><span>Обычная чувствительность зубов</span><span>Болезни желудка / пищевода</span><span>Лучевая терапия головы и шеи</span><span>Химиотерапия / иммунодепрессанты</span><span>Курение</span><span>Другие болезни / лекарства</span></div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">6</span><h2>Что нужно соблюдать пациенту</h2></div>
+      <ul class="rules"><li><span>Соблюдайте время, частоту и сроки; <b>не увеличивайте их</b> ради быстрого результата (можно повредить зубы) и используйте только назначенное количество геля.</span></li><li><span>При чувствительности, боли, побелении или болезненности дёсен <b>сразу прекратите</b> и сообщите нам.</span></li><li><span>Меньше окрашивающей пищи и курения, держите каппы в чистоте.</span></li><li><span>Приходите в назначенные дни и сообщайте об изменениях здоровья, лекарств и <b>о беременности</b>.</span></li></ul>
+    </section>
+  </div>
+</main>
+<footer class="foot"><p><b>Подписывая согласие,</b> вы подтверждаете, что понимаете: отбеливание — необязательная эстетическая процедура, и что получили и поняли разъяснения — особенно что зубы могут не стать настолько светлыми, как хочется, реставрации не отбеливаются, а цвет со временем возвращается, — и добровольно соглашаетесь на отбеливание.</p><p>Лечащий врач даёт разъяснения и выполняет основную часть операции; при необходимости в отдельных этапах могут участвовать другие стоматологи клиники. Если пациент несовершеннолетний или не может понять содержание документа, подписывает представитель.</p><p>Это перевод для ознакомления. При расхождении действует корейский оригинал.</p></footer>
+<section class="sign">
+  <p class="lbl">Я прочитал(а)<br>это резюме</p>
+  <div class="f"><span>Дата</span><div>«&nbsp;&nbsp;&nbsp;&nbsp;» ____________ 20___ г.</div></div>
+  <div class="f"><span>ФИО пациента (или представителя)</span><div>(подпись)</div></div>
+</section>
+<script>
+// 넘치면 글자 크기를 조금씩 줄여 A4 한 장에 맞춤
+document.fonts.ready.then(function fit(){
+  const cols=[...document.querySelectorAll('.col')];
+  const m=document.querySelector("main");
+  const over=()=>document.body.scrollHeight>1124||m.scrollHeight>m.clientHeight+1||cols.some(c=>c.scrollHeight>c.clientHeight+1);
+  let fs=11.0, gap=14;
+  while(over() && fs>9.6){ fs-=0.1; if(gap>9) gap-=0.5;
+    document.documentElement.style.setProperty('--fs',fs+'px');
+    document.documentElement.style.setProperty('--gap',gap+'px'); }
+  document.body.dataset.fs=fs.toFixed(1);
+});
+</script>
+</body>
+</html>
