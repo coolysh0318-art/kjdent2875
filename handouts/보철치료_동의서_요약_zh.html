@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<title>修复治疗同意书摘要</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@700;800;900&amp;family=Noto+Sans:wght@400;500;700;800;900&amp;family=Noto+Sans+KR:wght@400;500;700;900&amp;family=Noto+Sans+Thai:wght@400;500;700;800;900&amp;family=Noto+Sans+SC:wght@400;500;700;800;900&amp;display=swap">
+<style>
+/* A4 한 장(794×1123 CSS px) 이미지용 — 임플란트 동의서 요약과 같은 레이아웃 */
+:root {
+  --paper: #ffffff; --ink: #1d2327; --muted: #5a656b; --line: #e2e6e9; --tint: #f5f7f8;
+  --brand: #e8891c; --brand-ink: #b3620a; --brand-soft: #fdf1e3;
+  --teal: #1f7a78; --teal-soft: #e5f2f1; --alert: #c8322b; --alert-soft: #fcebea;
+  --font: "Noto Sans SC", "Noto Sans", "Noto Sans KR", sans-serif;
+  --display: "Noto Sans SC", "Noto Sans", "Noto Sans KR", sans-serif;
+  --fs: 11.8px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--paper); }
+body { width: 794px; height: 1123px; overflow: hidden; color: var(--ink); font-family: var(--font);
+  font-size: var(--fs); line-height: 1.6; display: flex; flex-direction: column; overflow-wrap: break-word; word-break: normal; }
+h1, h2, h3 { font-family: var(--display); }
+b { font-weight: 700; }
+.head { padding: 24px 34px 14px; border-bottom: 5px solid var(--brand); display: grid; gap: 7px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.clinic { display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--brand-ink); font-size: 12px; }
+.mark { background: var(--brand); color: #fff; font-family: "Noto Sans KR", sans-serif; font-weight: 900; font-size: 11px; border-radius: 5px; padding: 3px 6px; }
+.ver { color: var(--muted); font-size: 11px; }
+h1 { font-size: 29px; font-weight: 900; letter-spacing: -.01em; line-height: 1.25; }
+h1 span { color: var(--brand-ink); }
+.pre { background: var(--teal-soft); border-radius: 5px; padding: 8px 12px; font-size: 0.97em; }
+.pre b { color: var(--teal); }
+.body { flex: 1; display: grid; grid-template-columns: 1fr 1fr; min-height: 0; }
+.col { padding: 16px 20px 14px; display: flex; flex-direction: column; gap: var(--gap, 14px); min-width: 0; }
+.col + .col { border-left: 1px solid var(--line); }
+.sec { display: grid; gap: 6px; flex: none; }
+.sec-h { display: flex; align-items: center; gap: 8px; }
+.no { width: 21px; height: 21px; border-radius: 50%; background: var(--ink); color: #fff; font-family: "Noto Sans", sans-serif; font-weight: 900; font-size: 11.5px; display: grid; place-items: center; flex: none; }
+h2 { font-size: 1.24em; font-weight: 800; line-height: 1.3; }
+.muted { color: var(--muted); }
+.box { border: 1.5px solid var(--brand); border-radius: 6px; padding: 8px 12px; display: grid; gap: 4px; }
+.box ul, .grave ul { list-style: none; display: grid; gap: 3px; }
+.box li, .grave li { padding-left: 11px; position: relative; }
+.box li::before, .grave li::before { content: ""; position: absolute; left: 1px; top: .62em; width: 5px; height: 5px; border-radius: 50%; background: var(--brand); }
+.alts { display: grid; gap: 5px; }
+.alt { display: grid; align-items: start; grid-template-columns: 92px minmax(0,1fr); gap: 8px; background: var(--tint); border-radius: 5px; padding: 5px 10px; }
+.alt h3 { font-size: 1em; font-weight: 800; }
+.types { grid-template-columns: 1fr 1fr; }
+.types .alt { background: var(--brand-soft); grid-template-columns: 1fr; gap: 0; align-content: start; }
+.types .alt h3 { color: var(--brand-ink); }
+.flow { display: flex; align-items: center; gap: 4px 5px; flex-wrap: wrap; }
+.flow span { background: var(--brand-soft); color: var(--brand-ink); font-weight: 700; border-radius: 99px; padding: 1px 9px; font-size: 0.92em; }
+.flow i { color: var(--brand); font-style: normal; font-weight: 900; }
+.alist { list-style: none; display: grid; gap: 4px; }
+.alist li { background: var(--tint); border-radius: 5px; padding: 4px 10px; }
+.chips { display: flex; flex-wrap: wrap; gap: 4px; }
+.chips span { border: 1px solid var(--line); border-radius: 99px; padding: 0 9px; font-size: 0.93em; }
+.cx { display: grid; gap: 5px; }
+.cx-g { display: grid; gap: 1px; }
+.cx-g h3 { font-size: 1em; font-weight: 800; color: var(--brand-ink); }
+.grave { background: var(--alert-soft); border-radius: 6px; padding: 7px 11px; }
+.grave h3 { color: var(--alert); }
+.grave li::before { background: var(--alert); }
+.rules { list-style: none; display: grid; gap: 3px; }
+.rules li { display: grid; grid-template-columns: 16px 1fr; gap: 6px; }
+.rules li::before { content: "✓"; color: var(--teal); font-weight: 900; }
+.foot { border-top: 1px solid var(--line); background: var(--tint); padding: 9px 34px 11px; display: grid; gap: 2px; font-size: 0.88em; color: var(--muted); }
+.foot b { color: var(--ink); }
+.sign { padding: 10px 34px 16px; border-top: 1.5px solid var(--ink); display: grid; grid-template-columns: auto 1fr 1.4fr; gap: 20px; align-items: end; }
+.sign .lbl { font-family: var(--display); font-weight: 800; font-size: 12.5px; line-height: 1.35; }
+.sign .f { display: grid; gap: 3px; }
+.sign .f > span { font-size: 10.5px; color: var(--muted); }
+.sign .f div { border-bottom: 1px solid var(--ink); height: 26px; display: flex; justify-content: flex-end; align-items: flex-end; padding: 0 2px 3px; font-size: 11px; color: var(--muted); }
+</style>
+</head>
+<body>
+<header class="head">
+  <div class="top">
+    <div class="clinic"><span class="mark">프라임</span>Prime 牙科诊所（庆州）</div>
+    <div class="ver">同意书第7版 · 2026.08.04</div>
+  </div>
+  <h1>修复治疗同意书 <span>摘要</span></h1>
+  <p class="pre"><b>本摘要供您在签署同意书前阅读。</b>正式同意须在诊所进行：听取牙医说明并提出疑问后，再签署同意书原件。</p>
+</header>
+<main class="body">
+  <div class="col">
+    <section class="sec">
+      <div class="sec-h"><span class="no">1</span><h2>治疗目的与种类</h2></div>
+      <p>恢复受损或缺失牙齿的<b>形态以及咀嚼、发音功能</b>，必要时改善美观。</p>
+      <div class="alts types"><div class="alt"><h3>牙冠</h3><p>包覆整颗牙，保护变弱的牙齿</p></div><div class="alt"><h3>固定桥</h3><p>以缺牙两侧的牙为基牙连接修复</p></div><div class="alt"><h3>嵌体</h3><p>定制修复体填补备牙部位</p></div><div class="alt"><h3>贴面</h3><p>前牙唇面少量磨除后粘贴薄片</p></div></div>
+      <div class="flow"><span>备牙</span><i>→</i><span>取模（戴临时牙）</span><i>→</i><span>制作与粘接</span><i>→</i><span>调整咬合</span></div>
+      <p class="muted">视牙齿情况，可能需先做根管治疗、牙周治疗或桩核，治疗计划也可能改变。</p>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">2</span><h2>事先需了解的事项</h2></div>
+      <div class="box"><p>为修复而磨除的牙体组织无法恢复。</p><ul><li><b>磨除量</b>因修复种类和牙齿状况而异。</li><li>如贴面等<b>以美观为主要目的</b>时，也可以选择不治疗、保持现状。</li><li>效果因牙齿和牙龈状况而异，<b>最终修复体可能与事先看到的预期效果不完全相同</b>；因美观原因重做时可能需要进一步磨牙。</li></ul></div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">3</span><h2>其他治疗方法</h2></div>
+      <ul class="alist"><li><b>直接充填（树脂）</b> — 磨牙少、一次完成，但缺损大时强度、寿命和颜色有限。</li><li><b>嵌体与牙冠</b> — 嵌体磨除少但对薄弱牙齿保护有限；牙冠保护更全面但磨除较多。</li><li><b>代替贴面</b> — 树脂、美白或正畸可少磨或不磨，但改善范围和维持时间不同。</li><li><b>代替固定桥</b> — 种植牙无需磨邻牙，但需手术，时间和费用更多；活动假牙咀嚼力弱且有异物感。</li><li><b>不治疗</b> — 龋坏、折裂、疼痛、感染、牙齿移位和牙槽骨吸收会加重，日后治疗更难（若为美观目的则维持现状）。</li></ul>
+    </section>
+  </div>
+  <div class="col">
+    <section class="sec">
+      <div class="sec-h"><span class="no">4</span><h2>可能出现的并发症</h2></div>
+      <div class="cx">
+        <div class="cx-g"><h3>磨牙与牙髓</h3><p>遇冷热可能敏感或疼痛，通常会减轻，若持续或加重可能需要根管治疗；戴入后牙髓也可能坏死或牙齿变色而需根管治疗（事先难以预测）。</p></div>
+        <div class="cx-g"><h3>折裂与脱落</h3><p>牙齿、桥基牙或牙根可能折裂，需要重新修复、根管治疗或拔牙（根管治疗后的牙更脆弱）；修复体可能崩瓷、磨损或脱落，需要修理、重新粘接或重做。</p></div>
+        <div class="cx-g"><h3>牙龈与继发龋</h3><p>修复体边缘牙龈发炎或退缩（边缘外露、敏感），修复体下方继发龋（根管治疗后的牙可能无痛而发现较晚），边缘着色或出现缝隙、食物嵌塞。清洁不佳时固定桥可能失去基牙而需整体重做。</p></div>
+        <div class="cx-g"><h3>咬合、适应、美观及其他</h3><p>需调整咬合、咀嚼不适或颞下颌关节疼痛、异物感或发音改变、颜色形态与天然牙存在差异（贴面可能有色差或边缘外露）、临时牙脱落、破裂或敏感、邻牙表面损伤、嘴唇、脸颊、舌头擦伤或烫伤、麻醉部位疼痛、淤青或头晕（少数感觉异常持续）。修复体有<b>使用寿命</b>，取决于口腔卫生、习惯和定期维护。</p></div>
+        <div class="cx-g grave"><h3>少见但严重的并发症</h3><ul><li>对牙科材料或药物过敏，少数出现过敏性休克——需紧急处理并转诊至上级医院。</li><li>误吞或误吸器械、材料，可能需要就医。</li></ul></div>
+      </div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">5</span><h2>请务必告知</h2></div>
+      <p class="muted">为确保治疗安全，如有以下情况请提前告知：</p>
+      <div class="chips"><span>糖尿病</span><span>高血压 / 心脏病</span><span>药物 / 麻药过敏</span><span>牙科材料过敏</span><span>抗凝血药 / 出血性疾病</span><span>磨牙 / 紧咬牙</span><span>吸烟</span><span>怀孕（或可能怀孕）</span><span>头颈部放射治疗</span><span>化疗 / 免疫抑制剂</span><span>其他疾病 / 正在服用的药物</span></div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">6</span><h2>患者须遵守事项</h2></div>
+      <ul class="rules"><li><span>请按时<b>定期复查</b>。</span></li><li><span>如有敏感、疼痛、修复体松脱或破裂，或<b>健康状况、服用药物发生变化</b>，请立即告知。</span></li><li><span>每天用牙刷、牙线和牙间刷清洁，<b>固定桥下方</b>尤其容易嵌塞食物。</span></li><li><span>避免过硬或黏性食物，以及磨牙、紧咬等<b>给修复体造成负担的习惯</b>。</span></li></ul>
+    </section>
+  </div>
+</main>
+<footer class="foot"><p><b>费用与保修：</b>修复前或同时需要的根管治疗、牙周治疗或桩核为另行治疗，费用另计；修复体的修理、重做或重新粘接亦同，但在保修期限和条件范围内可免费或部分负担。金额、退款及保修条件将另行说明。</p><p><b>签署同意书即表示</b>您已听取并理解上述说明，并自愿同意接受修复治疗。</p><p>主治医生是负责说明并主导手术的医生；必要时本院其他牙医可参与部分过程。患者为未成年人或难以理解本文件内容时，由代理人签字。</p><p>本文件为参考译文，如有出入，以韩文原件为准。</p></footer>
+<section class="sign">
+  <p class="lbl">本人已阅读<br>本摘要</p>
+  <div class="f"><span>日期</span><div>________ 年 ______ 月 ______ 日</div></div>
+  <div class="f"><span>患者（或代理人）姓名</span><div>（签字）</div></div>
+</section>
+<script>
+// 넘치면 글자 크기를 조금씩 줄여 A4 한 장에 맞춤
+document.fonts.ready.then(function fit(){
+  const cols=[...document.querySelectorAll('.col')];
+  const m=document.querySelector("main");
+  const over=()=>document.body.scrollHeight>1124||m.scrollHeight>m.clientHeight+1||cols.some(c=>c.scrollHeight>c.clientHeight+1);
+  let fs=11.8, gap=14;
+  while(over() && fs>9.6){ fs-=0.1; if(gap>9) gap-=0.5;
+    document.documentElement.style.setProperty('--fs',fs+'px');
+    document.documentElement.style.setProperty('--gap',gap+'px'); }
+  document.body.dataset.fs=fs.toFixed(1);
+});
+</script>
+</body>
+</html>
