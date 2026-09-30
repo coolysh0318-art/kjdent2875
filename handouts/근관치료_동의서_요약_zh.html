@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<title>根管治疗同意书摘要</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@700;800;900&amp;family=Noto+Sans:wght@400;500;700;800;900&amp;family=Noto+Sans+KR:wght@400;500;700;900&amp;family=Noto+Sans+Thai:wght@400;500;700;800;900&amp;family=Noto+Sans+SC:wght@400;500;700;800;900&amp;display=swap">
+<style>
+/* A4 한 장(794×1123 CSS px) 이미지용 — 임플란트 동의서 요약과 같은 레이아웃 */
+:root {
+  --paper: #ffffff; --ink: #1d2327; --muted: #5a656b; --line: #e2e6e9; --tint: #f5f7f8;
+  --brand: #e8891c; --brand-ink: #b3620a; --brand-soft: #fdf1e3;
+  --teal: #1f7a78; --teal-soft: #e5f2f1; --alert: #c8322b; --alert-soft: #fcebea;
+  --font: "Noto Sans SC", "Noto Sans", "Noto Sans KR", sans-serif;
+  --display: "Noto Sans SC", "Noto Sans", "Noto Sans KR", sans-serif;
+  --fs: 12.0px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--paper); }
+body { width: 794px; height: 1123px; overflow: hidden; color: var(--ink); font-family: var(--font);
+  font-size: var(--fs); line-height: 1.6; display: flex; flex-direction: column; overflow-wrap: break-word; word-break: normal; }
+h1, h2, h3 { font-family: var(--display); }
+b { font-weight: 700; }
+.head { padding: 24px 34px 14px; border-bottom: 5px solid var(--brand); display: grid; gap: 7px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.clinic { display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--brand-ink); font-size: 12px; }
+.mark { background: var(--brand); color: #fff; font-family: "Noto Sans KR", sans-serif; font-weight: 900; font-size: 11px; border-radius: 5px; padding: 3px 6px; }
+.ver { color: var(--muted); font-size: 11px; }
+h1 { font-size: 29px; font-weight: 900; letter-spacing: -.01em; line-height: 1.25; }
+h1 span { color: var(--brand-ink); }
+.pre { background: var(--teal-soft); border-radius: 5px; padding: 8px 12px; font-size: 0.97em; }
+.pre b { color: var(--teal); }
+.body { flex: 1; display: grid; grid-template-columns: 1fr 1fr; min-height: 0; }
+.col { padding: 16px 20px 14px; display: flex; flex-direction: column; gap: var(--gap, 14px); min-width: 0; }
+.col + .col { border-left: 1px solid var(--line); }
+.sec { display: grid; gap: 6px; flex: none; }
+.sec-h { display: flex; align-items: center; gap: 8px; }
+.no { width: 21px; height: 21px; border-radius: 50%; background: var(--ink); color: #fff; font-family: "Noto Sans", sans-serif; font-weight: 900; font-size: 11.5px; display: grid; place-items: center; flex: none; }
+h2 { font-size: 1.24em; font-weight: 800; line-height: 1.3; }
+.muted { color: var(--muted); }
+.box { border: 1.5px solid var(--brand); border-radius: 6px; padding: 8px 12px; display: grid; gap: 4px; }
+.box ul, .grave ul { list-style: none; display: grid; gap: 3px; }
+.box li, .grave li { padding-left: 11px; position: relative; }
+.box li::before, .grave li::before { content: ""; position: absolute; left: 1px; top: .62em; width: 5px; height: 5px; border-radius: 50%; background: var(--brand); }
+.alts { display: grid; gap: 5px; }
+.alt { display: grid; grid-template-columns: 88px minmax(0,1fr); gap: 8px; background: var(--tint); border-radius: 5px; padding: 5px 10px; }
+.alt h3 { font-size: 1em; font-weight: 800; }
+.types .alt { background: var(--brand-soft); }
+.types .alt h3 { color: var(--brand-ink); }
+.flow { display: flex; align-items: center; gap: 4px 5px; flex-wrap: wrap; }
+.flow span { background: var(--brand-soft); color: var(--brand-ink); font-weight: 700; border-radius: 99px; padding: 1px 9px; font-size: 0.92em; }
+.flow i { color: var(--brand); font-style: normal; font-weight: 900; }
+.chips { display: flex; flex-wrap: wrap; gap: 4px; }
+.chips span { border: 1px solid var(--line); border-radius: 99px; padding: 0 9px; font-size: 0.93em; }
+.cx { display: grid; gap: 5px; }
+.cx-g { display: grid; gap: 1px; }
+.cx-g h3 { font-size: 1em; font-weight: 800; color: var(--brand-ink); }
+.grave { background: var(--alert-soft); border-radius: 6px; padding: 7px 11px; }
+.grave h3 { color: var(--alert); }
+.grave li::before { background: var(--alert); }
+.rules { list-style: none; display: grid; gap: 3px; }
+.rules li { display: grid; grid-template-columns: 16px 1fr; gap: 6px; }
+.rules li::before { content: "✓"; color: var(--teal); font-weight: 900; }
+.foot { border-top: 1px solid var(--line); background: var(--tint); padding: 9px 34px 11px; display: grid; gap: 2px; font-size: 0.88em; color: var(--muted); }
+.foot b { color: var(--ink); }
+.sign { padding: 10px 34px 16px; border-top: 1.5px solid var(--ink); display: grid; grid-template-columns: auto 1fr 1.4fr; gap: 20px; align-items: end; }
+.sign .lbl { font-family: var(--display); font-weight: 800; font-size: 12.5px; line-height: 1.35; }
+.sign .f { display: grid; gap: 3px; }
+.sign .f > span { font-size: 10.5px; color: var(--muted); }
+.sign .f div { border-bottom: 1px solid var(--ink); height: 26px; display: flex; justify-content: flex-end; align-items: flex-end; padding: 0 2px 3px; font-size: 11px; color: var(--muted); }
+</style>
+</head>
+<body>
+<header class="head">
+  <div class="top">
+    <div class="clinic"><span class="mark">프라임</span>Prime 牙科诊所（庆州）</div>
+    <div class="ver">同意书第9版 · 2026.08.06</div>
+  </div>
+  <h1>根管治疗同意书 <span>摘要</span></h1>
+  <p class="pre"><b>本摘要供您在签署同意书前阅读。</b>正式同意须在诊所进行：听取牙医说明并提出疑问后，再签署同意书原件。</p>
+</header>
+<main class="body">
+  <div class="col">
+    <section class="sec">
+      <div class="sec-h"><span class="no">1</span><h2>治疗目的与流程</h2></div>
+      <p>当龋齿、牙折或外伤导致牙齿内部的牙髓（神经和血管组织）发炎或坏死时，去除感染的牙髓和细菌，清理、消毒根管后严密充填，<b>从而保留自己的天然牙</b>。</p>
+      <div class="flow"><span>麻醉后开髓</span><i>→</i><span>根管清理消毒（需多次就诊）</span><i>→</i><span>根管充填</span><i>→</i><span>桩核与牙冠</span></div>
+      <p class="muted">如不治疗，疼痛和感染会反复发作，炎症可能扩散到根尖及周围骨组织。治疗后通常需做牙冠，部分情况下也可选择不做牙冠。</p>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">2</span><h2>治疗中需了解的事项</h2></div>
+      <div class="box"><p>根管非常细小复杂，可能弯曲或钙化堵塞。</p><ul><li>因此需要<b>多次就诊</b>。</li><li>根据实际情况，<b>治疗方法可能改变或需要追加处置</b>。</li><li>紧急情况下优先保障您的安全，必要时可能转诊至上级医院。</li></ul></div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">3</span><h2>其他治疗方法</h2></div>
+      <div class="alts">
+        <div class="alt"><h3>拔牙后修复</h3><p>拔除牙齿后以种植牙、固定桥或假牙修复。会失去天然牙，需另行手术、费用和时间，可能需要磨削邻牙。</p></div>
+        <div class="alt"><h3>不治疗</h3><p>疼痛、感染反复发作，可能形成脓肿或囊肿，炎症扩散到邻牙和颌骨，最终可能失去牙齿。</p></div>
+      </div>
+      <p class="muted">根管治疗能保留天然牙，但无法保证成功；如失败，可能需要根管再治疗、根尖手术或拔牙。</p>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">4</span><h2>患者须遵守事项</h2></div>
+      <ul class="rules"><li><span>治疗结束前<b>不要用该牙用力咀嚼</b>——临时状态的牙齿容易折裂。</span></li><li><span><b>临时封药材料脱落或破损</b>时根管可能被污染，请立即联系并来院。</span></li><li><span>请按预约时间就诊直至治疗完成，已计划做牙冠的请勿拖延。</span></li><li><span>请遵照处方和医嘱；如有疼痛、肿胀等异常，或<b>健康状况、服用药物发生变化</b>，请立即告知。</span></li></ul>
+    </section>
+  </div>
+  <div class="col">
+    <section class="sec">
+      <div class="sec-h"><span class="no">5</span><h2>可能出现的并发症</h2></div>
+      <div class="cx">
+        <div class="cx-g"><h3>治疗中及治疗后</h3><p>数日内疼痛或咬合痛、牙齿感觉与正常牙不同、治疗期间突发剧烈疼痛和肿胀（flare-up）、注射部位疼痛、淤青或感觉异常、针头折断、短暂头晕或心悸、急性牙髓炎的牙齿可能麻醉效果差需追加麻醉、张口受限或颞下颌关节疼痛、对橡皮障、消毒液或处方药过敏或出现副作用。</p></div>
+        <div class="cx-g"><h3>牙齿及根管</h3><p>细小器械可能折断残留在根管内；意外穿孔；堵塞或弯曲的根管可能无法疏通到底；再治疗时原有充填物、桩或牙冠可能难以取出或造成牙齿损伤；材料超出根尖；原有修复体损伤；治疗前无法发现的裂纹或牙根折裂——可能需要再治疗、根尖手术或拔牙。</p></div>
+        <div class="cx-g"><h3>消毒液及周围结构</h3><p>消毒液接触口腔、皮肤或眼睛可引起刺激，沾到衣物会永久褪色；若超出根尖可突发疼痛、肿胀和淤青。上颌磨牙：上颌窦穿孔或炎症（耳鼻喉科诊治）。下颌磨牙：影响神经导致下唇、下巴、牙龈麻木或味觉改变（暂时或永久）。误吞或误吸器械、牙齿碎片。</p></div>
+        <div class="cx-g"><h3>治疗结果</h3><p>成功率高但无法保证；如炎症残留或复发，可能需要再治疗、手术或拔牙。根管治疗后的牙齿<b>更容易折裂</b>，需要合适的最终修复；修复后仍可能折裂、再感染或变色，因此需要定期复查。</p></div>
+        <div class="cx-g grave"><h3>少见但严重的并发症</h3><ul><li>消毒液外漏造成大范围组织损伤——需转至上级医院处理。</li><li>皮下气肿：吹干根管的空气进入组织，导致面部、颈部肿胀（严重时可影响气道）。</li><li>感染全身扩散（败血症）、过敏性休克——需紧急处理并转诊至上级医院。</li></ul></div>
+      </div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">6</span><h2>请务必告知</h2></div>
+      <p class="muted">为确保治疗安全，如有以下情况请提前告知：</p>
+      <div class="chips"><span>糖尿病</span><span>高血压 / 心脏病（含需预防感染性心内膜炎者）</span><span>药物 / 麻药过敏</span><span>乳胶（橡胶）过敏</span><span>头颈部放射治疗</span><span>化疗 / 免疫抑制剂</span><span>怀孕（或可能怀孕）</span><span>吸烟</span><span>其他疾病 / 正在服用的药物</span></div>
+    </section>
+  </div>
+</main>
+<footer class="foot"><p><b>费用：</b>根管再治疗、根尖手术、拔牙及其后的修复，以及根管治疗后的最终修复（桩核、牙冠）均为另行治疗，费用另计。金额、付款方式及取消时的结算退款标准以《诊疗费用及保修合同》为准。</p><p><b>签署同意书即表示</b>您已听取并理解上述说明，已收到《根管治疗须知》和《诊疗费用及保修合同》，并自愿同意接受根管治疗。</p><p>主治医生是负责说明并主导手术的医生；必要时本院其他牙医可参与部分过程。患者为未成年人或难以理解本文件内容时，由代理人签字。</p><p>本文件为参考译文，如有出入，以韩文原件为准。</p></footer>
+<section class="sign">
+  <p class="lbl">本人已阅读<br>本摘要</p>
+  <div class="f"><span>日期</span><div>________ 年 ______ 月 ______ 日</div></div>
+  <div class="f"><span>患者（或代理人）姓名</span><div>（签字）</div></div>
+</section>
+<script>
+// 넘치면 글자 크기를 조금씩 줄여 A4 한 장에 맞춤
+document.fonts.ready.then(function fit(){
+  const cols=[...document.querySelectorAll('.col')];
+  const m=document.querySelector("main");
+  const over=()=>document.body.scrollHeight>1124||m.scrollHeight>m.clientHeight+1||cols.some(c=>c.scrollHeight>c.clientHeight+1);
+  let fs=12.0, gap=14;
+  while(over() && fs>9.6){ fs-=0.1; if(gap>9) gap-=0.5;
+    document.documentElement.style.setProperty('--fs',fs+'px');
+    document.documentElement.style.setProperty('--gap',gap+'px'); }
+  document.body.dataset.fs=fs.toFixed(1);
+});
+</script>
+</body>
+</html>
