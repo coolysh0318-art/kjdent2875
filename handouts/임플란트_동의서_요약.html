@@ -87,6 +87,11 @@ h2 { font-size: 15.5px; font-weight: 800; letter-spacing: -.01em; }
 
 .foot { border-top: 1px solid var(--line); background: var(--tint); padding: 11px 34px 14px; display: grid; gap: 3px; font-size: 10.8px; color: var(--muted); }
 .foot b { color: var(--ink); }
+.sign { padding: 12px 34px 18px; border-top: 1.5px solid var(--ink); display: grid; grid-template-columns: auto 1fr 1.4fr; gap: 22px; align-items: end; }
+.sign .lbl { font-family: var(--font-display); font-weight: 800; font-size: 13px; }
+.sign .f { display: grid; gap: 4px; }
+.sign .f span { font-size: 10.8px; color: var(--muted); }
+.sign .f div { border-bottom: 1px solid var(--ink); height: 26px; display: flex; justify-content: flex-end; align-items: flex-end; gap: 22px; padding: 0 2px 3px; font-size: 11.5px; color: var(--muted); }
 </style>
 </head>
 <body>
@@ -186,5 +191,10 @@ h2 { font-size: 15.5px; font-weight: 800; letter-spacing: -.01em; }
   <p><b>동의서에 서명하시면</b> 위 내용을 설명 듣고 이해했으며, 「임플란트 수술 안내문」을 받았고, 자유로운 의사로 임플란트 치료를 선택했음을 확인하게 됩니다.</p>
   <p>주치의는 설명을 맡고 시술을 주도하는 의사이며, 필요하면 본원의 다른 치과의사가 일부 과정에 참여할 수 있습니다. 미성년자이거나 내용을 이해하기 어려운 경우에는 대리인이 서명합니다.</p>
 </footer>
+<section class="sign">
+  <p class="lbl">요약본을 읽고<br>확인했습니다</p>
+  <div class="f"><span>확인일</span><div>년<span></span>월<span></span>일</div></div>
+  <div class="f"><span>환자(또는 대리인) 성명</span><div>(서명)</div></div>
+</section>
 </body>
 </html>
