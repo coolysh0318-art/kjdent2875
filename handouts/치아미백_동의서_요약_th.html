@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<title>สรุปหนังสือยินยอมฟอกสีฟัน</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@700;800;900&amp;family=Noto+Sans:wght@400;500;700;800;900&amp;family=Noto+Sans+KR:wght@400;500;700;900&amp;family=Noto+Sans+Thai:wght@400;500;700;800;900&amp;family=Noto+Sans+SC:wght@400;500;700;800;900&amp;display=swap">
+<style>
+/* A4 한 장(794×1123 CSS px) 이미지용 — 임플란트 동의서 요약과 같은 레이아웃 */
+:root {
+  --paper: #ffffff; --ink: #1d2327; --muted: #5a656b; --line: #e2e6e9; --tint: #f5f7f8;
+  --brand: #e8891c; --brand-ink: #b3620a; --brand-soft: #fdf1e3;
+  --teal: #1f7a78; --teal-soft: #e5f2f1; --alert: #c8322b; --alert-soft: #fcebea;
+  --font: "Noto Sans Thai", "Noto Sans", "Noto Sans KR", sans-serif;
+  --display: "Noto Sans Thai", "Noto Sans", "Noto Sans KR", sans-serif;
+  --fs: 11.0px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--paper); }
+body { width: 794px; height: 1123px; overflow: hidden; color: var(--ink); font-family: var(--font);
+  font-size: var(--fs); line-height: 1.62; display: flex; flex-direction: column; overflow-wrap: break-word; word-break: normal; }
+h1, h2, h3 { font-family: var(--display); }
+b { font-weight: 700; }
+.head { padding: 24px 34px 14px; border-bottom: 5px solid var(--brand); display: grid; gap: 7px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.clinic { display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--brand-ink); font-size: 12px; }
+.mark { background: var(--brand); color: #fff; font-family: "Noto Sans KR", sans-serif; font-weight: 900; font-size: 11px; border-radius: 5px; padding: 3px 6px; }
+.ver { color: var(--muted); font-size: 11px; }
+h1 { font-size: 26px; font-weight: 900; letter-spacing: -.01em; line-height: 1.25; }
+h1 span { color: var(--brand-ink); }
+.pre { background: var(--teal-soft); border-radius: 5px; padding: 8px 12px; font-size: 0.97em; }
+.pre b { color: var(--teal); }
+.body { flex: 1; display: grid; grid-template-columns: 1fr 1fr; min-height: 0; }
+.col { padding: 16px 20px 14px; display: flex; flex-direction: column; gap: var(--gap, 14px); min-width: 0; }
+.col + .col { border-left: 1px solid var(--line); }
+.sec { display: grid; gap: 6px; flex: none; }
+.sec-h { display: flex; align-items: center; gap: 8px; }
+.no { width: 21px; height: 21px; border-radius: 50%; background: var(--ink); color: #fff; font-family: "Noto Sans", sans-serif; font-weight: 900; font-size: 11.5px; display: grid; place-items: center; flex: none; }
+h2 { font-size: 1.24em; font-weight: 800; line-height: 1.3; }
+.muted { color: var(--muted); }
+.box { border: 1.5px solid var(--brand); border-radius: 6px; padding: 8px 12px; display: grid; gap: 4px; }
+.box ul, .grave ul { list-style: none; display: grid; gap: 3px; }
+.box li, .grave li { padding-left: 11px; position: relative; }
+.box li::before, .grave li::before { content: ""; position: absolute; left: 1px; top: .62em; width: 5px; height: 5px; border-radius: 50%; background: var(--brand); }
+.alts { display: grid; gap: 5px; }
+.alt { display: grid; align-items: start; grid-template-columns: 118px minmax(0,1fr); gap: 8px; background: var(--tint); border-radius: 5px; padding: 5px 10px; }
+.alt h3 { font-size: 1em; font-weight: 800; }
+.types .alt { background: var(--brand-soft); }
+.types .alt h3 { color: var(--brand-ink); }
+.flow { display: flex; align-items: center; gap: 4px 5px; flex-wrap: wrap; }
+.flow span { background: var(--brand-soft); color: var(--brand-ink); font-weight: 700; border-radius: 99px; padding: 1px 9px; font-size: 0.92em; }
+.flow i { color: var(--brand); font-style: normal; font-weight: 900; }
+.alist { list-style: none; display: grid; gap: 4px; }
+.alist li { background: var(--tint); border-radius: 5px; padding: 4px 10px; }
+.chips { display: flex; flex-wrap: wrap; gap: 4px; }
+.chips span { border: 1px solid var(--line); border-radius: 99px; padding: 0 9px; font-size: 0.93em; }
+.cx { display: grid; gap: 5px; }
+.cx-g { display: grid; gap: 1px; }
+.cx-g h3 { font-size: 1em; font-weight: 800; color: var(--brand-ink); }
+.grave { background: var(--alert-soft); border-radius: 6px; padding: 7px 11px; }
+.grave h3 { color: var(--alert); }
+.grave li::before { background: var(--alert); }
+.rules { list-style: none; display: grid; gap: 3px; }
+.rules li { display: grid; grid-template-columns: 16px 1fr; gap: 6px; }
+.rules li::before { content: "✓"; color: var(--teal); font-weight: 900; }
+.foot { border-top: 1px solid var(--line); background: var(--tint); padding: 9px 34px 11px; display: grid; gap: 2px; font-size: 0.88em; color: var(--muted); }
+.foot b { color: var(--ink); }
+.sign { padding: 10px 34px 16px; border-top: 1.5px solid var(--ink); display: grid; grid-template-columns: auto 1fr 1.4fr; gap: 20px; align-items: end; }
+.sign .lbl { font-family: var(--display); font-weight: 800; font-size: 12.5px; line-height: 1.35; }
+.sign .f { display: grid; gap: 3px; }
+.sign .f > span { font-size: 10.5px; color: var(--muted); }
+.sign .f div { border-bottom: 1px solid var(--ink); height: 26px; display: flex; justify-content: flex-end; align-items: flex-end; padding: 0 2px 3px; font-size: 11px; color: var(--muted); }
+</style>
+</head>
+<body>
+<header class="head">
+  <div class="top">
+    <div class="clinic"><span class="mark">프라임</span>คลินิกทันตกรรมไพรม์ คย็องจู</div>
+    <div class="ver">หนังสือยินยอม ฉบับที่ 6 · 7 ส.ค. 2026</div>
+  </div>
+  <h1>หนังสือยินยอมการฟอกสีฟัน <span>ฉบับสรุป</span></h1>
+  <p class="pre"><b>เอกสารนี้เป็นฉบับสรุปสำหรับอ่านก่อนให้ความยินยอม</b> การให้ความยินยอมจริงจะทำที่คลินิก โดยท่านจะลงนามในหนังสือยินยอมฉบับจริงหลังจากได้ฟังคำอธิบายจากทันตแพทย์และได้สอบถามข้อสงสัยแล้ว</p>
+</header>
+<main class="body">
+  <div class="col">
+    <section class="sec">
+      <div class="sec-h"><span class="no">1</span><h2>วัตถุประสงค์และวิธีการ</h2></div>
+      <p>สารฟอกสีฟัน (ไฮโดรเจนเปอร์ออกไซด์หรือคาร์บาไมด์เปอร์ออกไซด์) สลายสีภายในเนื้อฟัน เพื่อ<b>ทำให้ฟันที่เปลี่ยนสีขาวขึ้น</b></p>
+      <div class="alts types"><div class="alt"><h3>ฟอกสีฟันที่คลินิก</h3><p>ป้องกันเหงือกและริมฝีปากก่อน แล้วทาสารฟอกสีที่คลินิก บางครั้งใช้แสงร่วม</p></div><div class="alt"><h3>ฟอกสีฟันที่บ้าน</h3><p>ใส่ถาดครอบฟันเฉพาะบุคคลพร้อมสารฟอกสีที่บ้านตามเวลาที่กำหนด (อาจใช้ทั้งสองวิธีร่วมกัน)</p></div><div class="alt"><h3>ฟอกสีฟันจากภายใน</h3><p>สำหรับฟันที่รักษารากแล้วเปลี่ยนสี ใส่สารไว้ในฟันและเปลี่ยนหลายครั้ง</p></div></div>
+      <div class="flow"><span>ตรวจฟันผุ เหงือก รอยร้าว วัสดุอุด</span><i>→</i><span>รักษาที่จำเป็นก่อน</span><i>→</i><span>ฟอกสีฟัน</span><i>→</i><span>ดูแลต่อเนื่อง</span></div>
+      <p class="muted">การฟอกสีฟันเป็น<b>การรักษาเพื่อความสวยงามที่เลือกได้</b> ไม่ใช่การรักษาโรค หากไม่ทำก็ไม่ส่งผลต่อสุขภาพช่องปาก วิธีการหรือจำนวนครั้งอาจเปลี่ยนระหว่างการรักษา</p>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">2</span><h2>ข้อจำกัดของผลลัพธ์ — โปรดตรวจสอบ</h2></div>
+      <div class="box"><p>ผลลัพธ์ต่างกันในแต่ละคนและแต่ละซี่ และอาจไม่ขาวถึงระดับที่ต้องการ</p><ul><li><b>สาเหตุของสีฟันมีผลมาก</b> ฟันสีเหลืองตอบสนองดี แต่สีเทา น้ำเงิน หรือดำ คราบจากยา (เตตราไซคลีน) และจุดจากฟลูออโรซิสได้ผลจำกัด จุดขาวจะไม่หายและอาจเห็นชัดขึ้น</li><li><b>วัสดุอุด ครอบฟัน วีเนียร์ ไม่ขาวขึ้น</b> หากสีไม่เข้ากันอาจต้องทำใหม่ซึ่งมีค่าใช้จ่ายแยก</li><li>คอฟันใกล้เหงือกมีสีเข้มกว่าโดยธรรมชาติ และแต่ละซี่อาจขาวขึ้นไม่เท่ากัน</li><li>จำนวนครั้งและระยะเวลาจะกำหนดระหว่างการรักษา หากเพิ่มขึ้นอาจมีค่าใช้จ่ายเพิ่ม</li><li><b>ผลไม่ถาวร</b> ฟันจะกลับมาคล้ำขึ้นตามเวลา (ไม่ใช่ความล้มเหลว) กาแฟ ชา ไวน์ แกงกะหรี่ และบุหรี่ทำให้เร็วขึ้น จึงต้องดูแลต่อเนื่อง</li></ul></div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">3</span><h2>ทางเลือกการรักษาอื่น</h2></div>
+      <ul class="alist"><li><b>ไม่รักษา</b> — ไม่มีผลข้างเคียงหรือค่าใช้จ่าย แต่สีฟันไม่เปลี่ยน</li><li><b>ขูดหินปูนและขัดฟัน</b> — ขจัดเฉพาะคราบผิวนอก ไม่ทำให้ขาวกว่าสีธรรมชาติ</li><li><b>ที่คลินิกกับที่บ้าน</b> — ที่คลินิกเร็วกว่าแต่เสียวฟันและระคายเหงือกมากกว่า ที่บ้านอ่อนโยนกว่าแต่ใช้เวลานานและต้องใส่สม่ำเสมอ</li><li><b>ขัดผิวเคลือบ / เรซินแทรกซึม</b> — สำหรับฟลูออโรซิสหรือจุดขาว กรอผิวเล็กน้อยและใช้ได้จำกัด</li><li><b>อุดเรซิน</b> — ปรับสีและรูปร่างได้ในครั้งเดียว แต่เปลี่ยนสีและสึกตามเวลา</li><li><b>วีเนียร์ / ครอบฟัน</b> — แก้สีที่ยากและรูปร่างได้ แต่ต้องกรอฟัน ค่าใช้จ่ายสูง และอาจบิ่นหรือหลุด</li></ul>
+    </section>
+  </div>
+  <div class="col">
+    <section class="sec">
+      <div class="sec-h"><span class="no">4</span><h2>ภาวะแทรกซ้อนที่อาจเกิดขึ้น</h2></div>
+      <div class="cx">
+        <div class="cx-g"><h3>เสียวฟัน (พบบ่อยที่สุด)</h3><p>เสียวเมื่อโดนเย็นหรือปวดแปลบพบได้บ่อย มักเกิดในไม่กี่วันแรกและหายในไม่กี่วัน แต่บางรายนานหรือรุนแรงจนต้องหยุด ยาลดเสียวช่วยได้ไม่ทั้งหมด บางรายเส้นประสาทเสียหายต้องรักษารากฟัน ฟันผุ วัสดุอุดรั่ว รากฟันโผล่ คอฟันสึก หรือรอยร้าวทำให้เสียวมากขึ้น ต้องรักษาก่อน</p></div>
+        <div class="cx-g"><h3>เหงือกและช่องปาก</h3><p>เหงือก ริมฝีปาก แก้มที่โดนสารอาจขาวซีด แสบ หรือเจ็บ (ระคายจากสารเคมี) มักหายในไม่กี่วันแต่อาจนานกว่า หากเหงือกอักเสบหรือมีแผลควรรักษาก่อน</p></div>
+        <div class="cx-g"><h3>ฟอกสีฟันที่รักษารากแล้ว</h3><p>พบน้อยแต่อาจเกิด<b>การละลายของรากฟันจากภายนอก</b>จนสูญเสียฟัน บางครั้งพบหลังหลายปี (ใช้ชั้นกั้นลดความเสี่ยงได้แต่ไม่หมด) อาจต้องรักษารากฟันใหม่ วัสดุอุดเปลี่ยนสีหรือหลุด หรือสีไม่ถึงเป้าหมายหรือกลับมาคล้ำ</p></div>
+        <div class="cx-g"><h3>อื่น ๆ</h3><p>ขอบวัสดุอุดมีช่องมากขึ้นทำให้ผุหรือเปลี่ยนสี กลืนหรือสำลักสารฟอกสีหรือเครื่องมือ (กลืนแล้วอาจระคายกระเพาะ) <b>ไม่แนะนำระหว่างตั้งครรภ์</b> หากให้นมบุตรโปรดปรึกษาก่อน วัยรุ่นควรทำหลังฟันแท้ขึ้นครบ</p></div>
+        <div class="cx-g grave"><h3>พบได้น้อยแต่รุนแรง</h3><ul><li>แพ้หรือภาวะแพ้รุนแรง (ช็อก) — ต้องรักษาฉุกเฉินและส่งต่อโรงพยาบาล</li></ul></div>
+      </div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">5</span><h2>โปรดแจ้งให้ทราบ</h2></div>
+      <p class="muted">เพื่อความปลอดภัยในการฟอกสีฟัน โปรดแจ้งล่วงหน้าหากท่านมีข้อใดต่อไปนี้</p>
+      <div class="chips"><span>ตั้งครรภ์ (หรืออาจตั้งครรภ์)</span><span>ให้นมบุตร</span><span>แพ้สารฟอกสีฟัน (เปอร์ออกไซด์)</span><span>แพ้ยาหรือวัสดุทันตกรรมอื่น</span><span>เสียวฟันเป็นประจำ</span><span>โรคกระเพาะ / หลอดอาหาร</span><span>ฉายรังสีบริเวณศีรษะและลำคอ</span><span>เคมีบำบัด / ยากดภูมิคุ้มกัน</span><span>สูบบุหรี่</span><span>โรคหรือยาอื่น ๆ ที่ใช้อยู่</span></div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">6</span><h2>สิ่งที่ผู้ป่วยต้องปฏิบัติ</h2></div>
+      <ul class="rules"><li><span>ใช้ตามเวลา ความถี่ และระยะเวลาที่กำหนด <b>อย่าใช้นานขึ้นเอง</b>เพื่อให้ได้ผลเร็ว (ฟันอาจเสียหาย) และใช้สารฟอกสีตามปริมาณที่แนะนำเท่านั้น</span></li><li><span>หากเสียวฟัน ปวด หรือเหงือกขาวซีดหรือเจ็บ <b>หยุดใช้ทันที</b>และแจ้งคลินิก</span></li><li><span>ลดอาหารที่ทำให้ฟันเปลี่ยนสีและบุหรี่ และทำความสะอาดถาดครอบฟันเสมอ</span></li><li><span>มาตามนัด และแจ้งเมื่อสุขภาพ ยาที่ใช้ หรือ<b>การตั้งครรภ์</b>เปลี่ยนไป</span></li></ul>
+    </section>
+  </div>
+</main>
+<footer class="foot"><p><b>การลงนามในหนังสือยินยอม</b> หมายถึงท่านเข้าใจว่าการฟอกสีฟันเป็นการรักษาเพื่อความสวยงามที่เลือกได้ และได้รับคำอธิบายและเข้าใจ โดยเฉพาะว่าฟันอาจไม่ขาวเท่าที่ต้องการ วัสดุบูรณะไม่ขาวขึ้น และสีจะกลับมาคล้ำตามเวลา และยินยอมรับการฟอกสีฟันด้วยความสมัครใจ</p><p>ทันตแพทย์เจ้าของไข้คือผู้ให้คำอธิบายและเป็นผู้ผ่าตัดหลัก หากจำเป็น ทันตแพทย์ท่านอื่นของคลินิกอาจร่วมในบางขั้นตอน หากผู้ป่วยเป็นผู้เยาว์หรือไม่สามารถเข้าใจเนื้อหาได้ ผู้แทนจะเป็นผู้ลงนาม</p><p>เอกสารนี้เป็นคำแปลเพื่อประกอบความเข้าใจ หากมีความไม่ตรงกัน ให้ยึดต้นฉบับภาษาเกาหลีเป็นหลัก</p></footer>
+<section class="sign">
+  <p class="lbl">ข้าพเจ้าได้อ่าน<br>เอกสารสรุปนี้แล้ว</p>
+  <div class="f"><span>วันที่</span><div>______ เดือน __________ พ.ศ. ______</div></div>
+  <div class="f"><span>ชื่อผู้ป่วย (หรือผู้แทน)</span><div>(ลายมือชื่อ)</div></div>
+</section>
+<script>
+// 넘치면 글자 크기를 조금씩 줄여 A4 한 장에 맞춤
+document.fonts.ready.then(function fit(){
+  const cols=[...document.querySelectorAll('.col')];
+  const m=document.querySelector("main");
+  const over=()=>document.body.scrollHeight>1124||m.scrollHeight>m.clientHeight+1||cols.some(c=>c.scrollHeight>c.clientHeight+1);
+  let fs=11.0, gap=14;
+  while(over() && fs>9.6){ fs-=0.1; if(gap>9) gap-=0.5;
+    document.documentElement.style.setProperty('--fs',fs+'px');
+    document.documentElement.style.setProperty('--gap',gap+'px'); }
+  document.body.dataset.fs=fs.toFixed(1);
+});
+</script>
+</body>
+</html>

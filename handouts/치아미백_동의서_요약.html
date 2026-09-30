@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>치아미백 동의서 요약</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@700;800;900&amp;family=Noto+Sans:wght@400;500;700;800;900&amp;family=Noto+Sans+KR:wght@400;500;700;900&amp;family=Noto+Sans+Thai:wght@400;500;700;800;900&amp;family=Noto+Sans+SC:wght@400;500;700;800;900&amp;display=swap">
+<style>
+/* A4 한 장(794×1123 CSS px) 이미지용 — 임플란트 동의서 요약과 같은 레이아웃 */
+:root {
+  --paper: #ffffff; --ink: #1d2327; --muted: #5a656b; --line: #e2e6e9; --tint: #f5f7f8;
+  --brand: #e8891c; --brand-ink: #b3620a; --brand-soft: #fdf1e3;
+  --teal: #1f7a78; --teal-soft: #e5f2f1; --alert: #c8322b; --alert-soft: #fcebea;
+  --font: "Noto Sans KR", sans-serif;
+  --display: "Gothic A1", "Noto Sans KR", sans-serif;
+  --fs: 11.6px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--paper); }
+body { width: 794px; height: 1123px; overflow: hidden; color: var(--ink); font-family: var(--font);
+  font-size: var(--fs); line-height: 1.55; display: flex; flex-direction: column; overflow-wrap: break-word; word-break: keep-all; }
+h1, h2, h3 { font-family: var(--display); }
+b { font-weight: 700; }
+.head { padding: 24px 34px 14px; border-bottom: 5px solid var(--brand); display: grid; gap: 7px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.clinic { display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--brand-ink); font-size: 12px; }
+.mark { background: var(--brand); color: #fff; font-family: "Noto Sans KR", sans-serif; font-weight: 900; font-size: 11px; border-radius: 5px; padding: 3px 6px; }
+.ver { color: var(--muted); font-size: 11px; }
+h1 { font-size: 30px; font-weight: 900; letter-spacing: -.01em; line-height: 1.25; }
+h1 span { color: var(--brand-ink); }
+.pre { background: var(--teal-soft); border-radius: 5px; padding: 8px 12px; font-size: 0.97em; }
+.pre b { color: var(--teal); }
+.body { flex: 1; display: grid; grid-template-columns: 1fr 1fr; min-height: 0; }
+.col { padding: 16px 20px 14px; display: flex; flex-direction: column; gap: var(--gap, 14px); min-width: 0; }
+.col + .col { border-left: 1px solid var(--line); }
+.sec { display: grid; gap: 6px; flex: none; }
+.sec-h { display: flex; align-items: center; gap: 8px; }
+.no { width: 21px; height: 21px; border-radius: 50%; background: var(--ink); color: #fff; font-family: "Noto Sans", sans-serif; font-weight: 900; font-size: 11.5px; display: grid; place-items: center; flex: none; }
+h2 { font-size: 1.24em; font-weight: 800; line-height: 1.3; }
+.muted { color: var(--muted); }
+.box { border: 1.5px solid var(--brand); border-radius: 6px; padding: 8px 12px; display: grid; gap: 4px; }
+.box ul, .grave ul { list-style: none; display: grid; gap: 3px; }
+.box li, .grave li { padding-left: 11px; position: relative; }
+.box li::before, .grave li::before { content: ""; position: absolute; left: 1px; top: .62em; width: 5px; height: 5px; border-radius: 50%; background: var(--brand); }
+.alts { display: grid; gap: 5px; }
+.alt { display: grid; align-items: start; grid-template-columns: 96px minmax(0,1fr); gap: 8px; background: var(--tint); border-radius: 5px; padding: 5px 10px; }
+.alt h3 { font-size: 1em; font-weight: 800; }
+.types .alt { background: var(--brand-soft); }
+.types .alt h3 { color: var(--brand-ink); }
+.flow { display: flex; align-items: center; gap: 4px 5px; flex-wrap: wrap; }
+.flow span { background: var(--brand-soft); color: var(--brand-ink); font-weight: 700; border-radius: 99px; padding: 1px 9px; font-size: 0.92em; }
+.flow i { color: var(--brand); font-style: normal; font-weight: 900; }
+.alist { list-style: none; display: grid; gap: 4px; }
+.alist li { background: var(--tint); border-radius: 5px; padding: 4px 10px; }
+.chips { display: flex; flex-wrap: wrap; gap: 4px; }
+.chips span { border: 1px solid var(--line); border-radius: 99px; padding: 0 9px; font-size: 0.93em; }
+.cx { display: grid; gap: 5px; }
+.cx-g { display: grid; gap: 1px; }
+.cx-g h3 { font-size: 1em; font-weight: 800; color: var(--brand-ink); }
+.grave { background: var(--alert-soft); border-radius: 6px; padding: 7px 11px; }
+.grave h3 { color: var(--alert); }
+.grave li::before { background: var(--alert); }
+.rules { list-style: none; display: grid; gap: 3px; }
+.rules li { display: grid; grid-template-columns: 16px 1fr; gap: 6px; }
+.rules li::before { content: "✓"; color: var(--teal); font-weight: 900; }
+.foot { border-top: 1px solid var(--line); background: var(--tint); padding: 9px 34px 11px; display: grid; gap: 2px; font-size: 0.88em; color: var(--muted); }
+.foot b { color: var(--ink); }
+.sign { padding: 10px 34px 16px; border-top: 1.5px solid var(--ink); display: grid; grid-template-columns: auto 1fr 1.4fr; gap: 20px; align-items: end; }
+.sign .lbl { font-family: var(--display); font-weight: 800; font-size: 12.5px; line-height: 1.35; }
+.sign .f { display: grid; gap: 3px; }
+.sign .f > span { font-size: 10.5px; color: var(--muted); }
+.sign .f div { border-bottom: 1px solid var(--ink); height: 26px; display: flex; justify-content: flex-end; align-items: flex-end; padding: 0 2px 3px; font-size: 11px; color: var(--muted); }
+</style>
+</head>
+<body>
+<header class="head">
+  <div class="top">
+    <div class="clinic"><span class="mark">프라임</span>경주 프라임치과</div>
+    <div class="ver">동의서 버전 6 · 2026. 08. 07</div>
+  </div>
+  <h1>치아미백 동의서 <span>한눈에 보기</span></h1>
+  <p class="pre"><b>동의 전에 미리 읽어 보시는 요약본입니다.</b> 실제 동의는 담당 의료진의 설명을 듣고 궁금한 점을 질문하신 뒤, 병원에서 동의서 원본에 서명하여 진행합니다.</p>
+</header>
+<main class="body">
+  <div class="col">
+    <section class="sec">
+      <div class="sec-h"><span class="no">1</span><h2>치료 목적과 방법</h2></div>
+      <p>미백제(과산화수소·과산화요소 등)가 치아 속 색소를 분해해 <b>변색된 치아를 밝게</b> 하는 치료입니다.</p>
+      <div class="alts types"><div class="alt"><h3>전문가 미백</h3><p>잇몸·입술을 보호한 뒤 병원에서 미백제를 바르고, 필요하면 빛을 쬡니다.</p></div><div class="alt"><h3>자가 미백</h3><p>맞춤 트레이에 미백제를 넣어 집에서 정해진 시간 동안 낍니다. (두 방법을 함께 쓰기도 함)</p></div><div class="alt"><h3>실활치 미백</h3><p>신경치료 후 변색된 치아 속에 미백제를 넣고 여러 번 교체합니다.</p></div></div>
+      <div class="flow"><span>충치·잇몸·균열·수복물 점검</span><i>→</i><span>필요한 치료 먼저</span><i>→</i><span>미백 진행</span><i>→</i><span>유지관리</span></div>
+      <p class="muted">미백은 질병 치료가 아닌 <b>선택적인 심미 치료</b>로, 받지 않아도 구강 건강에 문제가 없습니다. 진행 중 상태에 따라 방법·횟수가 바뀔 수 있습니다.</p>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">2</span><h2>효과의 한계 — 꼭 확인해 주세요</h2></div>
+      <div class="box"><p>결과는 사람마다, 치아마다 다르며 원하는 밝기에 이르지 못할 수 있습니다.</p><ul><li><b>변색 원인에 따라 효과가 다릅니다.</b> 누런 변색은 잘 반응하지만 회색·푸른색·검은색 계열, 약물(테트라사이클린) 착색, 불소증 반점은 효과가 제한적입니다. 흰 반점은 없어지지 않고 오히려 두드러질 수 있습니다.</li><li><b>레진·크라운·라미네이트 등 인공물은 미백되지 않습니다.</b> 색이 맞지 않으면 다시 만들어야 할 수 있으며 별도 비용이 듭니다.</li><li>잇몸 쪽 치아 목 부분은 원래 더 어둡고, 치아마다 밝아지는 정도가 달라 고르지 않을 수 있습니다.</li><li>필요한 횟수·기간은 진행하면서 정해지며, 늘어나면 추가 비용이 생길 수 있습니다.</li><li><b>효과는 영구적이지 않습니다.</b> 시간이 지나면 다시 어두워지며(실패가 아님), 커피·차·와인·카레·흡연에 따라 속도가 달라지고 유지관리가 필요합니다.</li></ul></div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">3</span><h2>다른 치료 방법</h2></div>
+      <ul class="alist"><li><b>치료하지 않음</b> — 부작용·비용은 없으나 색은 개선되지 않습니다.</li><li><b>스케일링·치면연마</b> — 표면 착색만 없애며, 타고난 색보다 밝아지지 않습니다.</li><li><b>전문가 ↔ 자가 미백</b> — 전문가 미백은 빠르지만 시림·잇몸 자극이 더 많고, 자가 미백은 자극이 적지만 기간이 길고 착용을 지켜야 합니다.</li><li><b>미세연마·레진 침투</b> — 불소증·흰 반점에 쓰며, 표면을 미세하게 깎고 적용 범위가 제한적입니다.</li><li><b>레진 수복</b> — 한 번에 색과 형태를 개선하지만 시간이 지나면 변색·마모됩니다.</li><li><b>라미네이트·크라운</b> — 어려운 변색과 형태까지 개선하지만, 치아를 깎아야 하고 비용이 높으며 파절·탈락 등이 생길 수 있습니다.</li></ul>
+    </section>
+  </div>
+  <div class="col">
+    <section class="sec">
+      <div class="sec-h"><span class="no">4</span><h2>생길 수 있는 합병증</h2></div>
+      <div class="cx">
+        <div class="cx-g"><h3>시린 증상 (가장 흔함)</h3><p>찬 것에 시리거나 찌릿한 통증이 흔합니다. 대개 시작 후 며칠 안에 나타나 수일 내 가라앉지만 더 오래가거나 심해 중단할 수 있고, 완화제로도 완전히 없어지지 않습니다. 드물게 신경이 손상되어 신경치료가 필요할 수 있습니다. 충치·틈이 있는 수복물·드러난 뿌리·패인 치아 목·균열이 있으면 더 심해질 수 있어 먼저 처치가 필요합니다.</p></div>
+        <div class="cx-g"><h3>잇몸·입안</h3><p>미백제가 닿은 잇몸·입술·볼이 하얗게 변하고 따갑거나 아플 수 있습니다(화학적 자극). 대개 며칠 내 회복되지만 더 오래갈 수 있고, 잇몸에 염증이나 상처가 있으면 먼저 치료가 필요합니다.</p></div>
+        <div class="cx-g"><h3>신경치료한 치아의 미백</h3><p>드물게 치아 뿌리가 녹는 <b>외흡수</b>로 치아를 잃을 수 있고 수년 뒤 발견되기도 합니다(차단막 등으로 위험을 줄이지만 완전히 없앨 수는 없음). 신경치료를 다시 해야 하거나, 수복물 변색·탈락, 목표 색 미달·재변색이 있을 수 있습니다.</p></div>
+        <div class="cx-g"><h3>그 밖의 사항</h3><p>수복물 경계의 틈이 늘어 2차 충치·변색, 미백제·기구를 삼키거나 들이마심(삼키면 위장 자극). <b>임신 중에는 권하지 않으며</b> 수유 중이면 미리 상의가 필요합니다. 청소년은 영구치가 모두 나온 뒤에 시행합니다.</p></div>
+        <div class="cx-g grave"><h3>드물지만 중대한 합병증</h3><ul><li>알레르기·아나필락시스(쇼크) — 응급 처치·상급병원 이송 필요</li></ul></div>
+      </div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">5</span><h2>꼭 알려 주세요</h2></div>
+      <p class="muted">안전한 미백을 위해 아래에 해당하면 미리 말씀해 주세요.</p>
+      <div class="chips"><span>임신 (가능성 포함)</span><span>수유 중</span><span>미백제 성분 알레르기</span><span>그 밖의 약물·치과재료 알레르기</span><span>평소 시린 증상</span><span>위·식도 질환</span><span>두경부 방사선치료</span><span>항암치료·면역억제제</span><span>흡연</span><span>그 밖의 질환·복용 약</span></div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">6</span><h2>환자분이 지켜 주실 일</h2></div>
+      <ul class="rules"><li><span>정해진 사용 시간·횟수·기간을 지키고, 빨리 효과를 보려고 <b>임의로 늘려 쓰지 마세요</b>(치아가 손상될 수 있음). 미백제는 지시된 양만 쓰세요.</span></li><li><span>시림·통증, 잇몸이 하얗게 변하거나 아프면 <b>즉시 중단</b>하고 알려 주세요.</span></li><li><span>착색이 강한 음식과 흡연을 줄이고, 트레이를 깨끗이 관리해 주세요.</span></li><li><span>안내된 일정에 오시고, 건강 상태·복용 약·<b>임신 여부</b>가 바뀌면 알려 주세요.</span></li></ul>
+    </section>
+  </div>
+</main>
+<footer class="foot"><p><b>동의서에 서명하시면</b> 치아미백이 질병 치료가 아닌 선택적 심미 치료임을 이해했고, 특히 원하는 만큼 밝아지지 않을 수 있다는 점, 기존 수복물·보철물은 미백되지 않는다는 점, 밝아진 색이 시간이 지나면 되돌아온다는 점을 설명 듣고 이해했으며, 자유로운 의사로 치아미백에 동의함을 확인하게 됩니다.</p><p>주치의는 설명을 맡고 시술을 주도하는 의사이며, 필요하면 본원의 다른 치과의사가 일부 과정에 참여할 수 있습니다. 미성년자이거나 내용을 이해하기 어려운 경우에는 대리인이 서명합니다.</p></footer>
+<section class="sign">
+  <p class="lbl">요약본을 읽고<br>확인했습니다</p>
+  <div class="f"><span>확인일</span><div>년&emsp;&emsp;&emsp;월&emsp;&emsp;&emsp;일</div></div>
+  <div class="f"><span>환자(또는 대리인) 성명</span><div>(서명)</div></div>
+</section>
+<script>
+// 넘치면 글자 크기를 조금씩 줄여 A4 한 장에 맞춤
+document.fonts.ready.then(function fit(){
+  const cols=[...document.querySelectorAll('.col')];
+  const m=document.querySelector("main");
+  const over=()=>document.body.scrollHeight>1124||m.scrollHeight>m.clientHeight+1||cols.some(c=>c.scrollHeight>c.clientHeight+1);
+  let fs=11.6, gap=14;
+  while(over() && fs>9.6){ fs-=0.1; if(gap>9) gap-=0.5;
+    document.documentElement.style.setProperty('--fs',fs+'px');
+    document.documentElement.style.setProperty('--gap',gap+'px'); }
+  document.body.dataset.fs=fs.toFixed(1);
+});
+</script>
+</body>
+</html>
