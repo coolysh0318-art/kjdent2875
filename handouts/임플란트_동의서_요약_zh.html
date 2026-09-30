@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<title>种植牙同意书摘要</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700;800;900&amp;family=Noto+Sans+Thai:wght@400;500;700;800;900&amp;family=Noto+Sans+KR:wght@400;700;900&amp;family=Noto+Sans+SC:wght@400;500;700;800;900&amp;display=swap">
+<style>
+/* A4 한 장(794×1123 CSS px) 이미지용 — 한국어판과 같은 레이아웃 */
+:root {
+  --paper: #ffffff; --ink: #1d2327; --muted: #5a656b; --line: #e2e6e9; --tint: #f5f7f8;
+  --brand: #e8891c; --brand-ink: #b3620a; --brand-soft: #fdf1e3;
+  --teal: #1f7a78; --teal-soft: #e5f2f1; --alert: #c8322b; --alert-soft: #fcebea;
+  --font: "Noto Sans SC", "Noto Sans", "Noto Sans KR", sans-serif;
+  --fs: 12.2px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--paper); }
+body { width: 794px; height: 1123px; overflow: hidden; color: var(--ink); font-family: var(--font);
+  font-size: var(--fs); line-height: 1.6; display: flex; flex-direction: column; overflow-wrap: break-word; }
+h1, h2, h3 { font-family: var(--font); }
+b { font-weight: 700; }
+.head { padding: 24px 34px 14px; border-bottom: 5px solid var(--brand); display: grid; gap: 7px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.clinic { display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--brand-ink); font-size: 12px; }
+.mark { background: var(--brand); color: #fff; font-family: "Noto Sans KR", sans-serif; font-weight: 900; font-size: 11px; border-radius: 5px; padding: 3px 6px; }
+.ver { color: var(--muted); font-size: 11px; }
+h1 { font-size: 29px; font-weight: 900; letter-spacing: -.01em; line-height: 1.25; }
+h1 span { color: var(--brand-ink); }
+.pre { background: var(--teal-soft); border-radius: 5px; padding: 8px 12px; font-size: 0.97em; }
+.pre b { color: var(--teal); }
+.body { flex: 1; display: grid; grid-template-columns: 1fr 1fr; min-height: 0; }
+.col { padding: 16px 20px 14px; display: flex; flex-direction: column; gap: var(--gap, 14px); min-width: 0; }
+.col + .col { border-left: 1px solid var(--line); }
+.sec { display: grid; gap: 6px; flex: none; }
+.sec-h { display: flex; align-items: center; gap: 8px; }
+.no { width: 21px; height: 21px; border-radius: 50%; background: var(--ink); color: #fff; font-weight: 900; font-size: 11.5px; display: grid; place-items: center; flex: none; }
+h2 { font-size: 1.24em; font-weight: 800; line-height: 1.3; }
+.flow { display: flex; align-items: center; gap: 5px; flex-wrap: wrap; }
+.flow span { background: var(--brand-soft); color: var(--brand-ink); font-weight: 700; border-radius: 99px; padding: 1px 10px; font-size: 0.94em; }
+.flow i { color: var(--brand); font-style: normal; font-weight: 900; }
+.muted { color: var(--muted); }
+.box { border: 1.5px solid var(--brand); border-radius: 6px; padding: 8px 12px; display: grid; gap: 4px; }
+.box ul, .grave ul { list-style: none; display: grid; gap: 3px; }
+.box li, .grave li { padding-left: 11px; position: relative; }
+.box li::before, .grave li::before { content: ""; position: absolute; left: 1px; top: .62em; width: 5px; height: 5px; border-radius: 50%; background: var(--brand); }
+.alts { display: grid; gap: 5px; }
+.alt { display: grid; grid-template-columns: 70px minmax(0,1fr); gap: 8px; background: var(--tint); border-radius: 5px; padding: 5px 10px; }
+.alt h3 { font-size: 1em; font-weight: 800; }
+.plus { color: var(--teal); font-weight: 700; }
+.minus { color: var(--alert); font-weight: 700; }
+.chips { display: flex; flex-wrap: wrap; gap: 4px; }
+.chips span { border: 1px solid var(--line); border-radius: 99px; padding: 0 9px; font-size: 0.93em; }
+.cx { display: grid; gap: 5px; }
+.cx-g { display: grid; gap: 1px; }
+.cx-g h3 { font-size: 1em; font-weight: 800; color: var(--brand-ink); }
+.grave { background: var(--alert-soft); border-radius: 6px; padding: 7px 11px; }
+.grave h3 { color: var(--alert); }
+.grave li::before { background: var(--alert); }
+.rules { list-style: none; display: grid; gap: 3px; }
+.rules li { display: grid; grid-template-columns: 16px 1fr; gap: 6px; }
+.rules li::before { content: "✓"; color: var(--teal); font-weight: 900; }
+.foot { border-top: 1px solid var(--line); background: var(--tint); padding: 9px 34px 11px; display: grid; gap: 2px; font-size: 0.88em; color: var(--muted); }
+.foot b { color: var(--ink); }
+.sign { padding: 10px 34px 16px; border-top: 1.5px solid var(--ink); display: grid; grid-template-columns: auto 1fr 1.4fr; gap: 20px; align-items: end; }
+.sign .lbl { font-weight: 800; font-size: 12.5px; line-height: 1.35; }
+.sign .f { display: grid; gap: 3px; }
+.sign .f > span { font-size: 10.5px; color: var(--muted); }
+.sign .f div { border-bottom: 1px solid var(--ink); height: 26px; display: flex; justify-content: flex-end; align-items: flex-end; padding: 0 2px 3px; font-size: 11px; color: var(--muted); }
+</style>
+</head>
+<body>
+<header class="head">
+  <div class="top">
+    <div class="clinic"><span class="mark">프라임</span>Prime 牙科诊所（庆州）</div>
+    <div class="ver">同意书第5版 · 2026.08.05</div>
+  </div>
+  <h1>种植牙手术同意书 <span>摘要</span></h1>
+  <p class="pre"><b>本摘要供您在签署同意书前阅读。</b>正式同意须在诊所进行：听取牙医说明并提出疑问后，再签署同意书原件。</p>
+</header>
+<main class="body">
+  <div class="col">
+    <section class="sec">
+      <div class="sec-h"><span class="no">1</span><h2>治疗目的与流程</h2></div>
+      <p>在缺牙部位的颌骨内植入人工牙根，待其与骨头牢固结合后再连接牙冠，以恢复<b>咀嚼、发音和美观</b>。</p>
+      <div class="flow"><span>一期手术</span><i>→</i><span>二期手术（必要时）</span><i>→</i><span>安装牙冠</span></div>
+      <p class="muted">如骨量或牙龈不足，可能同时或另行进行植骨、上颌窦提升或牙龈移植，治疗步骤和周期可能因此改变。</p>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">2</span><h2>手术中计划可能改变</h2></div>
+      <div class="box"><p>骨量、骨质和牙龈状况只有在手术中才能准确判断。</p><ul><li>种植体的<b>数量和位置</b>，以及植骨、上颌窦提升的<b>是否实施与范围</b>，可能变更或追加。</li><li>镇静（睡眠）状态下难以再次征得同意，因此事先就<b>同一治疗目的范围内的合理变更</b>取得您的同意。</li><li>变更内容和原因将在术后向您说明；如治疗目的或方法发生本质改变，将另行征得同意。</li><li>紧急情况下，优先采取保障您安全的处置。</li></ul></div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">3</span><h2>其他治疗方法</h2></div>
+      <div class="alts">
+        <div class="alt"><h3>固定桥</h3><p><span class="plus">优点</span> 治疗时间短<br><span class="minus">缺点</span> 需磨削邻牙</p></div>
+        <div class="alt"><h3>活动假牙</h3><p><span class="plus">优点</span> 费用可能较低<br><span class="minus">缺点</span> 咀嚼力和固位力较弱，有异物感</p></div>
+        <div class="alt"><h3>不治疗</h3><p>邻牙可能倾斜，对颌牙伸长，牙槽骨萎缩。</p></div>
+      </div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">4</span><h2>请务必告知</h2></div>
+      <p class="muted">为确保手术安全，如有以下情况请提前告知：</p>
+      <div class="chips"><span>糖尿病</span><span>高血压 / 心脏病</span><span>骨质疏松药物</span><span>药物 / 麻药过敏</span><span>抗凝血药 / 出血性疾病</span><span>吸烟</span><span>头颈部放射治疗</span><span>化疗 / 免疫抑制剂</span><span>怀孕（或可能怀孕）</span><span>其他疾病 / 正在服用的药物</span></div>
+    </section>
+  </div>
+  <div class="col">
+    <section class="sec">
+      <div class="sec-h"><span class="no">5</span><h2>可能出现的并发症</h2></div>
+      <div class="cx">
+        <div class="cx-g"><h3>术中及术后</h3><p>疼痛、肿胀、出血、淤青、感染或炎症、缝合处裂开、邻牙牙根损伤（可能需根管治疗或拔牙）、张口受限或颞下颌关节不适、麻醉及处方药副作用、误吞或误吸小零件。</p></div>
+        <div class="cx-g"><h3>神经损伤</h3><p>下唇、下巴、舌头、牙龈感觉异常或麻木（暂时或永久），味觉改变。</p></div>
+        <div class="cx-g"><h3>上颌手术及骨 / 牙龈移植</h3><p>上颌窦穿孔或上颌窦炎（可能需耳鼻喉科诊治）；少数情况下种植体移位进入上颌窦；植骨材料或屏障膜暴露、感染、吸收；牙龈取材部位（上腭）疼痛、出血；移植物坏死。</p></div>
+        <div class="cx-g"><h3>失败及远期并发症</h3><p>种植体未能与骨结合（取出后重新植入或追加植骨）、种植体周围炎、螺丝松动或折断、牙冠破损或脱落、种植体折断、食物嵌塞、咬合调整、牙龈退缩或金属外露、发音改变及异物感。</p></div>
+        <div class="cx-g grave"><h3>少见但严重的并发症</h3><ul><li>止血困难或数日后再次出血（服用抗凝血药者较常见）。</li><li><b>擅自停用抗凝血药</b>会增加中风和心肌梗塞的风险。是否停药须与开药医生商量决定。</li><li>有骨质疏松药物用药史者，少数可发生颌骨坏死（MRONJ）。</li><li>下颌骨骨折、口底出血、过敏性休克——需紧急处理并转诊至上级医院。</li></ul></div>
+      </div>
+    </section>
+    <section class="sec">
+      <div class="sec-h"><span class="no">6</span><h2>患者须遵守事项</h2></div>
+      <ul class="rules"><li><span>请<b>戒烟</b>——吸烟会增加失败风险。请遵照处方和医嘱。</span></li><li><span>请按时<b>定期复查</b>，用牙刷和牙间刷保持口腔清洁。</span></li><li><span>如有疼痛、肿胀、出血等异常，或<b>健康状况、服用药物发生变化</b>，请立即告知。</span></li></ul>
+    </section>
+  </div>
+</main>
+<footer class="foot"><p><b>签署同意书即表示</b>您已听取并理解上述说明，已收到《种植牙手术须知》，并自愿选择种植治疗。</p><p>主治医生是负责说明并主导手术的医生；必要时本院其他牙医可参与部分过程。患者为未成年人或难以理解本文件内容时，由代理人签字。</p><p>本文件为参考译文，如有出入，以韩文原件为准。</p></footer>
+<section class="sign">
+  <p class="lbl">本人已阅读<br>本摘要</p>
+  <div class="f"><span>日期</span><div>________ 年 ______ 月 ______ 日</div></div>
+  <div class="f"><span>患者（或代理人）姓名</span><div>（签字）</div></div>
+</section>
+<script>
+// 넘치면 글자 크기를 조금씩 줄여 A4 한 장에 맞춤
+document.fonts.ready.then(function fit(){
+  const cols=[...document.querySelectorAll('.col')];
+  const m=document.querySelector("main"); const over=()=>document.body.scrollHeight>1124||m.scrollHeight>m.clientHeight+1||cols.some(c=>c.scrollHeight>c.clientHeight+1);
+  let fs=12.2, gap=14;
+  while(over() && fs>9.9){ fs-=0.1; if(gap>9) gap-=0.5;
+    document.documentElement.style.setProperty('--fs',fs+'px');
+    document.documentElement.style.setProperty('--gap',gap+'px'); }
+  document.body.dataset.fs=fs.toFixed(1);
+});
+</script>
+</body>
+</html>
