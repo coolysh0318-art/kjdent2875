@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>경주 임플란트 포스터 A3</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;700;800;900&family=Noto+Sans+KR:wght@400;500;700;900&display=swap">
+<style>
+/* A3 세로(297×420mm = 1123×1587 CSS px). 기존 배너와 같은 남색 + 오렌지 */
+@page { size: 297mm 420mm; margin: 0; }
+:root {
+  --navy: #0b1828;
+  --navy-deep: #060d17;
+  --ink: #ffffff;
+  --soft: #b9c6d6;
+  --muted: #7d8da1;
+  --orange: #f5a623;
+  --blue: #5fa8ff;
+  --display: "Gothic A1", "Noto Sans KR", sans-serif;
+  --body: "Noto Sans KR", sans-serif;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1123px; height: 1587px; }
+body {
+  position: relative; overflow: hidden; color: var(--ink); font-family: var(--body);
+  background:
+    radial-gradient(900px 900px at 78% 52%, rgba(64,120,190,.28), transparent 60%),
+    radial-gradient(700px 600px at 10% 0%, rgba(245,166,35,.08), transparent 60%),
+    linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+/* CT 격자 느낌의 아주 옅은 선 */
+.grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(140,180,230,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(140,180,230,.05) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(700px 700px at 78% 52%, #000 30%, transparent 75%);
+  -webkit-mask-image: radial-gradient(700px 700px at 78% 52%, #000 30%, transparent 75%);
+}
+.sweep { position: absolute; left: 0; top: 1000px; width: 1123px; height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(245,166,35,.0) 20%, rgba(245,166,35,.55) 55%, transparent 90%);
+  transform: rotate(-14deg); }
+
+.top { position: absolute; left: 96px; top: 92px; display: flex; align-items: center; gap: 16px; }
+.mark { background: var(--orange); color: #fff; font-family: "Noto Sans KR", sans-serif; font-weight: 900;
+  font-size: 22px; border-radius: 8px; padding: 6px 12px; letter-spacing: .02em; }
+.eng { font-family: var(--display); font-weight: 700; font-size: 18px; letter-spacing: .42em; color: var(--soft); }
+
+.head { position: absolute; left: 92px; top: 190px; }
+.head h1 { font-family: var(--display); font-weight: 900; font-size: 138px; line-height: 1.12; letter-spacing: -.035em; }
+.head h1 .comma { color: var(--orange); }
+.rule { width: 120px; height: 6px; background: var(--orange); margin: 54px 0 40px 6px; border-radius: 3px; }
+.answer { font-family: var(--display); font-weight: 800; font-size: 60px; line-height: 1.28; letter-spacing: -.02em; color: var(--orange); }
+.lead { margin-top: 36px; font-size: 26px; line-height: 1.7; color: var(--soft); font-weight: 400; max-width: 520px; }
+.lead b { color: var(--ink); font-weight: 700; }
+
+.art { position: absolute; right: 50px; top: 540px; width: 400px; height: 650px; }
+
+.points { position: absolute; left: 96px; right: 96px; top: 1222px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
+.pt { padding: 6px 30px 6px 30px; display: grid; gap: 14px; justify-items: start; }
+.pt + .pt { border-left: 1px solid rgba(185,198,214,.25); }
+.pt:first-child { padding-left: 0; }
+.pt svg { width: 46px; height: 46px; }
+.pt p { font-family: var(--display); font-size: 27px; font-weight: 800; line-height: 1.35; letter-spacing: -.01em; }
+.pt p span { display: block; font-weight: 400; color: var(--soft); font-size: 23px; }
+
+.foot { position: absolute; left: 0; right: 0; bottom: 0; height: 200px; background: rgba(3,8,15,.72);
+  border-top: 2px solid var(--orange); padding: 36px 96px 0; display: grid; grid-template-columns: 1fr auto; align-items: start; column-gap: 40px; }
+.brand { display: flex; align-items: center; gap: 16px; white-space: nowrap; }
+.brand .mark { font-size: 24px; padding: 6px 12px; white-space: nowrap; }
+.brand b { font-family: var(--display); font-weight: 900; font-size: 42px; letter-spacing: -.02em; }
+.addr { margin-top: 14px; font-size: 24px; color: var(--soft); white-space: nowrap; }
+.tel { text-align: right; }
+.tel small { display: block; font-size: 20px; letter-spacing: .3em; color: var(--muted); font-family: var(--display); font-weight: 700; }
+.tel strong { display: block; font-family: var(--display); font-weight: 900; font-size: 64px; letter-spacing: -.01em; line-height: 1.1; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.legal { position: absolute; left: 96px; right: 96px; bottom: 20px; font-size: 16px; color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="grid"></div>
+<div class="sweep"></div>
+
+<div class="top"><span class="mark">프라임</span><span class="eng">PRIME DENTAL CLINIC</span></div>
+
+<section class="head">
+  <h1>경주 임플란트<br>어디서 할까<span class="comma">,</span></h1>
+  <div class="rule"></div>
+  <p class="answer">진단이 정확한 곳에서<br>시작하세요</p>
+  <p class="lead">뼈의 높이와 두께, 신경의 위치까지<br><b>3D CT로 먼저 확인</b>하고 계획합니다.</p>
+</section>
+
+<svg class="art" viewBox="0 0 400 760" aria-hidden="true">
+  <defs>
+    <radialGradient id="halo" cx="50%" cy="48%" r="50%">
+      <stop offset="0" stop-color="#5fa8ff" stop-opacity=".45"/>
+      <stop offset=".55" stop-color="#2a5d9a" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#0b1828" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="crown" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#cfe2f7"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4f7fb4"/>
+      <stop offset=".45" stop-color="#d9ecff"/>
+      <stop offset="1" stop-color="#3d6a9e"/>
+    </linearGradient>
+    <linearGradient id="bone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6f9fd6" stop-opacity=".30"/>
+      <stop offset="1" stop-color="#1c3b63" stop-opacity=".05"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="9" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <ellipse cx="200" cy="380" rx="200" ry="370" fill="url(#halo)"/>
+  <g fill="none" stroke="#5fa8ff" stroke-opacity=".22" stroke-width="1.5">
+    <circle cx="200" cy="380" r="150"/>
+    <circle cx="200" cy="380" r="215" stroke-dasharray="4 10"/>
+    <circle cx="200" cy="380" r="285" stroke-opacity=".12"/>
+  </g>
+  <!-- 잇몸뼈 단면 -->
+  <path d="M40,300 C90,280 150,292 200,292 C250,292 310,280 360,300 L340,740 C280,755 120,755 60,740 Z" fill="url(#bone)" stroke="#8fbaf0" stroke-opacity=".35" stroke-width="2"/>
+  <!-- 고정체 -->
+  <g filter="url(#glow)">
+    <path d="M140,300 L260,300 L236,628 Q200,662 164,628 Z" fill="url(#metal)"/>
+    <g stroke="#1f3f66" stroke-opacity=".55" stroke-width="5" stroke-linecap="round">
+        <path d="M135.3,318 L264.7,327" />
+        <path d="M136.8,338 L263.2,347" />
+        <path d="M138.3,358 L261.7,367" />
+        <path d="M139.7,378 L260.3,387" />
+        <path d="M141.2,398 L258.8,407" />
+        <path d="M142.7,418 L257.3,427" />
+        <path d="M144.1,438 L255.9,447" />
+        <path d="M145.6,458 L254.4,467" />
+        <path d="M147.1,478 L252.9,487" />
+        <path d="M148.6,498 L251.4,507" />
+        <path d="M150.0,518 L250.0,527" />
+        <path d="M151.5,538 L248.5,547" />
+        <path d="M153.0,558 L247.0,567" />
+        <path d="M154.4,578 L245.6,587" />
+        <path d="M155.9,598 L244.1,607" />
+        <path d="M157.4,618 L242.6,627" />
+    </g>
+    <!-- 지대주 -->
+    <rect x="168" y="250" width="64" height="56" rx="8" fill="url(#metal)"/>
+    <!-- 크라운 -->
+    <path d="M106,196 C93,136 113,66 160,58 C181,54 190,78 200,78 C210,78 219,54 240,58 C287,66 307,136 294,196 C288,238 256,262 200,262 C144,262 112,238 106,196 Z" fill="url(#crown)"/>
+  </g>
+  <!-- 측정 표시 -->
+  <g stroke="#f5a623" stroke-width="2" fill="none" stroke-opacity=".9">
+    <path d="M330,300 L330,640 M322,300 L338,300 M322,640 L338,640"/>
+  </g>
+  <g fill="#f5a623" font-family="Gothic A1, sans-serif" font-size="15" font-weight="700" letter-spacing="1">
+    <text x="344" y="476" transform="rotate(90 344 476)">3D CT</text>
+  </g>
+</svg>
+
+<section class="points">
+  <div class="pt">
+    <svg viewBox="0 0 48 48" fill="none" stroke="#f5a623" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="15" r="8"/><path d="M8 42c2-9 9-14 16-14s14 5 16 14"/><path d="M24 30v6M21 33h6"/></svg>
+    <p>통합치의학과 전문의<span>직접 진료</span></p>
+  </div>
+  <div class="pt">
+    <svg viewBox="0 0 48 48" fill="none" stroke="#f5a623" stroke-width="3" stroke-linecap="round"><circle cx="24" cy="24" r="16"/><circle cx="24" cy="24" r="7"/><path d="M24 2v8M24 38v8M2 24h8M38 24h8"/></svg>
+    <p>3D CT 네비게이션<span>임플란트</span></p>
+  </div>
+  <div class="pt">
+    <svg viewBox="0 0 48 48" fill="none" stroke="#f5a623" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M14 8c-5 0-8 4-8 10 0 8 3 12 5 22 1 3 4 3 5 0l2-9c1-3 4-3 5 0l2 9c1 3 4 3 5 0 2-10 5-14 5-22 0-6-3-10-8-10-3 0-5 2-7 2s-4-2-6-2z" transform="translate(4 0)"/></svg>
+    <p>원내 기공실<span>운영</span></p>
+  </div>
+</section>
+
+<footer class="foot">
+  <div>
+    <div class="brand"><span class="mark">프라임</span><b>경주 프라임치과</b></div>
+    <p class="addr">경북 경주시 원화로 298-1, 5층</p>
+  </div>
+  <div class="tel"><small>예약·상담</small><strong>054-705-1234</strong></div>
+</footer>
+<p class="legal">개인에 따라 치료 결과와 부작용이 다를 수 있습니다.</p>
+</body>
+</html>
