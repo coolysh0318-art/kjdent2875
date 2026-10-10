@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><title>임플란트 이벤트 배너</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@500;700;800;900&family=Noto+Sans+KR:wght@400;500;700;900&display=swap">
+<link rel="stylesheet" href="shared.css">
+<style>
+/* 홈페이지·블로그 가로 배너 (1920×720) */
+body{width:1920px;height:720px;display:grid;grid-template-columns:1fr 760px;background:var(--cream)}
+.left{padding:80px 0 0 110px;display:flex;flex-direction:column}
+.clinic{font-size:22px;letter-spacing:.32em;color:var(--muted);font-weight:500}
+h1{margin-top:22px;font-family:var(--font-display);font-weight:900;font-size:86px;line-height:1.2;letter-spacing:-.02em}
+h1 em{font-style:normal;color:var(--brand)}
+.sub{margin-top:26px;font-size:30px;color:var(--muted);font-weight:500}
+.sub b{color:var(--ink)}
+.notes{margin-top:auto;padding:0 40px 34px 0;font-size:17px;line-height:1.6;color:var(--muted)}
+.right{background:var(--teal);color:#fff;padding:78px 80px 0;display:flex;flex-direction:column;gap:18px}
+.tag{align-self:flex-start;border:2px solid rgba(255,255,255,.7);border-radius:999px;padding:8px 24px;font-weight:700;font-size:22px}
+.name{font-size:32px;font-weight:700;margin-top:6px}
+.name span{display:block;font-size:22px;font-weight:500;opacity:.85;margin-top:4px}
+.reg{font-size:28px;opacity:.85}
+.reg s{text-decoration-thickness:2px}
+.ev{font-family:var(--font-display);font-weight:900;font-size:96px;line-height:1;color:#ffd39a}
+.ev small{font-family:var(--font-body);font-size:26px;font-weight:700;color:#fff;margin-right:14px;vertical-align:middle}
+.period{font-size:24px;font-weight:700}
+.right .ph{color:inherit}
+.contact{margin-top:auto;padding-bottom:40px;font-size:24px;font-weight:700;opacity:.95}
+</style></head><body>
+<div class="left">
+  <div class="clinic">PRIME DENTAL CLINIC · 경주 프라임치과</div>
+  <h1>임플란트, <em>부담은 낮추고</em><br>원칙은 그대로</h1>
+  <div class="sub">정품 보증서 발급 · CT 정밀 진단 · <b>통합치의학과 전문의 직접 진료</b></div>
+  <div class="notes">
+    <div id="n1"></div>
+    <div>· 만 65세 이상 건강보험 임플란트는 이벤트 대상이 아닙니다. · 개인의 구강 상태에 따라 치료 방법과 비용이 달라질 수 있습니다.</div>
+    <div>· 수술 후 통증, 부기, 출혈, 감염, 신경 손상 등의 부작용이 생길 수 있으므로 충분한 상담 후 결정하세요. <span id="rv"></span></div>
+  </div>
+</div>
+<div class="right">
+  <div class="tag">기간 한정 이벤트</div>
+  <div class="name" id="name"></div>
+  <div class="reg">정상가 <s id="reg"></s></div>
+  <div class="ev"><small>이벤트가</small><span id="ev"></span></div>
+  <div class="period" id="period"></div>
+  <div class="contact" id="contact"></div>
+</div>
+<script src="config.js"></script>
+<script src="fill.js"></script>
+</body></html>

@@ -1,0 +1,9 @@
+:root{
+  --ink:#1d2327; --muted:#5a656b; --line:#e4dfd8; --paper:#ffffff; --cream:#f6f3ef;
+  --brand:#e8891c; --brand-ink:#a8590a; --teal:#1f7a78; --teal-soft:#e5f2f1;
+  --font-display:"Gothic A1","Noto Sans KR",sans-serif; --font-body:"Noto Sans KR",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--paper)}
+body{color:var(--ink);font-family:var(--font-body);word-break:keep-all;overflow:hidden}
+.ph{color:var(--brand-ink)}

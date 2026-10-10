@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><title>임플란트 이벤트 피드</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@500;700;800;900&family=Noto+Sans+KR:wght@400;500;700;900&display=swap">
+<link rel="stylesheet" href="shared.css">
+<style>
+/* 인스타그램·네이버 피드용 4:5 (1080×1350) */
+body{width:1080px;height:1350px;display:flex;flex-direction:column;background:var(--cream)}
+.top{padding:64px 72px 0;display:flex;justify-content:space-between;align-items:center}
+.clinic{font-family:var(--font-display);font-weight:800;font-size:30px;color:var(--teal);letter-spacing:.02em}
+.clinic small{display:block;font-family:var(--font-body);font-weight:500;font-size:17px;letter-spacing:.32em;color:var(--muted);margin-bottom:6px}
+.tag{border:2px solid var(--teal);color:var(--teal);border-radius:999px;padding:10px 26px;font-weight:700;font-size:24px}
+.hero{padding:44px 72px 0}
+.hero h1{font-family:var(--font-display);font-weight:900;font-size:84px;line-height:1.16;letter-spacing:-.02em}
+.hero h1 em{font-style:normal;color:var(--brand)}
+.hero p{margin-top:22px;font-size:29px;line-height:1.55;color:var(--muted);font-weight:500}
+.hero p b{color:var(--ink);font-weight:700}
+.price{margin:40px 72px 0;background:var(--paper);border-radius:28px;padding:32px 44px;box-shadow:0 10px 30px rgba(60,40,20,.08);display:grid;gap:14px}
+.price .name{font-size:30px;font-weight:700}
+.price .name span{font-size:22px;font-weight:500;color:var(--muted);margin-left:10px}
+.row{display:flex;align-items:baseline;gap:22px}
+.reg{font-size:28px;color:var(--muted)}
+.reg s{text-decoration-thickness:2px}
+.arrow{font-size:30px;color:var(--muted)}
+.ev{font-family:var(--font-display);font-weight:900;font-size:70px;color:var(--brand)}
+.ev small{font-family:var(--font-body);font-size:24px;font-weight:700;color:var(--brand-ink);margin-right:12px;vertical-align:middle}
+.period{font-size:24px;color:var(--teal);font-weight:700}
+.points{margin:24px 72px 0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.pt{background:var(--teal-soft);border-radius:20px;padding:24px 22px;font-size:23px;line-height:1.45;font-weight:500}
+.pt b{display:block;color:var(--teal);font-size:26px;font-weight:800;margin-bottom:6px}
+.notes{margin-top:auto;padding:24px 72px 34px;font-size:18px;line-height:1.55;color:var(--muted);border-top:1px solid var(--line);background:var(--paper)}
+.notes .contact{font-size:22px;color:var(--ink);font-weight:700;margin-bottom:8px}
+</style></head><body>
+<div class="top">
+  <div class="clinic"><small>PRIME DENTAL CLINIC</small>경주 프라임치과</div>
+  <div class="tag">기간 한정 이벤트</div>
+</div>
+<div class="hero">
+  <h1>임플란트,<br><em>부담은 낮추고</em><br>원칙은 그대로</h1>
+  <p>상담부터 수술·보철·정기검진까지<br><b>통합치의학과 전문의</b>가 직접 진료합니다</p>
+</div>
+<div class="price">
+  <div class="name" id="name"></div>
+  <div class="row"><span class="reg">정상가 <s id="reg"></s></span><span class="arrow">→</span><span class="ev"><small>이벤트가</small><span id="ev"></span></span></div>
+  <div class="period" id="period"></div>
+</div>
+<div class="points">
+  <div class="pt"><b>정품 보증서</b><span id="war"></span> 보증서를 발급해 드립니다</div>
+  <div class="pt"><b>정밀 진단</b>CT와 구강스캐너로 먼저 확인합니다</div>
+  <div class="pt"><b>정기 검진</b>치료 후에도 꾸준히 상태를 확인합니다</div>
+</div>
+<div class="notes">
+  <div class="contact" id="contact"></div>
+  <div id="n1"></div>
+  <div>· 만 65세 이상 건강보험 임플란트는 이벤트 대상이 아닙니다. · 개인의 구강 상태에 따라 치료 방법과 비용이 달라질 수 있습니다.</div>
+  <div>· 수술 후 통증, 부기, 출혈, 감염, 신경 손상 등의 부작용이 생길 수 있으므로 충분한 상담 후 결정하세요.</div>
+  <div id="rv"></div>
+</div>
+<script src="config.js"></script>
+<script src="fill.js"></script>
+</body></html>
